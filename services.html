@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Stackly Accounting & Finance</title>
+  <meta name="description" content="Explore Stackly's comprehensive financial services: bookkeeping, tax preparation, compliance, and executive fractional CFO advisory.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-actions-mobile">
+            <a href="login.html" class="btn btn-secondary">Log In</a>
+            <a href="consultation.html" class="btn btn-primary">Book a Consultation</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">LOGIN</a>
+        <a href="consultation.html" class="btn btn-primary">
+          <span>BOOK A CONSULTATION</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section (Services Page)
+       ========================================================================== -->
+  <section class="services-hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="section-badge">Our Services</div>
+        <h1 class="hero-title">Your finances, handled with clarity.</h1>
+        <p class="hero-description">
+          Full-suite financial management, tax planning, and strategic guidance—tailored to give you total control and compliance at every stage of your business journey.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#services-list" class="btn btn-primary">
+            <span>Explore Our Services</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#integration-matrix" class="btn btn-secondary">How We Work →</a>
+        </div>
+
+        <div class="hero-trust-notes">
+          <span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            99.8% Accuracy Guaranteed
+          </span>
+          <span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Dedicated US CPAs
+          </span>
+          <span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            SOC 2 Type II Certified
+          </span>
+        </div>
+      </div>
+
+      <div class="services-hero-image-wrap reveal reveal-delay-2">
+        <img src="assets/services-hero.webp" alt="Stackly financial advisors collaborating on strategy" class="services-hero-image" loading="lazy">
+        <div class="hero-image-floating-bar floating-element">
+          <h5>Stackly Client Partnership Model</h5>
+          <p>Tailored for high-growth enterprises • 100% US-based CPAs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Flexible Engagement / Service Delivery
+       ========================================================================== -->
+  <section class="support-delivery-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Flexible Support</div>
+        <h2 class="section-title">Financial support that fits the way you work.</h2>
+        <p class="section-subtitle">
+          Whether you need ongoing monthly accounting, targeted tax optimization, or executive fractional CFO leadership, we provide flexible engagement tiers that adapt as your company expands.
+        </p>
+      </div>
+
+      <div class="support-delivery-grid">
+        <div class="support-image-container reveal">
+          <img src="assets/support-workspace.webp" alt="Professional reviewing company finances seamlessly" class="support-main-image" loading="lazy">
+          <div class="support-image-caption-card">
+            <h5>Seamless Onboarding & Integration</h5>
+            <p>Zero downtime • Bank-grade connections • Real-time setup</p>
+          </div>
+        </div>
+
+        <div class="support-cards-stack">
+          <!-- Card 1 -->
+          <div class="support-stack-card reveal">
+            <div class="support-stack-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+              </svg>
+            </div>
+            <div class="support-stack-content">
+              <h3>Flexible Engagements</h3>
+              <p>Scale up or down as your needs evolve. From simple monthly closes to multi-entity fractional CFO leadership, our services adjust seamlessly without locked-in contracts.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="support-stack-card reveal reveal-delay-1">
+            <div class="support-stack-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+            </div>
+            <div class="support-stack-content">
+              <h3>Direct CPA Access</h3>
+              <p>Work directly with your designated senior CPA who knows your business intimately. No offshore call centers, no generic ticket queues, and prompt responses within two business hours.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="support-stack-card reveal reveal-delay-2">
+            <div class="support-stack-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div class="support-stack-content">
+              <h3>Continuous Compliance</h3>
+              <p>Never worry about missed deadlines or changing regulations again. We manage ongoing federal, state, and local requirements proactively year-round.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Detailed Service 01: Bookkeeping & Accounting
+       ========================================================================== -->
+  <section id="services-list" class="service-detail-section bg-white">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Service 01 • Foundational</div>
+        <h2 class="section-title">Bookkeeping & Accounting</h2>
+        <p class="section-subtitle">
+          Keep your general ledger immaculate with daily reconciliations, automated categorization, and real-time financial reporting.
+        </p>
+      </div>
+
+      <div class="service-detail-grid">
+        <!-- Left: What's Included Card -->
+        <div class="service-detail-card reveal">
+          <div class="service-detail-card-header">
+            <h3>What's Included</h3>
+            <span class="service-deliverable-badge">Core Deliverable</span>
+          </div>
+
+          <ul class="service-checklist">
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Daily transaction reconciliation, ledger balancing, and categorizations</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Automated bank feeds, credit card, and payment gateway synchronization</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Monthly Balance Sheet, Profit & Loss (P&L), and Cash Flow statement generation</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Accounts Payable (AP) bill pay execution and Accounts Receivable (AR) invoicing</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Quarterly general ledger review and GAAP statement compliance certification</span>
+            </li>
+          </ul>
+
+          <div class="service-kpis-row">
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">Monthly Close</div>
+              <div class="service-kpi-val">&lt; 5 Days</div>
+            </div>
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">Accuracy Rate</div>
+              <div class="service-kpi-val">99.8%</div>
+            </div>
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">Software</div>
+              <div class="service-kpi-val">QBO / Xero</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            <span>Get Started with Bookkeeping</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="service-detail-image-wrap reveal reveal-delay-2">
+          <img src="assets/bookkeeping-workspace.webp" alt="Audit-ready bookkeeping workspace with financial statements" class="service-detail-image" loading="lazy">
+          <div class="service-image-caption-tag">
+            <h5>Always Audit-Ready Ledgers</h5>
+            <p>Zero unreconciled transactions • Clean financial audit trails</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Detailed Service 02: Tax Preparation & Compliance
+       ========================================================================== -->
+  <section class="service-detail-section bg-sage">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Service 02 • Tax Strategy</div>
+        <h2 class="section-title">Tax Preparation & Compliance</h2>
+        <p class="section-subtitle">
+          Proactive tax minimization, strategic multi-entity structuring, and meticulous compliance to keep your hard-earned capital working for you.
+        </p>
+      </div>
+
+      <div class="service-detail-grid reverse">
+        <!-- Left: Image -->
+        <div class="service-detail-image-wrap reveal">
+          <img src="assets/tax-monitoring.webp" alt="Senior tax specialist preparing federal and state filings" class="service-detail-image" loading="lazy">
+          <div class="service-image-caption-tag">
+            <h5>Year-Round Proactive Tax Shield</h5>
+            <p>Quarterly tax liability forecasting • Zero penalty guarantee</p>
+          </div>
+        </div>
+
+        <!-- Right: What's Included Card -->
+        <div class="service-detail-card reveal reveal-delay-2">
+          <div class="service-detail-card-header">
+            <h3>What's Included</h3>
+            <span class="service-deliverable-badge">Core Deliverable</span>
+          </div>
+
+          <ul class="service-checklist">
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Corporate federal & state income tax preparation (Forms 1120, 1120-S, 1065)</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Quarterly estimated tax modeling and proactive liability forecasting sessions</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Section 179 depreciation optimization and Federal/State R&D credit capture</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Multi-state economic nexus tracking and automated sales tax filing</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Full audit representation, penalty abatement, and IRS notice defense</span>
+            </li>
+          </ul>
+
+          <div class="service-kpis-row">
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">Average Savings</div>
+              <div class="service-kpi-val">35% Saved</div>
+            </div>
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">State Coverage</div>
+              <div class="service-kpi-val">All 50 States</div>
+            </div>
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">IRS Defense</div>
+              <div class="service-kpi-val">100% CPA Lead</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            <span>Explore Tax Services</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Detailed Service 03: Financial Reporting & Business Advisory
+       ========================================================================== -->
+  <section class="service-detail-section bg-white">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Service 03 • Strategic Advisory</div>
+        <h2 class="section-title">Financial Reporting & Business Advisory</h2>
+        <p class="section-subtitle">
+          Transform historical numbers into forward-looking strategic intelligence with executive-level fractional CFO leadership.
+        </p>
+      </div>
+
+      <div class="service-detail-grid">
+        <!-- Left: What's Included Card -->
+        <div class="service-detail-card reveal">
+          <div class="service-detail-card-header">
+            <h3>What's Included</h3>
+            <span class="service-deliverable-badge">Core Deliverable</span>
+          </div>
+
+          <ul class="service-checklist">
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Customized executive KPI dashboards, margin analysis, and board reporting decks</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Dynamic cash flow forecasting, 13-week rolling models, and burn runway projections</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Unit economics modeling, customer acquisition cost (CAC), and LTV optimization</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Fundraising preparation, financial model creation, and data room diligence support</span>
+            </li>
+            <li class="service-check-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>Monthly 1-on-1 strategic executive reviews with a dedicated Senior CFO</span>
+            </li>
+          </ul>
+
+          <div class="service-kpis-row">
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">Review Cadence</div>
+              <div class="service-kpi-val">Monthly/Qtr</div>
+            </div>
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">Readiness</div>
+              <div class="service-kpi-val">Board-Ready</div>
+            </div>
+            <div class="service-kpi-box">
+              <div class="service-kpi-label">Strategy Focus</div>
+              <div class="service-kpi-val">Growth & ROI</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            <span>Schedule CFO Consultation</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="service-detail-image-wrap reveal reveal-delay-2">
+          <img src="assets/cfo-advisory-team.webp" alt="Fractional CFO team reviewing corporate growth trajectory" class="service-detail-image" loading="lazy">
+          <div class="service-image-caption-tag">
+            <h5>Executive Leadership on Demand</h5>
+            <p>High-impact strategic guidance without full-time executive overhead</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Integration Matrix / Comparison Table
+       ========================================================================== -->
+  <section id="integration-matrix" class="matrix-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Service Tiers & Packages</div>
+        <h2 class="section-title">How our practice integrates with your business</h2>
+        <p class="section-subtitle">
+          Select the level of partnership that matches your company's operational scale and strategic requirements.
+        </p>
+      </div>
+
+      <div class="matrix-table-container reveal">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th class="col-feature">Scope & Deliverables</th>
+              <th>
+                Foundational Bookkeeping
+                <span class="tier-th-subtitle">For lean teams & early-stage startups</span>
+              </th>
+              <th class="col-highlight">
+                Complete Management <span class="tier-badge-pill">Popular</span>
+                <span class="tier-th-subtitle">Comprehensive accounting & tax operations</span>
+              </th>
+              <th>
+                Strategic CFO & Advisory
+                <span class="tier-th-subtitle">For scaling scaleups & enterprises</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-title-cell">Ledger Reconciliations</td>
+              <td>Monthly closing & categorization</td>
+              <td class="col-highlight">Weekly automated reconciliation & categorization</td>
+              <td>Continuous real-time audit-ready ledgers</td>
+            </tr>
+            <tr>
+              <td class="feature-title-cell">Tax Preparation & Strategy</td>
+              <td>Annual federal & state corporate returns</td>
+              <td class="col-highlight">Quarterly tax projections & multi-state returns</td>
+              <td>Full multi-entity structuring & R&D credits</td>
+            </tr>
+            <tr>
+              <td class="feature-title-cell">Management Reporting</td>
+              <td>Standard monthly P&L and Balance Sheet</td>
+              <td class="col-highlight">Custom KPI dashboards & 13-week cash flow</td>
+              <td>Investor decks, board packs & scenario models</td>
+            </tr>
+            <tr>
+              <td class="feature-title-cell">Assigned Account Team</td>
+              <td>Dedicated Staff Bookkeeper</td>
+              <td class="col-highlight">Lead CPA + Account Specialist</td>
+              <td>Fractional CFO + Lead CPA + Account Team</td>
+            </tr>
+            <tr>
+              <td class="feature-title-cell">Advisory & Check-Ins</td>
+              <td>Email & secure portal ticket support</td>
+              <td class="col-highlight">Monthly review meeting & priority Slack</td>
+              <td>Weekly CFO syncs, unlimited call availability</td>
+            </tr>
+            <tr>
+              <td class="feature-title-cell">Software & System Setup</td>
+              <td>QuickBooks Online or Xero integration</td>
+              <td class="col-highlight">QBO/Xero + Payroll & Expensify/Bill.com</td>
+              <td>Full NetSuite/Sage ERP + custom API feeds</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Choose Foundational</a>
+              </td>
+              <td class="col-highlight">
+                <a href="contact.html" class="btn btn-primary" style="width: 100%;">Choose Management</a>
+              </td>
+              <td>
+                <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Schedule CFO Call</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Frequently Asked Questions (FAQ Accordion)
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Answers to common questions about onboarding, our service scopes, and CPA partnerships.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" type="button">
+            <span>How fast can we get onboarded and integrated?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Our streamlined onboarding process typically takes between 5 to 7 business days. We securely connect your bank feeds, payroll, and invoicing tools with zero downtime, immediately verifying your charts of accounts and establishing ongoing workflows.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question-btn" type="button">
+            <span>Can I customize or mix different service packages?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Yes. Every business has distinct requirements. You can combine foundational bookkeeping with seasonal tax planning, or layer on fractional CFO advisory for upcoming fundraising rounds as your operational needs evolve.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question-btn" type="button">
+            <span>Can you reconcile our back taxes or catch up past-due books?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Absolutely. Our catch-up and historical audit team specializes in bringing delinquent books and unfiled tax returns current. We conduct a full historical review, resolve discrepancies, and bring your records up to clean, audit-ready standards within two to three weeks.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" type="button">
+            <span>What accounting and ERP platforms do you support?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              We are certified partners across QuickBooks Online, Xero, NetSuite, and Sage Intacct. We also integrate directly with Gusto, Stripe, Bill.com, Ramp, Brex, Expensify, and Shopify for complete financial synchronization.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question-btn" type="button">
+            <span>How is pricing structured, and are there long-term contracts?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              We operate on transparent, flat-fee monthly subscriptions based on transaction volume, entity complexity, and reporting needs. We do not lock you into rigid annual commitments—you can adjust your service tier at any time with 30 days notice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Deep Forest Green CTA Banner
+       ========================================================================== -->
+  <section class="dark-cta-section">
+    <div class="container dark-cta-inner reveal">
+      <div class="section-badge dark-cta-badge">Start Your Partnership</div>
+      <h2 class="dark-cta-title">Ready for organized, reliable financial support?</h2>
+      <p class="dark-cta-subtitle">
+        Schedule a confidential 30-minute discovery session with a senior partner and discover where your business can save and grow.
+      </p>
+
+      <div class="dark-cta-actions">
+        <a href="contact.html" class="btn btn-white">
+          <span>Get Started With Stackly</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline-white">Contact Our Team</a>
+      </div>
+
+      <div class="dark-cta-guarantees">
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          No Long-Term Contracts
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Free Diagnostic Review
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          100% Confidential NDA
+        </span>
+      </div>
+    </div>
+  </section>
+
+      <!-- ==========================================================================
+       Footer (Matching exact design)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+          <p class="footer-brand-desc">
+            Professional accounting, bookkeeping and financial management support for ambitious businesses.
+          </p>
+          <p class="footer-brand-sub">
+            Registered accounting practice &amp; commercial finance advisors.
+          </p>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-nav-col">
+          <h5>Services</h5>
+          <ul class="footer-links-list">
+            <li><a href="services.html#bookkeeping">Bookkeeping &amp; Accounting</a></li>
+            <li><a href="services.html#tax">Tax &amp; Compliance</a></li>
+            <li><a href="services.html#payroll">Payroll Support</a></li>
+            <li><a href="services.html#reporting">Financial Reporting</a></li>
+            <li><a href="services.html#advisory">Business Advisory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-nav-col">
+          <h5>Company</h5>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html#industries">Industries We Serve</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="resources.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contact -->
+        <div class="footer-nav-col">
+          <h5>Direct Contact</h5>
+          <div class="footer-contact-details">
+            <a href="mailto:info@stacklyfinance-example.com">info@stacklyfinance-example.com</a>
+            <a href="tel:+15550192834">+1 (555) 019-2834</a>
+            <span>Hours: Mon–Fri 9am–5pm</span>
+          </div>
+          <div class="footer-social-list">
+            <a href="404.html" class="footer-social-icon" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-copy">
+          &copy; 2024 Stackly Financial Services Inc. All rights reserved. Registered accounting practice. Sample illustrative business website.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Client Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

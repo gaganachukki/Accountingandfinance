@@ -1,0 +1,1583 @@
+/**
+ * Stackly Accounting & Finance - Consultation Page Styles
+ * Matching Exact Figma Design & Color Palette
+ * Typography: Plus Jakarta Sans & JetBrains Mono
+ */
+
+/* ==========================================================================
+   CSS Variables & Typography Overrides for Consultation
+   ========================================================================== */
+.consultation-page {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #24332b;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+:root {
+  --c-dark-green: #002219;
+  --c-primary-green: #003829;
+  --c-hover-green: #064b38;
+  --c-mint-accent: #00966a;
+  --c-mint-light: #10b981;
+  --c-sage-bg: #f2f7f4;
+  --c-sage-subtle: #f6faf7;
+  --c-sage-card: #eef5f1;
+  --c-sage-border: #d4e5da;
+  --c-border: #dce7e0;
+  --c-border-light: #e8f0eb;
+  --c-text-title: #002219;
+  --c-text-body: #34473d;
+  --c-text-muted: #62776c;
+  --c-text-light: #8ba095;
+  --c-white: #ffffff;
+  --c-shadow-sm: 0 4px 12px rgba(0, 34, 25, 0.04);
+  --c-shadow-md: 0 10px 25px rgba(0, 34, 25, 0.06);
+  --c-shadow-lg: 0 20px 45px rgba(0, 34, 25, 0.08);
+}
+
+/* ==========================================================================
+   Global Section Pill Tags & Titles
+   ========================================================================== */
+.section-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #dbece0;
+  color: var(--c-primary-green);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px rgba(0, 53, 39, 0.05);
+}
+
+.section-pill-tag .pill-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--c-mint-light);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.section-header-block {
+  text-align: center;
+  max-width: 740px;
+  margin: 0 auto 52px;
+}
+
+.section-main-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  color: var(--c-text-title);
+  margin-bottom: 16px;
+}
+
+.section-main-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--c-text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Header active CTA */
+.nav-actions .btn.active-cta {
+  background-color: var(--c-dark-green);
+  box-shadow: 0 4px 14px rgba(0, 34, 25, 0.25);
+}
+
+/* ==========================================================================
+   Section 1: Hero Section
+   ========================================================================== */
+.consult-hero-section {
+  padding: 60px 0 85px;
+  background: linear-gradient(180deg, #f2f7f4 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.consult-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 52px;
+}
+
+.consult-hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.4rem, 4.2vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.14;
+  color: var(--c-text-title);
+  margin-bottom: 20px;
+}
+
+.consult-hero-desc {
+  font-size: 1.12rem;
+  line-height: 1.68;
+  color: var(--c-text-muted);
+  margin-bottom: 26px;
+  max-width: 580px;
+}
+
+.consult-hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(219, 236, 224, 0.65);
+  border: 1px solid var(--c-sage-border);
+  color: var(--c-primary-green);
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  margin-bottom: 34px;
+}
+
+.consult-hero-pill-badge svg {
+  color: var(--c-mint-light);
+  flex-shrink: 0;
+}
+
+.consult-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-book {
+  background-color: var(--c-dark-green);
+  color: var(--c-white);
+  padding: 14px 26px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 34, 25, 0.2);
+}
+
+.btn-hero-book:hover {
+  background-color: var(--c-primary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 34, 25, 0.28);
+}
+
+.btn-hero-book:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-hero-services {
+  background-color: var(--c-white);
+  color: var(--c-dark-green);
+  border: 1.5px solid var(--c-border);
+  padding: 13px 24px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+}
+
+.btn-hero-services:hover {
+  border-color: var(--c-dark-green);
+  background-color: #f7faf8;
+  transform: translateY(-2px);
+}
+
+.hero-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.hero-consult-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: var(--c-shadow-lg);
+  border: 1px solid rgba(0, 34, 25, 0.08);
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hero-image-wrapper:hover .hero-consult-img {
+  transform: scale(1.015);
+}
+
+.hero-floating-badge {
+  position: absolute;
+  bottom: -22px;
+  left: 24px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--c-sage-border);
+  border-radius: 14px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--c-shadow-md);
+  z-index: 2;
+}
+
+.floating-badge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: #dcfce7;
+  color: var(--c-mint-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-badge-text strong {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--c-dark-green);
+}
+
+.floating-badge-text span {
+  font-size: 0.75rem;
+  color: var(--c-text-muted);
+}
+
+/* ==========================================================================
+   Section 2: What to Expect / How Consultation Helps
+   ========================================================================== */
+.consult-expectation-section {
+  padding: 85px 0 95px;
+  background-color: var(--c-white);
+}
+
+.expectations-dual-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.expectations-cards-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.expectation-card {
+  background-color: var(--c-sage-card);
+  border: 1px solid var(--c-sage-border);
+  border-radius: 16px;
+  padding: 24px 26px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.expectation-card:hover {
+  background-color: #e5f0ea;
+  transform: translateY(-3px);
+  box-shadow: var(--c-shadow-sm);
+  border-color: #bdd6c6;
+}
+
+.exp-icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #dbece0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary-green);
+  flex-shrink: 0;
+  transition: background-color 0.25s ease;
+}
+
+.expectation-card:hover .exp-icon-box {
+  background-color: var(--c-primary-green);
+  color: var(--c-white);
+}
+
+.exp-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--c-text-title);
+  margin-bottom: 6px;
+}
+
+.exp-card-desc {
+  font-size: 0.94rem;
+  line-height: 1.58;
+  color: var(--c-text-body);
+}
+
+.expectation-guarantee-banner {
+  background-color: #f7fbf8;
+  border: 1px dashed var(--c-sage-border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--c-text-muted);
+}
+
+.guarantee-icon {
+  color: var(--c-mint-light);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Right Discovery Card */
+.discovery-feature-card {
+  background-color: var(--c-sage-card);
+  border: 1.5px solid var(--c-sage-border);
+  border-radius: 20px;
+  padding: 38px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--c-shadow-sm);
+  transition: all 0.35s ease;
+}
+
+.discovery-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--c-shadow-md);
+  border-color: #bdd6c6;
+}
+
+.discovery-card-icon {
+  width: 52px;
+  height: 52px;
+  background-color: #dbece0;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-primary-green);
+}
+
+.discovery-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--c-text-title);
+  line-height: 1.25;
+}
+
+.discovery-card-desc {
+  font-size: 0.96rem;
+  line-height: 1.62;
+  color: var(--c-text-body);
+}
+
+.discovery-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.discovery-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--c-text-body);
+}
+
+.discovery-checklist li svg {
+  color: var(--c-mint-light);
+  flex-shrink: 0;
+}
+
+.btn-discovery-services {
+  align-self: flex-start;
+  margin-top: 8px;
+  background-color: var(--c-white);
+  border: 1.5px solid var(--c-border);
+  color: var(--c-dark-green);
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 12px 22px;
+  font-size: 0.86rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-discovery-services:hover {
+  border-color: var(--c-dark-green);
+  background-color: #f7faf8;
+}
+
+/* ==========================================================================
+   Section 3: Interactive Consultation Booking Form Section
+   ========================================================================== */
+.consult-form-section {
+  padding: 95px 0 105px;
+  background-color: var(--c-sage-bg);
+  position: relative;
+}
+
+/* Step Progress Indicator Bar */
+.form-step-indicator-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.step-pill-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--c-white);
+  border: 1px solid var(--c-sage-border);
+  color: var(--c-text-muted);
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  transition: all 0.25s ease;
+}
+
+.step-pill-indicator .step-num-badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e2ede6;
+  color: var(--c-text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-pill-indicator.active {
+  background-color: var(--c-dark-green);
+  border-color: var(--c-dark-green);
+  color: var(--c-white);
+}
+
+.step-pill-indicator.active .step-num-badge {
+  background-color: var(--c-mint-light);
+  color: var(--c-dark-green);
+}
+
+/* Form Card Container */
+.consult-card-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: var(--c-white);
+  border-radius: 24px;
+  padding: 48px 52px;
+  box-shadow: 0 16px 40px rgba(0, 34, 25, 0.06);
+  border: 1px solid var(--c-sage-border);
+  position: relative;
+}
+
+.form-section-fieldset {
+  border: none;
+  padding: 0 0 36px 0;
+  margin: 0 0 36px 0;
+  border-bottom: 1px solid var(--c-border-light);
+}
+
+.form-section-fieldset:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.form-section-legend {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--c-text-title);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  width: 100%;
+}
+
+.legend-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background-color: #dbece0;
+  color: var(--c-primary-green);
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fieldset-sublabel {
+  font-size: 0.88rem;
+  color: var(--c-text-muted);
+  margin: -12px 0 20px 0;
+}
+
+/* Form Grids & Fields */
+.form-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.form-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-field-group.full-width {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.field-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--c-text-title);
+}
+
+.required-star {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.optional-tag {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--c-text-light);
+}
+
+.form-control-input,
+.form-control-select,
+.form-control-textarea {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.94rem;
+  color: var(--c-text-title);
+  background-color: var(--c-white);
+  border: 1.5px solid #d1ded4;
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-control-input:focus,
+.form-control-select:focus,
+.form-control-textarea:focus {
+  border-color: var(--c-primary-green);
+  box-shadow: 0 0 0 3px rgba(0, 53, 39, 0.1);
+}
+
+.form-control-input.field-invalid,
+.form-control-select.field-invalid,
+.form-control-textarea.field-invalid {
+  border-color: #ef4444;
+  background-color: #fffafb;
+  animation: fieldShake 0.4s ease;
+}
+
+@keyframes fieldShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.field-error-msg {
+  display: none;
+  font-size: 0.78rem;
+  color: #dc2626;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.form-control-input.field-invalid + .field-error-msg,
+.custom-select-wrapper + .field-error-msg.visible {
+  display: block;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--c-text-muted);
+  border-bottom: 2px solid var(--c-text-muted);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+.form-control-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+/* Services Checkbox Grid */
+.services-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.service-checkbox-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1.5px solid #dce7e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.service-checkbox-card:hover {
+  border-color: var(--c-primary-green);
+  background-color: #f7fbf8;
+}
+
+.service-checkbox-card.checked {
+  border-color: var(--c-dark-green);
+  background-color: #f0f7f2;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-check-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid #bdcebf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.service-checkbox-card.checked .custom-check-box {
+  background-color: var(--c-dark-green);
+  border-color: var(--c-dark-green);
+}
+
+.checkbox-label-text {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--c-text-body);
+}
+
+/* Meeting Format Radio Cards */
+.meeting-format-picker {
+  margin-bottom: 22px;
+}
+
+.format-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.format-card {
+  border: 1.5px solid #dce7e0;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.format-card:hover {
+  border-color: var(--c-primary-green);
+  background-color: #f7fbf8;
+}
+
+.format-card.active {
+  border-color: var(--c-dark-green);
+  background-color: #eef6f1;
+  box-shadow: 0 4px 12px rgba(0, 34, 25, 0.08);
+}
+
+.format-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.format-icon-pill {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #dbece0;
+  color: var(--c-primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.format-card.active .format-icon-pill {
+  background-color: var(--c-dark-green);
+  color: #ffffff;
+}
+
+.format-meta strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--c-text-title);
+}
+
+.format-meta span {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--c-text-muted);
+}
+
+/* Confidentiality Notice Box */
+.confidentiality-notice-box {
+  background-color: #f2f8f4;
+  border: 1px solid var(--c-sage-border);
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--c-text-body);
+}
+
+.conf-icon {
+  color: var(--c-mint-light);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Red Validation Alert Banner */
+.form-alert-banner {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  animation: fieldShake 0.4s ease;
+}
+
+.form-alert-banner svg {
+  flex-shrink: 0;
+}
+
+/* Consent Checkbox */
+.consent-group {
+  margin-bottom: 24px;
+}
+
+.consent-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.consent-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--c-text-body);
+}
+
+/* Submit Wrapper */
+.form-submit-wrapper {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.btn-submit-consult {
+  width: 100%;
+  max-width: 480px;
+  padding: 16px 32px;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background-color: var(--c-dark-green);
+  color: var(--c-white);
+  border: none;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0, 34, 25, 0.22);
+}
+
+.btn-submit-consult:hover {
+  background-color: var(--c-hover-green);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 34, 25, 0.3);
+}
+
+.btn-submit-consult:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+.form-privacy-note {
+  font-size: 0.80rem;
+  color: var(--c-text-light);
+  margin-top: 12px;
+}
+
+/* Success Modal Overlay */
+.consult-success-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 34, 25, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  z-index: 99999;
+  animation: fadeInModal 0.35s ease forwards;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.success-modal-card {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px 32px;
+  border-radius: 20px;
+  border: 1px solid var(--c-sage-border);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: scaleUpCard 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scaleUpCard {
+  from { transform: scale(0.92) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.success-icon-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.success-modal-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--c-text-title);
+  margin-bottom: 12px;
+}
+
+.success-modal-desc {
+  font-size: 0.96rem;
+  line-height: 1.62;
+  color: var(--c-text-body);
+  margin-bottom: 24px;
+}
+
+.success-details-summary {
+  background-color: var(--c-sage-card);
+  border: 1px solid var(--c-sage-border);
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 0.88rem;
+  color: var(--c-text-body);
+}
+
+.success-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* ==========================================================================
+   Section 4: What Happens Next (How It Works)
+   ========================================================================== */
+.consult-steps-section {
+  padding: 95px 0 100px;
+  background-color: var(--c-white);
+}
+
+.steps-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 48px;
+}
+
+.step-process-card {
+  background-color: var(--c-sage-card);
+  border: 1px solid var(--c-sage-border);
+  border-radius: 18px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.step-process-card:hover {
+  background-color: #e5f0ea;
+  transform: translateY(-4px);
+  box-shadow: var(--c-shadow-md);
+  border-color: #bdd6c6;
+}
+
+.step-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.step-number-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--c-primary-green);
+  letter-spacing: 0.05em;
+  background-color: #dbece0;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.step-corner-arrow {
+  color: var(--c-text-light);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.step-process-card:hover .step-corner-arrow {
+  color: var(--c-mint-light);
+  transform: translate(2px, -2px);
+}
+
+.step-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--c-text-title);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.step-desc {
+  font-size: 0.90rem;
+  line-height: 1.58;
+  color: var(--c-text-body);
+}
+
+/* Wide Team Photo Banner */
+.steps-banner-photo-wrapper {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--c-shadow-lg);
+  border: 1px solid rgba(0, 34, 25, 0.08);
+}
+
+.steps-banner-photo {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.steps-banner-photo-wrapper:hover .steps-banner-photo {
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   Section 5: Make the Most of Your Consultation (Preparation)
+   ========================================================================== */
+.consult-prep-section {
+  padding: 95px 0 100px;
+  background-color: var(--c-sage-bg);
+}
+
+.prep-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.prep-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.prep-card {
+  background-color: var(--c-white);
+  border: 1px solid var(--c-sage-border);
+  border-radius: 16px;
+  padding: 24px 22px;
+  box-shadow: var(--c-shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.prep-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--c-shadow-md);
+  border-color: var(--c-primary-green);
+}
+
+.prep-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #dbece0;
+  color: var(--c-primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.prep-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--c-text-title);
+  margin-bottom: 8px;
+}
+
+.prep-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--c-text-body);
+}
+
+.prep-image-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--c-shadow-lg);
+  border: 1px solid rgba(0, 34, 25, 0.08);
+}
+
+.prep-consult-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   Section 6: Support for Businesses at Different Stages
+   ========================================================================== */
+.consult-stages-section {
+  padding: 95px 0 100px;
+  background-color: var(--c-white);
+}
+
+.stages-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.stage-tier-card {
+  background-color: var(--c-sage-card);
+  border: 1px solid var(--c-sage-border);
+  border-radius: 18px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.stage-tier-card:hover {
+  background-color: #e5f0ea;
+  transform: translateY(-4px);
+  box-shadow: var(--c-shadow-md);
+  border-color: #bdd6c6;
+}
+
+.stage-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #dbece0;
+  color: var(--c-primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.stage-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--c-text-title);
+  margin-bottom: 10px;
+}
+
+.stage-desc {
+  font-size: 0.88rem;
+  line-height: 1.58;
+  color: var(--c-text-body);
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.stage-card-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--c-primary-green);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.stage-card-link:hover {
+  color: var(--c-mint-light);
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   Section 7: Frequently Asked Questions
+   ========================================================================== */
+.consult-faq-section {
+  padding: 95px 0 105px;
+  background-color: var(--c-sage-bg);
+}
+
+.faq-accordion-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.consult-faq-section .faq-item {
+  background-color: var(--c-white);
+  border: 1px solid var(--c-sage-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.consult-faq-section .faq-item.active {
+  border-color: var(--c-primary-green);
+  box-shadow: var(--c-shadow-sm);
+}
+
+.consult-faq-section .faq-question-btn {
+  width: 100%;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--c-text-title);
+  gap: 16px;
+}
+
+.consult-faq-section .faq-chevron-icon {
+  color: var(--c-text-light);
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.consult-faq-section .faq-item.active .faq-chevron-icon {
+  transform: rotate(180deg);
+  color: var(--c-primary-green);
+}
+
+.consult-faq-section .faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.consult-faq-section .faq-answer-panel p {
+  padding: 0 24px 22px;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  color: var(--c-text-body);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Section 8: Dark Green CTA Section
+   ========================================================================== */
+.consult-cta-section {
+  padding: 95px 0;
+  background-color: var(--c-dark-green);
+  color: var(--c-white);
+}
+
+.dark-cta-card {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.dark-cta-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  color: var(--c-white);
+  margin-bottom: 16px;
+}
+
+.dark-cta-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 34px;
+}
+
+.dark-cta-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-white {
+  background-color: var(--c-white);
+  color: var(--c-dark-green);
+  border: none;
+  font-weight: 700;
+  padding: 14px 26px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white:hover {
+  background-color: #f2f7f4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn-ghost-white {
+  background: transparent;
+  color: var(--c-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  padding: 13px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+}
+
+.btn-ghost-white:hover {
+  border-color: var(--c-white);
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+
+/* ==========================================================================
+   Responsive Breakpoints for Consultation Page
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .consult-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .consult-hero-content {
+    max-width: 100%;
+  }
+
+  .consult-hero-desc {
+    max-width: 100%;
+  }
+
+  .expectations-dual-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .steps-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .prep-split-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .stages-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .consult-hero-section {
+    padding: 40px 0 60px;
+  }
+
+  .consult-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-hero-book,
+  .btn-hero-services {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-floating-badge {
+    position: static;
+    margin-top: 14px;
+    border-radius: 12px;
+  }
+
+  .consult-card-wrapper {
+    padding: 32px 24px;
+    border-radius: 18px;
+  }
+
+  .form-grid-2col,
+  .form-grid-3col {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .format-cards-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .services-checkbox-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .steps-banner-photo {
+    height: 260px;
+  }
+
+  .prep-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .dark-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-white,
+  .btn-ghost-white {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .consult-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .section-main-title {
+    font-size: 1.65rem;
+  }
+
+  .consult-hero-pill-badge {
+    font-size: 0.78rem;
+    padding: 6px 12px;
+  }
+
+  .form-step-indicator-bar {
+    gap: 8px;
+  }
+
+  .step-pill-indicator {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .consult-card-wrapper {
+    padding: 22px 14px;
+    border-radius: 14px;
+  }
+
+  .form-section-legend {
+    font-size: 1.1rem;
+    gap: 8px;
+  }
+
+  .legend-badge {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75rem;
+  }
+
+  .steps-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stages-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expectation-card {
+    padding: 18px 16px;
+    gap: 14px;
+  }
+
+  .discovery-feature-card {
+    padding: 26px 20px;
+  }
+
+  .btn-submit-consult {
+    font-size: 0.88rem;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .consult-hero-title {
+    font-size: 1.65rem;
+  }
+
+  .consult-card-wrapper {
+    padding: 18px 12px;
+  }
+
+  .form-section-fieldset {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+}

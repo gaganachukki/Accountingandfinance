@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Partner Management — Stackly Accounting &amp; Finance</title>
+  <meta name="description" content="Executive administration portal for managing partner oversight, CPA allocation, client portfolios, and statutory compliance.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/admindashboard.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="admin-dashboard-body">
+
+  <!-- ==========================================================================
+       Admin Sidebar
+       ========================================================================= -->
+  <aside class="admin-sidebar" id="admin-sidebar">
+    <div class="admin-sidebar-header">
+      <a href="index.html" class="admin-brand">
+        <img src="assets/logo.webp" alt="Stackly" class="admin-brand-img" />
+        <span class="admin-badge-role">Admin</span>
+      </a>
+      <button class="admin-mobile-toggle" id="admin-sidebar-close" aria-label="Close sidebar" style="color: var(--white);">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Firm Overview Pill -->
+    <div class="admin-badge-firm">
+      <div>
+        <div class="firm-info-title">Stackly Practice HQ</div>
+        <div class="firm-info-subtitle">Licensed AICPA Firm #94021</div>
+      </div>
+      <span class="firm-role-pill">Partner</span>
+    </div>
+
+    <!-- Admin Nav Items -->
+    <nav class="admin-nav" aria-label="Practice Navigation">
+      <div class="admin-nav-heading">Practice Management</div>
+
+      <button type="button" class="admin-nav-item active" data-tab="admin-tab-overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Executive Overview</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-tab="admin-tab-clients">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span>Client Portfolio</span>
+        <span class="admin-badge-count" style="background-color: rgba(52, 211, 153, 0.2); color: #34d399;">42 Active</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-tab="admin-tab-team">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="7" r="4"></circle>
+          <path d="M5.5 21v-2a6.5 6.5 0 0 1 13 0v2"></path>
+        </svg>
+        <span>CPA Team Allocation</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-tab="admin-tab-compliance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 11 12 14 22 4"></polyline>
+          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+        </svg>
+        <span>Compliance &amp; Filings</span>
+        <span class="admin-badge-count">8 Due</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-tab="admin-tab-billing">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <span>Firm MRR &amp; Billing</span>
+      </button>
+
+      <div class="admin-nav-heading">Oversight &amp; Governance</div>
+
+      <button type="button" class="admin-nav-item" data-tab="admin-tab-audit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 14 14"></polyline>
+        </svg>
+        <span>Audit Trail &amp; Logs</span>
+      </button>
+
+      <button type="button" class="admin-nav-item" data-tab="admin-tab-settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        <span>Firm Practice Settings</span>
+      </button>
+    </nav>
+
+    <!-- Admin Footer -->
+    <div class="admin-sidebar-footer">
+      <div class="admin-partner-widget">
+        <img src="assets/leader-1.webp" alt="Marcus Sterling, Managing Partner" class="admin-partner-avatar">
+        <div class="admin-partner-meta">
+          <span class="admin-partner-name">Marcus Sterling</span>
+          <span class="admin-partner-role">Managing Partner &amp; CPA</span>
+        </div>
+      </div>
+      <a href="login.html" class="admin-logout-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Sign Out (HQ)</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       Admin Main Canvas
+       ========================================================================= -->
+  <main class="admin-main">
+    
+    <!-- Topbar -->
+    <header class="admin-topbar">
+      <div class="admin-topbar-left">
+        <button class="admin-mobile-toggle" id="admin-sidebar-open" aria-label="Open sidebar">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="admin-topbar-right">
+        <!-- Notification Bell & Dropdown -->
+        <div class="notif-wrapper">
+          <button class="notif-btn" id="admin-notif-toggle" aria-label="View notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notif-indicator"></span>
+          </button>
+          
+          <div class="notif-dropdown" id="admin-notif-dropdown">
+            <div class="notif-header">
+              <span>Practice Alerts</span>
+              <span class="notif-mark-read" id="admin-mark-read">Mark all read</span>
+            </div>
+            <ul class="notif-list">
+              <li class="notif-item">
+                <div><strong>Nexus BioTech:</strong> Q3 corporate tax return ready for partner review.</div>
+                <div class="notif-item-time">10 minutes ago</div>
+              </li>
+              <li class="notif-item">
+                <div><strong>IRS E-File:</strong> 3 Form 1120-S filings accepted successfully.</div>
+                <div class="notif-item-time">45 minutes ago</div>
+              </li>
+              <li class="notif-item">
+                <div><strong>Horizon Logistics:</strong> Requested quarterly retainer audit.</div>
+                <div class="notif-item-time">3 hours ago</div>
+              </li>
+              <li class="notif-item">
+                <div><strong>Elena Rostova (CPA):</strong> Reconciled month-end ledgers for 13 clients.</div>
+                <div class="notif-item-time">5 hours ago</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Admin Profile with Initial -->
+        <div class="admin-profile-wrapper">
+          <button class="admin-profile-btn" id="admin-profile-toggle" aria-label="Account menu" aria-expanded="false" title="Marcus Sterling (Managing Partner)">
+            <span class="admin-profile-initial">MS</span>
+            <span class="admin-profile-status-dot"></span>
+          </button>
+
+          <div class="admin-profile-dropdown" id="admin-profile-dropdown">
+            <div class="admin-profile-header">
+              <div class="admin-profile-avatar-large">MS</div>
+              <div class="admin-profile-info">
+                <span class="admin-profile-name">Marcus Sterling</span>
+                <span class="admin-profile-role">Managing Partner &amp; CPA</span>
+                <span class="admin-profile-email">m.sterling@stackly.com</span>
+              </div>
+            </div>
+            <div class="admin-profile-divider"></div>
+            <ul class="admin-profile-menu">
+              <li>
+                <button type="button" class="admin-profile-menu-item" onclick="switchAdminTab('admin-tab-settings'); closeAdminProfileDropdown();">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                  <span>Firm Practice Settings</span>
+                </button>
+              </li>
+              <li>
+                <a href="userdashboard.html" class="admin-profile-menu-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                    <polyline points="10 17 15 12 10 7"></polyline>
+                    <line x1="15" y1="12" x2="3" y2="12"></line>
+                  </svg>
+                  <span>Switch to Client Portal</span>
+                </a>
+              </li>
+              <li>
+                <a href="login.html" class="admin-profile-menu-item logout">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  <span>Sign Out (HQ)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Admin Content Panels -->
+    <div class="admin-content-container">
+
+      <!-- ======================================================================
+           TAB 1: EXECUTIVE OVERVIEW
+           ====================================================================== -->
+      <section class="admin-tab-panel active" id="admin-tab-overview">
+        
+        <!-- Welcome Banner -->
+        <div class="admin-welcome-banner">
+          <div>
+            <h1 class="admin-banner-title">Practice Performance Overview</h1>
+            <p class="admin-banner-sub">Managing Partner Dashboard • All 42 enterprise accounts reconciled and monitored.</p>
+          </div>
+          <div class="banner-period-group">
+            <button class="period-pill active" data-admin-period="month">This Month</button>
+            <button class="period-pill" data-admin-period="quarter">Q3 2026</button>
+            <button class="period-pill" data-admin-period="year">Full Year</button>
+          </div>
+        </div>
+
+        <!-- 4 KPI Cards -->
+        <div class="admin-kpi-grid">
+          
+          <div class="admin-kpi-card">
+            <div class="admin-kpi-top">
+              <span class="admin-kpi-label">Active Clients</span>
+              <div class="admin-kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+              </div>
+            </div>
+            <div class="admin-kpi-val" id="admin-kpi-clients">42</div>
+            <div class="admin-kpi-bot">
+              <span class="trend-badge positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                +4 this month
+              </span>
+              <span>100% retention</span>
+            </div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="admin-kpi-top">
+              <span class="admin-kpi-label">Practice MRR</span>
+              <div class="admin-kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="admin-kpi-val" id="admin-kpi-mrr">$184,500</div>
+            <div class="admin-kpi-bot">
+              <span class="trend-badge positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                +18.2% YoY
+              </span>
+              <span>$2.21M ARR run-rate</span>
+            </div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="admin-kpi-top">
+              <span class="admin-kpi-label">Due Filings (7 Days)</span>
+              <div class="admin-kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="admin-kpi-val" id="admin-kpi-filings" style="color: #d97706;">8</div>
+            <div class="admin-kpi-bot">
+              <span class="trend-badge" style="background-color: #fef3c7; color: #92400e;">6 Prepared</span>
+              <span>2 in final CPA audit</span>
+            </div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="admin-kpi-top">
+              <span class="admin-kpi-label">Team Capacity</span>
+              <div class="admin-kpi-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="admin-kpi-val" id="admin-kpi-capacity">84.6%</div>
+            <div class="admin-kpi-bot">
+              <span class="trend-badge positive">Optimal</span>
+              <span>room for 8 more clients</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Charts & Team Row -->
+        <div class="admin-charts-grid">
+          
+          <!-- Practice Revenue Growth Chart -->
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <div>
+                <h3 class="admin-card-title">Practice Monthly Recurring Revenue (MRR)</h3>
+                <span class="chart-card-desc">Total billed retainer revenue across 42 client engagements</span>
+              </div>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <span class="legend-color-dot" style="background-color: var(--admin-primary);"></span>
+                  <span>Billed MRR</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="practice-chart-wrapper" id="admin-revenue-chart">
+              <div class="practice-col-group">
+                <div class="chart-tooltip">May: $148K MRR</div>
+                <div class="practice-bar-container" style="height: 60%;"></div>
+                <span class="practice-month-name">May</span>
+              </div>
+              <div class="practice-col-group">
+                <div class="chart-tooltip">Jun: $156K MRR</div>
+                <div class="practice-bar-container" style="height: 66%;"></div>
+                <span class="practice-month-name">Jun</span>
+              </div>
+              <div class="practice-col-group">
+                <div class="chart-tooltip">Jul: $164K MRR</div>
+                <div class="practice-bar-container" style="height: 72%;"></div>
+                <span class="practice-month-name">Jul</span>
+              </div>
+              <div class="practice-col-group">
+                <div class="chart-tooltip">Aug: $172K MRR</div>
+                <div class="practice-bar-container" style="height: 80%;"></div>
+                <span class="practice-month-name">Aug</span>
+              </div>
+              <div class="practice-col-group">
+                <div class="chart-tooltip">Sep: $179K MRR</div>
+                <div class="practice-bar-container" style="height: 88%;"></div>
+                <span class="practice-month-name">Sep</span>
+              </div>
+              <div class="practice-col-group">
+                <div class="chart-tooltip">Oct: $184.5K MRR</div>
+                <div class="practice-bar-container" style="height: 94%;"></div>
+                <span class="practice-month-name">Oct</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CPA Team Workload Distribution -->
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <div>
+                <h3 class="admin-card-title">CPA Team Utilization</h3>
+                <span class="chart-card-desc">Caseload distribution by Senior Practitioner</span>
+              </div>
+            </div>
+
+            <div class="workload-list">
+              
+              <div class="workload-item">
+                <div class="workload-meta">
+                  <div class="workload-meta-left">
+                    <img src="assets/avatar-1.webp" alt="Sarah Jenkins" class="workload-avatar">
+                    <span>Sarah Jenkins, CPA</span>
+                  </div>
+                  <span>12 Clients (88% Cap)</span>
+                </div>
+                <div class="workload-track">
+                  <div class="workload-fill fill-cpa-1"></div>
+                </div>
+              </div>
+
+              <div class="workload-item">
+                <div class="workload-meta">
+                  <div class="workload-meta-left">
+                    <img src="assets/avatar-2.webp" alt="David Miller" class="workload-avatar">
+                    <span>David Miller, CPA</span>
+                  </div>
+                  <span>10 Clients (76% Cap)</span>
+                </div>
+                <div class="workload-track">
+                  <div class="workload-fill fill-cpa-2"></div>
+                </div>
+              </div>
+
+              <div class="workload-item">
+                <div class="workload-meta">
+                  <div class="workload-meta-left">
+                    <img src="assets/avatar-3.webp" alt="Elena Rostova" class="workload-avatar">
+                    <span>Elena Rostova, Senior Controller</span>
+                  </div>
+                  <span>13 Clients (92% Cap)</span>
+                </div>
+                <div class="workload-track">
+                  <div class="workload-fill fill-cpa-3"></div>
+                </div>
+              </div>
+
+              <div class="workload-item">
+                <div class="workload-meta">
+                  <div class="workload-meta-left">
+                    <img src="assets/leader-2.webp" alt="Robert Vance" class="workload-avatar">
+                    <span>Robert Vance, Tax Principal</span>
+                  </div>
+                  <span>7 Special Audits (64% Cap)</span>
+                </div>
+                <div class="workload-track">
+                  <div class="workload-fill fill-cpa-4"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Client Management Quick Matrix & Live Audit Log -->
+        <div class="admin-charts-grid" style="grid-template-columns: 2fr 1.1fr;">
+          
+          <!-- Client Table -->
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h3 class="admin-card-title">Priority Client Portfolio Status</h3>
+              <a href="#" class="panel-action-link" onclick="switchAdminTab('admin-tab-clients'); return false;">View All 42 Accounts &rarr;</a>
+            </div>
+
+            <div class="admin-table-container">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Client / Organization</th>
+                    <th>Lead Practitioner</th>
+                    <th>Engagement Tier</th>
+                    <th>Status</th>
+                    <th>Next Deadline</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="client-name-cell">
+                        <div class="client-avatar-cell">AF</div>
+                        <div>
+                          <div class="client-title-text">Acme Financial LLC</div>
+                          <div class="client-industry-text">Fintech &amp; Advisory</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Sarah Jenkins, CPA</td>
+                    <td><span class="tag-badge tier-advisory">Full Advisory</span></td>
+                    <td><span class="status-pill completed">Reconciled</span></td>
+                    <td>Oct 15 (Q4 Est)</td>
+                    <td><a href="userdashboard.html" class="btn-table-action" target="_blank">View Ledger</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="client-name-cell">
+                        <div class="client-avatar-cell" style="background-color: #eff6ff; color: #1e40af;">NB</div>
+                        <div>
+                          <div class="client-title-text">Nexus BioTech Corp</div>
+                          <div class="client-industry-text">Life Sciences &amp; R&amp;D</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>David Miller, CPA</td>
+                    <td><span class="tag-badge tier-controller">Controller</span></td>
+                    <td><span class="status-pill completed">Reconciled</span></td>
+                    <td>Oct 15 (Form 1120)</td>
+                    <td><button class="btn-table-action" onclick="alert('Opening Nexus BioTech master audit file...')">View Ledger</button></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="client-name-cell">
+                        <div class="client-avatar-cell" style="background-color: #fefce8; color: #854d0e;">VA</div>
+                        <div>
+                          <div class="client-title-text">Vertex AI Solutions</div>
+                          <div class="client-industry-text">Enterprise SaaS</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Elena Rostova</td>
+                    <td><span class="tag-badge tier-advisory">Full Advisory</span></td>
+                    <td><span class="status-pill pending">Audit Review</span></td>
+                    <td>Oct 20 (Sales Tax)</td>
+                    <td><button class="btn-table-action" onclick="alert('Opening Vertex AI master audit file...')">View Ledger</button></td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="client-name-cell">
+                        <div class="client-avatar-cell" style="background-color: #f3e8ff; color: #6b21a8;">HL</div>
+                        <div>
+                          <div class="client-title-text">Horizon Logistics Group</div>
+                          <div class="client-industry-text">Fleet Operations</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Robert Vance</td>
+                    <td><span class="tag-badge tier-compliance">Tax &amp; Compliance</span></td>
+                    <td><span class="status-pill completed">Reconciled</span></td>
+                    <td>Oct 31 (Form 941)</td>
+                    <td><button class="btn-table-action" onclick="alert('Opening Horizon Logistics audit file...')">View Ledger</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Live Compliance Feed -->
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h3 class="admin-card-title">Live Practice Audit Stream</h3>
+              <span class="status-dot-pulse"></span>
+            </div>
+
+            <div class="activity-feed-list">
+              <div class="activity-feed-item">
+                <span class="activity-feed-dot" style="background-color: var(--status-emerald);"></span>
+                <div class="activity-feed-content">
+                  <div><strong>Sarah Jenkins, CPA</strong> signed off on September reconciliations for <strong>Acme Financial LLC</strong>.</div>
+                  <div class="activity-feed-time">14 minutes ago • Reconciled</div>
+                </div>
+              </div>
+
+              <div class="activity-feed-item">
+                <span class="activity-feed-dot" style="background-color: #3b82f6;"></span>
+                <div class="activity-feed-content">
+                  <div><strong>Automated Bank Sync</strong> imported 482 transactions for <strong>Vertex AI Solutions</strong> via Chase Commercial API.</div>
+                  <div class="activity-feed-time">1 hour ago • Bank Ingestion</div>
+                </div>
+              </div>
+
+              <div class="activity-feed-item">
+                <span class="activity-feed-dot" style="background-color: #f59e0b;"></span>
+                <div class="activity-feed-content">
+                  <div>IRS Form 1120-S draft ready for partner sign-off for <strong>Nexus BioTech Corp</strong>.</div>
+                  <div class="activity-feed-time">3 hours ago • Tax Filing</div>
+                </div>
+              </div>
+
+              <div class="activity-feed-item">
+                <span class="activity-feed-dot" style="background-color: var(--admin-primary);"></span>
+                <div class="activity-feed-content">
+                  <div>Monthly retainer payment of <strong>$5,200.00</strong> collected from <strong>Horizon Logistics Group</strong>.</div>
+                  <div class="activity-feed-time">Today, 8:00 AM • Billing</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ======================================================================
+           TAB 2: CLIENT PORTFOLIO
+           ====================================================================== -->
+      <section class="admin-tab-panel" id="admin-tab-clients">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2 class="admin-card-title">Complete Client Portfolio Directory</h2>
+              <span class="chart-card-desc">42 Active Business Retainers • $184,500 MRR Total</span>
+            </div>
+            <button class="btn-new-client" onclick="alert('Adding new corporate client...')">+ New Corporate Account</button>
+          </div>
+
+          <div class="admin-table-container">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Client Organization</th>
+                  <th>Contact Email</th>
+                  <th>Lead Practitioner</th>
+                  <th>Monthly Retainer</th>
+                  <th>Engagement Tier</th>
+                  <th>Books Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Acme Financial LLC</strong></td>
+                  <td>eleanor@acmefinancial.com</td>
+                  <td>Sarah Jenkins, CPA</td>
+                  <td class="tx-amount">$5,500/mo</td>
+                  <td><span class="tag-badge tier-advisory">Full Advisory</span></td>
+                  <td><span class="status-pill completed">Up to Date</span></td>
+                  <td><a href="userdashboard.html" class="btn-table-action">Open Portal</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Nexus BioTech Corp</strong></td>
+                  <td>finance@nexusbio.com</td>
+                  <td>David Miller, CPA</td>
+                  <td class="tx-amount">$7,200/mo</td>
+                  <td><span class="tag-badge tier-controller">Controller</span></td>
+                  <td><span class="status-pill completed">Up to Date</span></td>
+                  <td><button class="btn-table-action" onclick="alert('Viewing Nexus Portal...')">Open Portal</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Vertex AI Solutions</strong></td>
+                  <td>founders@vertexai.tech</td>
+                  <td>Elena Rostova</td>
+                  <td class="tx-amount">$6,800/mo</td>
+                  <td><span class="tag-badge tier-advisory">Full Advisory</span></td>
+                  <td><span class="status-pill pending">Audit Needed</span></td>
+                  <td><button class="btn-table-action" onclick="alert('Viewing Vertex Portal...')">Open Portal</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Horizon Logistics Group</strong></td>
+                  <td>ops@horizonlogistics.io</td>
+                  <td>Robert Vance</td>
+                  <td class="tx-amount">$4,500/mo</td>
+                  <td><span class="tag-badge tier-compliance">Tax &amp; Compliance</span></td>
+                  <td><span class="status-pill completed">Up to Date</span></td>
+                  <td><button class="btn-table-action" onclick="alert('Viewing Horizon Portal...')">Open Portal</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 3: CPA TEAM ALLOCATION
+           ====================================================================== -->
+      <section class="admin-tab-panel" id="admin-tab-team">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2 class="admin-card-title">CPA Practice Allocation &amp; Capacity Management</h2>
+              <span class="chart-card-desc">Workload distribution and billable ratios for firm partners and controllers</span>
+            </div>
+            <button class="btn-new-client" onclick="alert('Invite Senior Controller modal triggered.')">+ Add Practitioner</button>
+          </div>
+
+          <div class="admin-table-container">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Practitioner</th>
+                  <th>Role &amp; Credential</th>
+                  <th>Active Accounts</th>
+                  <th>Capacity</th>
+                  <th>Billable Ratio</th>
+                  <th>Performance Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                      <img src="assets/avatar-1.webp" alt="Sarah Jenkins" style="width:34px; height:34px; border-radius:50%; object-fit:cover;">
+                      <strong>Sarah Jenkins, CPA</strong>
+                    </div>
+                  </td>
+                  <td>Senior Partner / Controller</td>
+                  <td>12 Clients</td>
+                  <td>88% (Near Limit)</td>
+                  <td class="tx-amount inflow">96.4%</td>
+                  <td><span class="status-pill completed">5.0 ★ Top Advisor</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                      <img src="assets/avatar-2.webp" alt="David Miller" style="width:34px; height:34px; border-radius:50%; object-fit:cover;">
+                      <strong>David Miller, CPA</strong>
+                    </div>
+                  </td>
+                  <td>Director of Tax Advisory</td>
+                  <td>10 Clients</td>
+                  <td>76% (Available)</td>
+                  <td class="tx-amount inflow">94.1%</td>
+                  <td><span class="status-pill completed">4.9 ★ Excellent</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                      <img src="assets/avatar-3.webp" alt="Elena Rostova" style="width:34px; height:34px; border-radius:50%; object-fit:cover;">
+                      <strong>Elena Rostova</strong>
+                    </div>
+                  </td>
+                  <td>Fractional CFO Specialist</td>
+                  <td>13 Clients</td>
+                  <td>92% (High)</td>
+                  <td class="tx-amount inflow">98.2%</td>
+                  <td><span class="status-pill completed">5.0 ★ Top Advisor</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 4: COMPLIANCE & FILINGS
+           ====================================================================== -->
+      <section class="admin-tab-panel" id="admin-tab-compliance">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2 class="admin-card-title">Practice Statutory Filing Master Schedule</h2>
+              <span class="chart-card-desc">Federal &amp; State compliance monitoring across all corporate entities</span>
+            </div>
+          </div>
+
+          <div class="admin-table-container">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Filing Type</th>
+                  <th>Client</th>
+                  <th>Statutory Due Date</th>
+                  <th>Assigned Lead</th>
+                  <th>Preparation Status</th>
+                  <th>IRS / State Dispatch</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Q4 Estimated Corporate Tax</strong></td>
+                  <td>Acme Financial LLC</td>
+                  <td>Oct 15, 2026</td>
+                  <td>Sarah Jenkins, CPA</td>
+                  <td><span class="status-pill pending">Voucher Ready</span></td>
+                  <td><button class="btn-table-action" onclick="alert('Transmitting voucher to IRS e-file gateway...')">Submit to IRS</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Form 1120-S Corporate Return</strong></td>
+                  <td>Nexus BioTech Corp</td>
+                  <td>Oct 15, 2026</td>
+                  <td>David Miller, CPA</td>
+                  <td><span class="status-pill completed">Audited &amp; Signed</span></td>
+                  <td><button class="btn-table-action" onclick="alert('Transmitting return to IRS e-file gateway...')">Submit to IRS</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Form 941 Quarterly Payroll</strong></td>
+                  <td>Horizon Logistics Group</td>
+                  <td>Oct 31, 2026</td>
+                  <td>Robert Vance</td>
+                  <td><span class="status-pill completed">Reconciled</span></td>
+                  <td><button class="btn-table-action" onclick="alert('Transmitting payroll return...')">Submit to State</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 5: BILLING & PRACTICE REVENUE
+           ====================================================================== -->
+      <section class="admin-tab-panel" id="admin-tab-billing">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2 class="admin-card-title">Practice Retainer Collections &amp; Invoicing</h2>
+              <span class="chart-card-desc">Monthly Recurring Revenue (MRR) automated credit card and ACH billing</span>
+            </div>
+            <button class="btn-new-client" onclick="alert('Triggering batch automated retainer run...')">Execute Monthly Batch</button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px;">
+            <div class="kpi-card">
+              <span class="kpi-label">Current MRR</span>
+              <div class="kpi-value" style="font-size: 1.6rem; color: var(--admin-primary);">$184,500.00</div>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">From 42 active client retainers</span>
+            </div>
+            <div class="kpi-card">
+              <span class="kpi-label">Collections Rate</span>
+              <div class="kpi-value" style="font-size: 1.6rem; color: var(--status-emerald);">99.2%</div>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Auto-ACH debit enabled</span>
+            </div>
+            <div class="kpi-card">
+              <span class="kpi-label">Average Retainer</span>
+              <div class="kpi-value" style="font-size: 1.6rem; color: var(--text-dark);">$4,392.00</div>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Per client / month</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 6: AUDIT TRAIL
+           ====================================================================== -->
+      <section class="admin-tab-panel" id="admin-tab-audit">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2 class="admin-card-title">AICPA SOC 2 Compliance &amp; Immutable Audit Trail</h2>
+              <span class="chart-card-desc">Cryptographically verified logs of all practitioner ledger modifications</span>
+            </div>
+            <button class="btn-topbar-action" onclick="alert('Exporting verified SOC 2 audit zip bundle...')">Export Certified Log</button>
+          </div>
+
+          <div class="activity-feed-list" style="margin-top: 14px;">
+            <div class="activity-feed-item">
+              <span class="activity-feed-dot" style="background-color: var(--status-emerald);"></span>
+              <div class="activity-feed-content">
+                <div><strong>[AUDIT-9921]</strong> User <em>Sarah Jenkins, CPA (ID: CPA-04)</em> approved journal entry #JE-2026-901 for <strong>Acme Financial LLC</strong>. Amount: $32,500.00.</div>
+                <div class="activity-feed-time">2026-10-02 14:22:04 EST • SHA-256 Verified</div>
+              </div>
+            </div>
+
+            <div class="activity-feed-item">
+              <span class="activity-feed-dot" style="background-color: #3b82f6;"></span>
+              <div class="activity-feed-content">
+                <div><strong>[AUDIT-9920]</strong> Automated Chase Plaid Connector ingested 482 bank records for <strong>Vertex AI Solutions</strong>.</div>
+                <div class="activity-feed-time">2026-10-02 13:00:11 EST • API Webhook Ingestion</div>
+              </div>
+            </div>
+
+            <div class="activity-feed-item">
+              <span class="activity-feed-dot" style="background-color: #f59e0b;"></span>
+              <div class="activity-feed-content">
+                <div><strong>[AUDIT-9919]</strong> User <em>David Miller, CPA (ID: CPA-08)</em> drafted IRS Form 1120-S Schedule K-1 for <strong>Nexus BioTech Corp</strong>.</div>
+                <div class="activity-feed-time">2026-10-02 11:15:39 EST • Statutory Draft</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 7: PRACTICE SETTINGS
+           ====================================================================== -->
+      <section class="admin-tab-panel" id="admin-tab-settings">
+        <div class="admin-card">
+          <h2 class="admin-card-title" style="margin-bottom: 18px;">Firm Governance &amp; Practice Settings</h2>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="signup-field-group">
+              <label class="signup-label">Practice Legal Name</label>
+              <input type="text" class="signup-input" value="Stackly Financial Services Inc." readonly style="background-color: #f7faf7;">
+            </div>
+            <div class="signup-field-group">
+              <label class="signup-label">State Board of Accountancy License #</label>
+              <input type="text" class="signup-input" value="AICPA-NY-094021" readonly style="background-color: #f7faf7;">
+            </div>
+            <div class="signup-field-group">
+              <label class="signup-label">Managing Partner</label>
+              <input type="text" class="signup-input" value="Marcus Sterling, CPA" readonly style="background-color: #f7faf7;">
+            </div>
+            <div class="signup-field-group">
+              <label class="signup-label">Encryption Standard</label>
+              <input type="text" class="signup-input" value="AES-256 Cloud Vault (SOC 2 Type II)" readonly style="background-color: #f7faf7;">
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <button class="btn-topbar-action" onclick="alert('Practice configuration verified and saved.')">Save Firm Settings</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Inline Admin Dashboard Scripts -->
+  <script>
+    // Tab switching
+    function switchAdminTab(tabId) {
+      document.querySelectorAll('.admin-tab-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      document.querySelectorAll('.admin-nav-item').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-tab') === tabId) {
+          btn.classList.add('active');
+        }
+      });
+      const activePanel = document.getElementById(tabId);
+      if (activePanel) {
+        activePanel.classList.add('active');
+      }
+    }
+
+    document.querySelectorAll('.admin-nav-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+        if (tabId) {
+          switchAdminTab(tabId);
+          // auto close mobile sidebar
+          const sidebar = document.getElementById('admin-sidebar');
+          if (sidebar) sidebar.classList.remove('open');
+        }
+      });
+    });
+
+    // Mobile sidebar toggle
+    const openBtn = document.getElementById('admin-sidebar-open');
+    const closeBtn = document.getElementById('admin-sidebar-close');
+    const sidebar = document.getElementById('admin-sidebar');
+
+    if (openBtn && sidebar) {
+      openBtn.addEventListener('click', () => sidebar.classList.add('open'));
+    }
+    if (closeBtn && sidebar) {
+      closeBtn.addEventListener('click', () => sidebar.classList.remove('open'));
+    }
+
+    // Timeframe filter for practice chart
+    const adminPeriodData = {
+      'month': {
+        clients: '42',
+        mrr: '$184,500',
+        filings: '8',
+        capacity: '84.6%',
+        bars: ['60%', '66%', '72%', '80%', '88%', '94%']
+      },
+      'quarter': {
+        clients: '42',
+        mrr: '$542,000',
+        filings: '24',
+        capacity: '86.2%',
+        bars: ['70%', '75%', '82%', '86%', '92%', '98%']
+      },
+      'year': {
+        clients: '42',
+        mrr: '$2,214,000',
+        filings: '96',
+        capacity: '85.4%',
+        bars: ['52%', '60%', '71%', '79%', '89%', '96%']
+      }
+    };
+
+    document.querySelectorAll('.period-pill[data-admin-period]').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.period-pill[data-admin-period]').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const period = pill.getAttribute('data-admin-period');
+        const d = adminPeriodData[period];
+        if (d) {
+          document.getElementById('admin-kpi-clients').textContent = d.clients;
+          document.getElementById('admin-kpi-mrr').textContent = d.mrr;
+          document.getElementById('admin-kpi-filings').textContent = d.filings;
+          document.getElementById('admin-kpi-capacity').textContent = d.capacity;
+
+          const barContainers = document.querySelectorAll('#admin-revenue-chart .practice-bar-container');
+          barContainers.forEach((bar, idx) => {
+            if (d.bars[idx]) {
+              bar.style.height = d.bars[idx];
+            }
+          });
+        }
+      });
+    });
+
+    // Real-time Search filter on Client Table
+    const searchInput = document.getElementById('admin-global-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+        const rows = document.querySelectorAll('.admin-table tbody tr');
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(query) ? '' : 'none';
+        });
+      });
+    }
+
+    // Admin Notifications Dropdown
+    const notifBtn = document.getElementById('admin-notif-toggle');
+    const notifDropdown = document.getElementById('admin-notif-dropdown');
+    const notifIndicator = notifBtn ? notifBtn.querySelector('.notif-indicator') : null;
+    const markReadBtn = document.getElementById('admin-mark-read');
+
+    if (notifBtn && notifDropdown) {
+      notifBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notifDropdown.classList.toggle('show');
+        if (typeof profileDropdown !== 'undefined' && profileDropdown) {
+          profileDropdown.classList.remove('show');
+        }
+      });
+    }
+
+    if (markReadBtn && notifIndicator) {
+      markReadBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notifIndicator.style.display = 'none';
+        markReadBtn.textContent = 'All read';
+        markReadBtn.style.color = '#94a3b8';
+      });
+    }
+
+    // Admin Profile Dropdown
+    const profileBtn = document.getElementById('admin-profile-toggle');
+    const profileDropdown = document.getElementById('admin-profile-dropdown');
+
+    function closeAdminProfileDropdown() {
+      if (profileDropdown) profileDropdown.classList.remove('show');
+    }
+
+    if (profileBtn && profileDropdown) {
+      profileBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        profileDropdown.classList.toggle('show');
+        if (notifDropdown) notifDropdown.classList.remove('show');
+      });
+    }
+
+    // Close dropdowns on outside click
+    document.addEventListener('click', (e) => {
+      if (notifDropdown && !notifDropdown.contains(e.target) && notifBtn && !notifBtn.contains(e.target)) {
+        notifDropdown.classList.remove('show');
+      }
+      if (profileDropdown && !profileDropdown.contains(e.target) && profileBtn && !profileBtn.contains(e.target)) {
+        profileDropdown.classList.remove('show');
+      }
+    });
+  </script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

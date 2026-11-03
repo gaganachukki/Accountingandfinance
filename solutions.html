@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solutions — Stackly Accounting & Finance</title>
+  <meta name="description" content="Purpose-built financial solutions for startups, high-growth scaleups, mid-market enterprises, and e-commerce brands.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/solutions.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link active">Solutions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-actions-mobile">
+            <a href="login.html" class="btn btn-secondary">Log In</a>
+            <a href="consultation.html" class="btn btn-primary">Book a Consultation</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">LOGIN</a>
+        <a href="consultation.html" class="btn btn-primary">
+          <span>BOOK A CONSULTATION</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section (Solutions Page)
+       ========================================================================== -->
+  <section class="solutions-hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="section-badge">Tailored Solutions</div>
+        <h1 class="hero-title">Financial solutions built around your business.</h1>
+        <p class="hero-description">
+          Whether you are bootstrapping a seed-stage startup, scaling multi-state operations, or preparing for enterprise M&A, our specialized financial frameworks provide the exact guidance you need.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#stage-solutions" class="btn btn-primary">
+            <span>Explore Solutions</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#onboarding-process" class="btn btn-secondary">How We Work →</a>
+        </div>
+
+        <div class="hero-trust-notes">
+          <span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            AICPA Compliant
+          </span>
+          <span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            SOC 2 Type II Certified
+          </span>
+          <span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            Dedicated US CPAs
+          </span>
+        </div>
+      </div>
+
+      <div class="solutions-hero-image-wrap reveal reveal-delay-2">
+        <img src="assets/solutions-hero.webp" alt="Stackly tailored advisory consultation with tech founders" class="solutions-hero-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Strategic Advantage Split
+       ========================================================================== -->
+  <section class="strategic-advantage-section">
+    <div class="container advantage-grid">
+      <div class="advantage-content reveal">
+        <div class="section-badge">Strategic Advantage</div>
+        <h2 class="section-title">You built a great business. We build its financial engine.</h2>
+        <p>
+          Managing complex cap tables, revenue recognition, multi-state tax nexus, and burn runway requires more than off-the-shelf software. We combine seasoned CFO acumen with automated cloud architecture to eliminate financial friction.
+        </p>
+
+        <div class="advantage-stats-stack">
+          <div class="advantage-stat-box">
+            <div class="advantage-stat-left">
+              <h4>Average Tax Liability Saved</h4>
+              <p>Proactive R&D credits, deductions & entity structuring</p>
+            </div>
+            <div class="advantage-stat-badge">35% Reduction</div>
+          </div>
+
+          <div class="advantage-stat-box">
+            <div class="advantage-stat-left">
+              <h4>Audit-Ready Ledger Precision</h4>
+              <p>Zero discrepancies in monthly closes & historical books</p>
+            </div>
+            <div class="advantage-stat-badge">100% Compliant</div>
+          </div>
+
+          <div class="advantage-stat-box">
+            <div class="advantage-stat-left">
+              <h4>Reclaimed Executive Time</h4>
+              <p>Eliminate manual reconciliation and financial busywork</p>
+            </div>
+            <div class="advantage-stat-badge">120+ Hrs / Mo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="advantage-image-wrap reveal reveal-delay-2">
+        <img src="assets/skyline-boardroom.webp" alt="Corporate boardroom overlooking modern city skyline" class="advantage-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Solutions by Company Stage (4 Alternating Cards)
+       ========================================================================== -->
+  <section id="stage-solutions" class="stage-solutions-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Solutions by Stage</div>
+        <h2 class="section-title">Financial expertise tailored for every stage</h2>
+        <p class="section-subtitle">
+          Purpose-built financial operational stacks designed specifically for your industry vertical and growth inflection point.
+        </p>
+      </div>
+
+      <div class="stage-cards-stack">
+        <!-- Stage 01: Startups -->
+        <div class="stage-solution-card reveal">
+          <div class="stage-card-grid">
+            <div class="stage-card-body">
+              <div class="section-badge">01 • Early-Stage Startups</div>
+              <h3 class="stage-card-title">Build a resilient foundation before you scale</h3>
+              <p class="stage-card-desc">
+                Early-stage companies need lean, audit-ready bookkeeping, runway modeling, and R&D tax credit captures to maximize every dollar of investor capital.
+              </p>
+
+              <div class="stage-pills-grid">
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Burn Rate & Runway Modeling</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Federal & State R&D Credits</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Cap Table & SAFE Note Tracking</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Frictionless Cloud ERP Setup</span>
+                </div>
+              </div>
+
+              <div class="stage-industry-tags">
+                Target Verticals: SaaS • Fintech • AI Startups • Seed to Series A
+              </div>
+
+              <a href="contact.html" class="btn btn-primary">
+                <span>Explore Startup Solutions</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="stage-card-image-wrap">
+              <img src="assets/startup-founders.webp" alt="Startup founders planning company finances" class="stage-card-image" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 02: Venture-Backed Scaleups (Reversed) -->
+        <div class="stage-solution-card reveal">
+          <div class="stage-card-grid reverse">
+            <div class="stage-card-image-wrap">
+              <img src="assets/consulting-pair.webp" alt="Scaleup executives analyzing financial modeling" class="stage-card-image" loading="lazy">
+            </div>
+
+            <div class="stage-card-body">
+              <div class="section-badge">02 • Venture-Backed Scaleups</div>
+              <h3 class="stage-card-title">Stay audit-ready as your business accelerates</h3>
+              <p class="stage-card-desc">
+                Scaling revenue creates operational complexity. We implement multi-departmental budgeting, advanced revenue recognition (ASC 606), and board reporting.
+              </p>
+
+              <div class="stage-pills-grid">
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>ASC 606 Revenue Recognition</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>13-Week Cash Forecasting</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Budget vs. Actual Variance</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Investor Diligence Readiness</span>
+                </div>
+              </div>
+
+              <div class="stage-industry-tags">
+                Target Verticals: Series A to C • Enterprise Tech • Multi-Department Scale
+              </div>
+
+              <a href="contact.html" class="btn btn-primary">
+                <span>Explore Scaleup Solutions</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 03: Mid-Market Firms -->
+        <div class="stage-solution-card reveal">
+          <div class="stage-card-grid">
+            <div class="stage-card-body">
+              <div class="section-badge">03 • Mid-Market Firms</div>
+              <h3 class="stage-card-title">Streamline multi-entity complexity and reduce liabilities</h3>
+              <p class="stage-card-desc">
+                For mature organizations managing multiple corporate subsidiaries, high transaction volumes, and complex vendor billing pipelines.
+              </p>
+
+              <div class="stage-pills-grid">
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Multi-Entity Consolidation</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Intercompany Eliminations</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Executive Compensation Structuring</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Audit Defense Representation</span>
+                </div>
+              </div>
+
+              <div class="stage-industry-tags">
+                Target Verticals: $10M - $100M ARR • Multi-Entity • Mature Operations
+              </div>
+
+              <a href="contact.html" class="btn btn-primary">
+                <span>Explore Mid-Market Solutions</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="stage-card-image-wrap">
+              <img src="assets/midmarket-meeting.webp" alt="Mid-market leadership team reviewing financial governance" class="stage-card-image" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 04: E-Commerce & Retail (Reversed) -->
+        <div class="stage-solution-card reveal">
+          <div class="stage-card-grid reverse">
+            <div class="stage-card-image-wrap">
+              <img src="assets/ecommerce-consult.webp" alt="E-commerce founders optimizing inventory and sales tax" class="stage-card-image" loading="lazy">
+            </div>
+
+            <div class="stage-card-body">
+              <div class="section-badge">04 • E-Commerce & Digital Commerce</div>
+              <h3 class="stage-card-title">Automate multi-channel sales tax and inventory costing</h3>
+              <p class="stage-card-desc">
+                Selling across Shopify, Amazon, and wholesale channels creates complex tax and inventory reconciliation challenges that we solve automatically.
+              </p>
+
+              <div class="stage-pills-grid">
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Automated Multi-State Nexus</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Landed COGS & Inventory Valuation</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Stripe & Shopify Reconciliation</span>
+                </div>
+                <div class="stage-pill-item">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Multi-Currency Exchange Audits</span>
+                </div>
+              </div>
+
+              <div class="stage-industry-tags">
+                Target Verticals: Shopify Plus • Amazon FBA • DTC Brands • Wholesale
+              </div>
+
+              <a href="contact.html" class="btn btn-primary">
+                <span>Explore E-Commerce Solutions</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Dedicated Vertical Playbooks (4 Cards + 2 Photos)
+       ========================================================================== -->
+  <section class="industry-playbooks-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Industry Expertise</div>
+        <h2 class="section-title">Dedicated vertical expertise across key industries</h2>
+        <p class="section-subtitle">
+          We understand the unique regulatory landscapes, accounting standards, and margin drivers of your sector.
+        </p>
+      </div>
+
+      <div class="industry-cards-grid">
+        <div class="industry-card reveal">
+          <div class="industry-card-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <h3 class="industry-card-title">SaaS & Software</h3>
+          <p class="industry-card-text">
+            Recurring subscription revenue, deferred revenue amortization, cohort churn tracking, and investor SaaS metrics packs.
+          </p>
+        </div>
+
+        <div class="industry-card reveal reveal-delay-1">
+          <div class="industry-card-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="industry-card-title">Professional Services</h3>
+          <p class="industry-card-text">
+            Utilization benchmarks, unbilled work-in-progress (WIP), billable margin tracking, and partner capital draw schedules.
+          </p>
+        </div>
+
+        <div class="industry-card reveal reveal-delay-2">
+          <div class="industry-card-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="industry-card-title">Healthcare & Biotech</h3>
+          <p class="industry-card-text">
+            HIPAA-compliant workflows, clinical trial cost segregation, NIH grant tracking, and specialized equipment depreciation.
+          </p>
+        </div>
+
+        <div class="industry-card reveal reveal-delay-3">
+          <div class="industry-card-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="industry-card-title">Real Estate & Development</h3>
+          <p class="industry-card-text">
+            Job costing, Section 1031 tax-deferred exchanges, cost segregation studies, and investor waterfall distribution models.
+          </p>
+        </div>
+      </div>
+
+      <!-- Playbook Team Photos -->
+      <div class="playbooks-photos-row reveal">
+        <img src="assets/advisor-support.webp" alt="Senior industry CPA advising enterprise client" class="playbook-photo" loading="lazy">
+        <img src="assets/team-group.webp" alt="Stackly specialized vertical advisory team" class="playbook-photo" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Flexible Engagement Plans (4 Cards)
+       ========================================================================== -->
+  <section class="plans-pricing-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Engagement Plans</div>
+        <h2 class="section-title">Flexible support built around your budget & pace</h2>
+        <p class="section-subtitle">
+          Transparent, fixed-fee monthly pricing designed to scale alongside your organization without hidden fees.
+        </p>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Plan 1 -->
+        <div class="plan-card reveal">
+          <div class="plan-header">
+            <h3 class="plan-title">Starter Foundation</h3>
+            <p class="plan-tagline">For pre-revenue & seed startups</p>
+          </div>
+          <ul class="plan-features-list">
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Monthly ledger reconciliation & categorization</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Standard P&L & Balance Sheet delivery</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Annual federal corporate tax return (1120/1120-S)</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Dedicated staff bookkeeper & portal support</span>
+            </li>
+          </ul>
+          <div class="plan-footer">
+            <a href="contact.html" class="btn btn-secondary">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Plan 2 (Highlighted) -->
+        <div class="plan-card highlighted reveal reveal-delay-1">
+          <div class="plan-badge-top">Most Popular</div>
+          <div class="plan-header">
+            <h3 class="plan-title">Growth Scale</h3>
+            <p class="plan-tagline">For scaling scaleups ($1M-$10M)</p>
+          </div>
+          <ul class="plan-features-list">
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Weekly automated transaction reconciliations</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>13-week dynamic rolling cash flow forecasts</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Multi-state sales tax nexus filing & R&D capture</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Dedicated Senior CPA + priority Slack channel</span>
+            </li>
+          </ul>
+          <div class="plan-footer">
+            <a href="contact.html" class="btn btn-primary">Choose Growth Scale</a>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan-card reveal reveal-delay-2">
+          <div class="plan-header">
+            <h3 class="plan-title">Fractional CFO</h3>
+            <p class="plan-tagline">Executive guidance & modeling</p>
+          </div>
+          <ul class="plan-features-list">
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Dedicated fractional CFO & executive reviews</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Board meeting packages & investor reporting decks</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Capital fundraising modeling & diligence rooms</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Weekly CFO syncs & direct phone access</span>
+            </li>
+          </ul>
+          <div class="plan-footer">
+            <a href="contact.html" class="btn btn-secondary">Schedule CFO Call</a>
+          </div>
+        </div>
+
+        <!-- Plan 4 -->
+        <div class="plan-card reveal reveal-delay-3">
+          <div class="plan-header">
+            <h3 class="plan-title">Custom Enterprise</h3>
+            <p class="plan-tagline">Multi-entity & high complexity</p>
+          </div>
+          <ul class="plan-features-list">
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Custom NetSuite / Sage Intacct integrations</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Intercompany consolidations & elimination ledgers</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>International transfer pricing & tax minimization</span>
+            </li>
+            <li class="plan-feature-item">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Dedicated advisory pod with custom SLAs</span>
+            </li>
+          </ul>
+          <div class="plan-footer">
+            <a href="contact.html" class="btn btn-secondary">Contact Enterprise</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Implementation Process (Onboarding)
+       ========================================================================== -->
+  <section id="onboarding-process" class="onboarding-section">
+    <div class="container onboarding-grid">
+      <div class="onboarding-content reveal">
+        <div class="section-badge">Onboarding Protocol</div>
+        <h2 class="section-title">A smooth transition with zero disruption</h2>
+        <p>
+          Migrating your financial records shouldn't interrupt your business operations. Our 4-step onboarding protocol ensures complete continuity from day one.
+        </p>
+
+        <div class="onboarding-steps-list">
+          <div class="onboarding-step-box">
+            <div class="onboarding-step-num">01</div>
+            <div class="onboarding-step-info">
+              <h4>Comprehensive Financial Diagnostic</h4>
+              <p>We audit historical ledgers, review prior-year tax returns, and map your existing software workflows to spot discrepancies.</p>
+            </div>
+          </div>
+
+          <div class="onboarding-step-box">
+            <div class="onboarding-step-num">02</div>
+            <div class="onboarding-step-info">
+              <h4>Bank-Grade System Integration</h4>
+              <p>We securely connect banking feeds, ERP tools, payroll systems, and invoicing gateways with SOC 2 certified encryption.</p>
+            </div>
+          </div>
+
+          <div class="onboarding-step-box">
+            <div class="onboarding-step-num">03</div>
+            <div class="onboarding-step-info">
+              <h4>Catch-Up & General Ledger Audit</h4>
+              <p>Our specialists reconcile delinquent months, rectify chart of accounts errors, and establish a clean baseline.</p>
+            </div>
+          </div>
+
+          <div class="onboarding-step-box">
+            <div class="onboarding-step-num">04</div>
+            <div class="onboarding-step-info">
+              <h4>Active Advisory & Review Cadence</h4>
+              <p>Deploy real-time reporting dashboards, assign your lead CPA, and begin regular monthly check-in reviews.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary">
+          <span>Schedule Your Onboarding Call</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="onboarding-image-wrap reveal reveal-delay-2">
+        <img src="assets/office-presentation.webp" alt="Stackly onboarding specialist walking team through financial workflows" class="onboarding-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Measurable Impact & Outcomes
+       ========================================================================== -->
+  <section class="impact-outcomes-section">
+    <div class="container impact-outcomes-grid">
+      <div class="impact-image-wrap reveal">
+        <img src="assets/executive-team.webp" alt="Executive team celebrating successful financial audit" class="impact-main-image" loading="lazy">
+      </div>
+
+      <div class="impact-content reveal reveal-delay-2">
+        <div class="section-badge">Measurable Impact</div>
+        <h2 class="section-title">Clarity that translates into measurable ROI</h2>
+        <p>
+          We don't view accounting as an overhead cost—we view it as a high-leverage growth driver that protects capital and uncovers strategic opportunities.
+        </p>
+
+        <div class="roi-metrics-grid">
+          <div class="roi-metric-tile">
+            <div class="roi-metric-val">35%</div>
+            <div class="roi-metric-label">Average tax liability reduction through aggressive legal credit capture</div>
+          </div>
+
+          <div class="roi-metric-tile">
+            <div class="roi-metric-val">100%</div>
+            <div class="roi-metric-label">On-time filing guarantee across federal, state, and local entities</div>
+          </div>
+
+          <div class="roi-metric-tile">
+            <div class="roi-metric-val">120+</div>
+            <div class="roi-metric-label">Hours saved monthly for founders and leadership teams</div>
+          </div>
+
+          <div class="roi-metric-tile">
+            <div class="roi-metric-val">Zero</div>
+            <div class="roi-metric-label">Audit penalties or compliance surprises incurred by our partners</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Frequently Asked Questions (FAQ Accordion)
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">FAQ</div>
+        <h2 class="section-title">Frequently asked questions about our solutions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about scopes, migration, and software partnerships.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" type="button">
+            <span>How do we determine which solution tier is right for us?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              During our initial discovery diagnostic, we assess your monthly transaction volume, entity structure, software stack, and immediate goals (e.g., fundraising, tax optimization, or routine compliance) to recommend the exact tier that fits your needs without paying for unused scope.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question-btn" type="button">
+            <span>Can we upgrade our plan as our company grows?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Yes. Our engagement models are fully modular. As you add employees, expand into new states, or close institutional funding rounds, you can transition seamlessly from foundational bookkeeping to fractional CFO advisory with 30 days notice.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question-btn" type="button">
+            <span>How does your team handle our past accounting errors?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Historical catch-up is one of our core specialties. Our CPA team conducts a line-by-line audit of your prior reconciliations, fixes erroneous balances, re-categorizes misclassified expenses, and amends past tax returns when lucrative refund opportunities exist.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" type="button">
+            <span>Will our internal team still have access to our financial software?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Absolutely. You retain full administrative ownership and 24/7 access to your QuickBooks Online, Xero, or NetSuite instances. We manage the day-to-day reconciliation and reporting while giving your team complete transparency.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question-btn" type="button">
+            <span>Do you provide investor-ready and board-ready reporting packs?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Yes. Our fractional CFOs produce professional executive summary decks, GAAP-compliant statements, 13-week cash flow trajectories, and unit economics breakdowns formatted specifically for venture capital boards and bank credit committees.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question-btn" type="button">
+            <span>How do you protect sensitive financial data?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              We maintain SOC 2 Type II certified protocols, bank-grade 256-bit encryption for all file transfers, hardware-backed multi-factor authentication, and strict non-disclosure agreements signed prior to receiving any company credentials.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Deep Forest Green CTA Banner
+       ========================================================================== -->
+  <section class="dark-cta-section">
+    <div class="container dark-cta-inner reveal">
+      <div class="section-badge dark-cta-badge">Start Your Transformation</div>
+      <h2 class="dark-cta-title">Let's build a stronger financial foundation for your business</h2>
+      <p class="dark-cta-subtitle">
+        Schedule a confidential 30-minute discovery call with a senior partner and discover where your business can save, optimize, and grow.
+      </p>
+
+      <div class="dark-cta-actions">
+        <a href="contact.html" class="btn btn-white">
+          <span>Schedule a Discovery Call</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline-white">Contact Our Office</a>
+      </div>
+
+      <div class="dark-cta-guarantees">
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          No Long-Term Contracts
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Free Diagnostic Review
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          100% Confidential NDA
+        </span>
+      </div>
+    </div>
+  </section>
+
+      <!-- ==========================================================================
+       Footer (Matching exact design)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+          <p class="footer-brand-desc">
+            Professional accounting, bookkeeping and financial management support for ambitious businesses.
+          </p>
+          <p class="footer-brand-sub">
+            Registered accounting practice &amp; commercial finance advisors.
+          </p>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-nav-col">
+          <h5>Services</h5>
+          <ul class="footer-links-list">
+            <li><a href="services.html#bookkeeping">Bookkeeping &amp; Accounting</a></li>
+            <li><a href="services.html#tax">Tax &amp; Compliance</a></li>
+            <li><a href="services.html#payroll">Payroll Support</a></li>
+            <li><a href="services.html#reporting">Financial Reporting</a></li>
+            <li><a href="services.html#advisory">Business Advisory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-nav-col">
+          <h5>Company</h5>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html#industries">Industries We Serve</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="resources.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contact -->
+        <div class="footer-nav-col">
+          <h5>Direct Contact</h5>
+          <div class="footer-contact-details">
+            <a href="mailto:info@stacklyfinance-example.com">info@stacklyfinance-example.com</a>
+            <a href="tel:+15550192834">+1 (555) 019-2834</a>
+            <span>Hours: Mon–Fri 9am–5pm</span>
+          </div>
+          <div class="footer-social-list">
+            <a href="404.html" class="footer-social-icon" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-copy">
+          &copy; 2024 Stackly Financial Services Inc. All rights reserved. Registered accounting practice. Sample illustrative business website.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Client Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

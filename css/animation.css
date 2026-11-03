@@ -1,0 +1,331 @@
+/* ==========================================================================
+   Stackly Accounting & Finance - 3D, Scroll & Jump Animations (animation.css)
+   Pure CSS3 + Hardware Accelerated (GPU) Transitions
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Scroll Progress Bar
+   -------------------------------------------------------------------------- */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5px;
+  width: 0%;
+  background: linear-gradient(90deg, #003527 0%, #10b981 70%, #34d399 100%);
+  z-index: 99999;
+  transition: width 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   2. Jump Animations (Buttons, Badges, Cards)
+   -------------------------------------------------------------------------- */
+@keyframes jumpBounce {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-8px) scale(1.02);
+  }
+  55% {
+    transform: translateY(2px) scale(0.99);
+  }
+  75% {
+    transform: translateY(-3px) scale(1.01);
+  }
+  100% {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+@keyframes jumpAttention {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    transform: translateY(-7px) scale(1.04);
+  }
+  40% {
+    transform: translateY(2px) scale(0.98);
+  }
+  60% {
+    transform: translateY(-3px) scale(1.02);
+  }
+  80% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatGentle3D {
+  0%, 100% {
+    transform: perspective(1200px) translateY(0) rotateX(0deg) rotateY(0deg);
+  }
+  33% {
+    transform: perspective(1200px) translateY(-8px) rotateX(1.5deg) rotateY(-1deg);
+  }
+  66% {
+    transform: perspective(1200px) translateY(-4px) rotateX(-1deg) rotateY(1.5deg);
+  }
+}
+
+@keyframes pulseGlowEffect {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Interactive Jump Classes */
+.jump-on-hover {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+  will-change: transform, box-shadow;
+}
+
+.jump-on-hover:hover {
+  animation: jumpBounce 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  box-shadow: 0 16px 32px rgba(0, 53, 39, 0.14);
+}
+
+/* Micro-interaction on all Primary and CTA buttons */
+.btn, .btn-primary, .btn-secondary, .login-cta-btn {
+  transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.32s ease, background-color 0.25s ease, color 0.25s ease !important;
+}
+
+.btn:hover, .btn-primary:hover, .login-cta-btn:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+}
+
+.btn:active, .btn-primary:active, .login-cta-btn:active {
+  transform: translateY(1px) scale(0.98) !important;
+}
+
+.btn-jump-active {
+  animation: jumpBounce 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* Badges with subtle attention jump */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.section-badge:hover {
+  animation: jumpAttention 0.65s ease;
+}
+
+/* --------------------------------------------------------------------------
+   3. 3D Perspective & Tilt Styling
+   -------------------------------------------------------------------------- */
+.tilt-card-3d {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+  will-change: transform;
+}
+
+.tilt-inner {
+  transform: translateZ(20px);
+  transform-style: preserve-3d;
+}
+
+.tilt-inner-high {
+  transform: translateZ(35px);
+}
+
+/* 3D Floating Hero Preview Card */
+.hero-dashboard-card {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  animation: floatGentle3D 7s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero-dashboard-card:hover {
+  animation-play-state: paused;
+}
+
+.hero-dashboard-card .card-header-bar {
+  transform: translateZ(15px);
+}
+
+.hero-dashboard-card .metrics-row {
+  transform: translateZ(25px);
+}
+
+.hero-dashboard-card .chart-visual-wrapper {
+  transform: translateZ(20px);
+}
+
+/* 3D Metric Pill Boxes */
+.metric-pill-box {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.metric-pill-box:hover {
+  transform: translateY(-5px) translateZ(15px) scale(1.04);
+  box-shadow: 0 10px 22px rgba(0, 53, 39, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   4. Scroll Reveal Animations (3D & GPU Accelerated)
+   -------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: perspective(1200px) translateY(28px) rotateX(8deg);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: perspective(1200px) translateY(0) rotateX(0deg);
+}
+
+/* 3D Slide from Left */
+.reveal-3d-left {
+  opacity: 0;
+  transform: perspective(1200px) translateX(-45px) rotateY(-14deg) scale(0.95);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-3d-left.active {
+  opacity: 1;
+  transform: perspective(1200px) translateX(0) rotateY(0deg) scale(1);
+}
+
+/* 3D Slide from Right */
+.reveal-3d-right {
+  opacity: 0;
+  transform: perspective(1200px) translateX(45px) rotateY(14deg) scale(0.95);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-3d-right.active {
+  opacity: 1;
+  transform: perspective(1200px) translateX(0) rotateY(0deg) scale(1);
+}
+
+/* 3D Zoom In */
+.reveal-3d-zoom {
+  opacity: 0;
+  transform: perspective(1200px) translateZ(-60px) scale(0.92);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-3d-zoom.active {
+  opacity: 1;
+  transform: perspective(1200px) translateZ(0) scale(1);
+}
+
+/* Stagger Delays */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* --------------------------------------------------------------------------
+   5. Interactive 3D Card Hover Depth
+   -------------------------------------------------------------------------- */
+.feature-strip-card,
+.feature-card,
+.service-card,
+.solution-card,
+.insight-card,
+.kpi-card,
+.pricing-card,
+.practice-metric-card,
+.dashboard-card {
+  transition: transform 0.38s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.38s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease !important;
+  will-change: transform, box-shadow;
+}
+
+.feature-strip-card:hover,
+.feature-card:hover,
+.service-card:hover,
+.solution-card:hover,
+.insight-card:hover,
+.kpi-card:hover,
+.pricing-card:hover,
+.practice-metric-card:hover,
+.dashboard-card:hover {
+  transform: translateY(-8px) perspective(1000px) rotateX(2deg) scale(1.015) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 53, 39, 0.15) !important;
+  border-color: #a7f3d0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Floating Jump Back-To-Top Button
+   -------------------------------------------------------------------------- */
+.scroll-top-jump-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--primary, #003527);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 53, 39, 0.25);
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.8);
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease;
+}
+
+.scroll-top-jump-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-top-jump-btn:hover {
+  background: var(--primary-hover, #064534);
+  animation: jumpBounce 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  box-shadow: 0 16px 32px rgba(0, 53, 39, 0.35);
+}
+
+.scroll-top-jump-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.scroll-top-jump-btn:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Mobile overflow protection for 3D translations */
+@media (max-width: 860px) {
+  .reveal-3d-left,
+  .reveal-3d-right {
+    transform: perspective(1200px) translateY(24px) scale(0.97) !important;
+  }
+  .reveal-3d-left.active,
+  .reveal-3d-right.active {
+    transform: perspective(1200px) translateY(0) scale(1) !important;
+  }
+  .hero-dashboard-card {
+    animation: none !important;
+    transform: none !important;
+  }
+}

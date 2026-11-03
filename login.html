@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Stackly Accounting &amp; Finance</title>
+  <meta name="description" content="Sign in to your Stackly financial workspace to access verified ledgers, tax filings, fractional CFO dashboards, and dedicated CPA advisory.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="login-page-body">
+
+    <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-actions-mobile">
+            <a href="login.html" class="btn btn-secondary">Log In</a>
+            <a href="consultation.html" class="btn btn-primary">Book a Consultation</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">LOGIN</a>
+        <a href="consultation.html" class="btn btn-primary">
+          <span>BOOK A CONSULTATION</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Main Login Section
+       ========================================================================= -->
+  <main class="login-main-wrapper" id="main-content">
+    <div class="login-card-container fade-in">
+      
+      <!-- Left Panel: Workspace Summary -->
+      <section class="login-left-panel" aria-label="Workspace Highlights">
+        <div class="login-left-pill">
+          <span class="login-left-pill-dot" aria-hidden="true"></span>
+          <span>YOUR BUSINESS, BETTER ORGANIZED</span>
+        </div>
+
+        <h1 class="login-left-title">Your financial workspace starts here.</h1>
+        <p class="login-left-desc">Sign in to continue to your Stackly account and access the features available to you.</p>
+
+        <div class="login-team-image-box">
+          <img src="assets/login-team.webp" alt="Stackly Financial Advisors collaborating in conference room" class="login-team-img" width="480" height="287" loading="eager">
+        </div>
+
+        <ul class="login-features-list">
+          <li class="login-feature-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <span>Secure, enterprise-grade access</span>
+          </li>
+          <li class="login-feature-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <span>Direct practitioner communication</span>
+          </li>
+          <li class="login-feature-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="23 4 23 10 17 10"/>
+              <polyline points="1 20 1 14 7 14"/>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+            </svg>
+            <span>Reliable accounting workflows</span>
+          </li>
+        </ul>
+
+        <p class="login-left-footer-note">
+          Stackly authentication portal for authorized business clients and verified users.
+        </p>
+      </section>
+
+      <!-- Right Panel: Authentication Form -->
+      <section class="login-right-panel" aria-label="Sign In Form">
+        <span class="login-welcome-tag" id="login-welcome-tag">WELCOME BACK</span>
+        <h2 class="login-form-title" id="login-form-title">Sign in to Stackly.</h2>
+        <p class="login-form-subtitle" id="login-form-subtitle">Enter your account details to continue.</p>
+
+        <!-- Role Selection (User / Admin) -->
+        <div class="role-toggle-group" role="group" aria-label="Select Account Role">
+          <button type="button" class="role-toggle-btn active" data-role="user" id="login-role-user">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>User</span>
+          </button>
+          <button type="button" class="role-toggle-btn" data-role="admin" id="login-role-admin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+            <span>Admin</span>
+          </button>
+        </div>
+
+        <form id="login-form" novalidate autocomplete="on">
+          <input type="hidden" id="login-selected-role" name="role" value="user">
+          <!-- Email Input -->
+          <div class="login-field-group">
+            <label for="login-email" class="login-label">Email Address <span class="asterisk">*</span></label>
+            <div class="login-input-wrapper">
+              <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <input type="email" id="login-email" name="email" class="login-input" placeholder="Enter your email address" required autocomplete="email">
+            </div>
+            <div class="field-error-msg" id="login-email-error" role="alert"></div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="login-field-group">
+            <label for="login-password" class="login-label">Password <span class="asterisk">*</span></label>
+            <div class="login-input-wrapper">
+              <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <input type="password" id="login-password" name="password" class="login-input has-toggle" placeholder="Enter your password" required autocomplete="current-password">
+              <button type="button" class="login-eye-toggle" id="password-toggle" aria-label="Show password">
+                <svg id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+            </div>
+            <div class="field-error-msg" id="login-password-error" role="alert"></div>
+          </div>
+
+          <!-- Options: Remember Me & Forgot Password -->
+          <div class="login-options-row">
+            <label class="login-checkbox-label" for="remember-me">
+              <input type="checkbox" id="remember-me" name="remember-me">
+              <span>Remember me on this device</span>
+            </label>
+            <a href="404.html" class="login-forgot-link">Forgot password?</a>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="login-submit-btn" id="login-submit">
+            <span>SIGN IN</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <!-- Signup Callout -->
+          <div class="login-signup-callout">
+            <span>New to Stackly?</span>
+            <a href="signup.html" class="login-signup-link">CREATE AN ACCOUNT &rarr;</a>
+          </div>
+
+          <!-- Security Callout Box -->
+          <div class="login-security-box">
+            <p class="login-security-text">Protected by industry-standard encryption protocols. Need assistance? Contact our client support team.</p>
+            <div class="login-security-links">
+              <a href="contact.html">Contact Support</a>
+              <span class="dot-sep" aria-hidden="true">&bull;</span>
+              <a href="404.html">Security Standards</a>
+            </div>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       Simplified Login Footer
+       ========================================================================= -->
+    <!-- ==========================================================================
+       Footer (Matching exact design)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+          <p class="footer-brand-desc">
+            Professional accounting, bookkeeping and financial management support for ambitious businesses.
+          </p>
+          <p class="footer-brand-sub">
+            Registered accounting practice &amp; commercial finance advisors.
+          </p>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-nav-col">
+          <h5>Services</h5>
+          <ul class="footer-links-list">
+            <li><a href="services.html#bookkeeping">Bookkeeping &amp; Accounting</a></li>
+            <li><a href="services.html#tax">Tax &amp; Compliance</a></li>
+            <li><a href="services.html#payroll">Payroll Support</a></li>
+            <li><a href="services.html#reporting">Financial Reporting</a></li>
+            <li><a href="services.html#advisory">Business Advisory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-nav-col">
+          <h5>Company</h5>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html#industries">Industries We Serve</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="resources.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contact -->
+        <div class="footer-nav-col">
+          <h5>Direct Contact</h5>
+          <div class="footer-contact-details">
+            <a href="mailto:info@stacklyfinance-example.com">info@stacklyfinance-example.com</a>
+            <a href="tel:+15550192834">+1 (555) 019-2834</a>
+            <span>Hours: Mon–Fri 9am–5pm</span>
+          </div>
+          <div class="footer-social-list">
+            <a href="404.html" class="footer-social-icon" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-copy">
+          &copy; 2024 Stackly Financial Services Inc. All rights reserved. Registered accounting practice. Sample illustrative business website.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Client Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

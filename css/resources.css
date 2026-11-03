@@ -1,0 +1,659 @@
+/* ==========================================================================
+   Finora Accounting & Finance - Resources Page Stylesheet (resources.css)
+   Figma Match: Luxury Forest Green & Sage Palette
+   ========================================================================== */
+
+/* Hero Section (Resources Variant) */
+.resources-hero-section {
+  padding: 80px 0 72px;
+  background-color: var(--accent-sage-subtle);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.resources-hero-image-wrap {
+  position: relative;
+}
+
+.resources-hero-image {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Search & Category Filter Bar
+   ========================================================================== */
+.search-filter-section {
+  padding: 40px 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-filter-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.search-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.search-input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input-box svg {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.resources-search-input {
+  width: 100%;
+  padding: 16px 20px 16px 50px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: #fafdfa;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: var(--transition);
+}
+
+.resources-search-input:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+  box-shadow: 0 0 0 4px rgba(0, 53, 39, 0.08);
+}
+
+.filter-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-pill-btn {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 8px 18px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-pill-btn:hover {
+  background-color: var(--accent-sage);
+  color: var(--primary);
+  border-color: #bcd4be;
+}
+
+.filter-pill-btn.active {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 53, 39, 0.15);
+}
+
+/* ==========================================================================
+   Section: Featured Article / Lead Story Spotlight
+   ========================================================================== */
+.featured-story-section {
+  padding: 90px 0;
+  background-color: var(--white);
+}
+
+.featured-story-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  transition: var(--transition);
+}
+
+.featured-story-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: #bcd4be;
+}
+
+.featured-image-wrap {
+  position: relative;
+  height: 100%;
+  min-height: 380px;
+}
+
+.featured-story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-content-body {
+  padding: 52px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-category-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  background-color: var(--accent-sage);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.featured-title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.featured-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.featured-meta {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-bottom: 28px;
+}
+
+/* ==========================================================================
+   Section: 9-Card Resource Article Grid
+   ========================================================================== */
+.articles-grid-section {
+  padding: 104px 0;
+  background-color: var(--accent-sage-subtle);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resource-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.resource-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: #bcd4be;
+}
+
+.resource-thumbnail-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--accent-sage);
+}
+
+.resource-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.resource-card:hover .resource-thumbnail {
+  transform: scale(1.04);
+}
+
+.resource-card-body {
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.resource-cat-tag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  background-color: var(--accent-sage);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+.resource-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.resource-card-snippet {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.resource-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* ==========================================================================
+   Section: Daily Habits Split
+   ========================================================================== */
+.daily-habits-section {
+  padding: 104px 0;
+  background-color: var(--white);
+}
+
+.habits-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.habits-content p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.habits-tiles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.habit-tile {
+  background-color: var(--accent-mint-tint);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px 18px;
+  transition: var(--transition);
+}
+
+.habit-tile:hover {
+  background-color: var(--white);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.habit-tile h4 {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.habit-tile p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.habits-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Tax Documentation Split
+   ========================================================================== */
+.tax-docs-section {
+  padding: 104px 0;
+  background-color: var(--accent-sage);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tax-docs-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.tax-docs-content p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.quote-callout-box {
+  background-color: var(--white);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+  margin-bottom: 26px;
+  box-shadow: var(--shadow-sm);
+}
+
+.quote-callout-box h5 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.quote-callout-box blockquote {
+  font-style: italic;
+  font-size: 0.94rem;
+  color: var(--text-dark);
+  line-height: 1.55;
+}
+
+.tax-docs-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Financial Modeling Split
+   ========================================================================== */
+.modeling-section {
+  padding: 104px 0;
+  background-color: var(--white);
+}
+
+.modeling-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.modeling-content p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.modeling-items-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.modeling-item-bar {
+  background-color: #fafdfa;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition);
+}
+
+.modeling-item-bar:hover {
+  background-color: var(--white);
+  border-color: var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transform: translateX(4px);
+}
+
+.modeling-item-bar svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.template-download-box {
+  background-color: var(--accent-sage);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.template-download-info h5 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.template-download-info p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.modeling-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Interactive Tools & Downloadable Utilities
+   ========================================================================== */
+.tools-section {
+  padding: 104px 0;
+  background-color: var(--accent-sage);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+.tool-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: #bcd4be;
+}
+
+.tool-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  background-color: var(--accent-sage);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.tool-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.tool-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.tool-alert-strip {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.tool-alert-strip strong {
+  color: var(--primary);
+}
+
+/* Responsive adjustments for Resources */
+@media (max-width: 1080px) {
+  .featured-story-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-image-wrap {
+    min-height: 280px;
+    max-height: 340px;
+  }
+
+  .featured-content-body {
+    padding: 36px 30px;
+  }
+
+  .resource-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .habits-grid,
+  .tax-docs-grid,
+  .modeling-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resource-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .habits-tiles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .template-download-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .tool-alert-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .resources-hero-image,
+  .habits-image,
+  .tax-docs-image,
+  .modeling-image {
+    height: 340px;
+  }
+}
+
+@media (max-width: 560px) {
+  .filter-pills-row {
+    gap: 8px;
+  }
+
+  .filter-pill-btn {
+    padding: 6px 14px;
+    font-size: 0.78rem;
+  }
+
+  .featured-content-body {
+    padding: 26px 20px;
+  }
+}

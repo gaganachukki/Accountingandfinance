@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Financial Workspace — Stackly Accounting &amp; Finance</title>
+  <meta name="description" content="Manage real-time reconciled ledgers, financial statements, tax deadlines, and direct CPA advisory in your Stackly client workspace.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/userdashboard.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- ==========================================================================
+       Sidebar Navigation
+       ========================================================================= -->
+  <aside class="dashboard-sidebar" id="dashboard-sidebar">
+    <div class="sidebar-header">
+      <a href="index.html" class="sidebar-brand">
+        <img src="assets/logo.webp" alt="Stackly" class="sidebar-brand-img" />
+      </a>
+      <button class="sidebar-toggle-btn" id="sidebar-close-btn" aria-label="Close sidebar">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Active Client Workspace Badge -->
+    <div class="sidebar-client-badge">
+      <div class="client-avatar-mini">AF</div>
+      <div class="client-meta">
+        <span class="client-company-name">Acme Financial LLC</span>
+        <span class="client-plan-tier">Full Advisory Plan</span>
+      </div>
+    </div>
+
+    <!-- Navigation Menu Items -->
+    <nav class="sidebar-nav" aria-label="Sidebar Navigation">
+      <div class="sidebar-nav-heading">Workspace</div>
+      
+      <button type="button" class="sidebar-item active" data-tab="tab-overview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Overview</span>
+      </button>
+
+      <button type="button" class="sidebar-item" data-tab="tab-financials">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+        <span>Financial Statements</span>
+      </button>
+
+      <button type="button" class="sidebar-item" data-tab="tab-invoices">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        <span>Invoices &amp; Billing</span>
+        <span class="badge-count">2 Due</span>
+      </button>
+
+      <button type="button" class="sidebar-item" data-tab="tab-tax">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span>Tax &amp; Compliance</span>
+        <span class="badge-count urgent">Oct 15</span>
+      </button>
+
+      <button type="button" class="sidebar-item" data-tab="tab-transactions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+        <span>Transactions &amp; Feeds</span>
+      </button>
+
+      <div class="sidebar-nav-heading">Advisory &amp; Support</div>
+
+      <button type="button" class="sidebar-item" data-tab="tab-advisory">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span>CPA Advisory Chat</span>
+        <span class="badge-count">Live</span>
+      </button>
+
+      <button type="button" class="sidebar-item" data-tab="tab-settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        <span>Practice Settings</span>
+      </button>
+    </nav>
+
+    <!-- Sidebar Footer with Assigned Practitioner -->
+    <div class="sidebar-footer">
+      <div class="assigned-cpa-widget">
+        <img src="assets/avatar-1.webp" alt="Sarah Jenkins, Lead CPA" class="assigned-cpa-avatar">
+        <div class="assigned-cpa-meta">
+          <span class="assigned-cpa-name">Sarah Jenkins, CPA</span>
+          <span class="assigned-cpa-role">Dedicated Controller</span>
+        </div>
+      </div>
+      <a href="login.html" class="sidebar-logout-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+        <span>Sign Out</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       Main Workspace Canvas
+       ========================================================================= -->
+  <main class="dashboard-main">
+    
+    <!-- Topbar -->
+    <header class="dashboard-topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle-btn" id="sidebar-open-btn" aria-label="Open sidebar">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="topbar-right">
+
+        <!-- Notification Bell -->
+        <div class="notif-wrapper">
+          <button class="notif-btn" id="notif-toggle-btn" aria-label="View notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="notif-indicator"></span>
+          </button>
+          
+          <div class="notif-dropdown" id="notif-dropdown">
+            <div class="notif-header">
+              <span>Notifications</span>
+              <span style="color: var(--primary); font-size: 0.75rem; cursor: pointer;">Mark all read</span>
+            </div>
+            <ul class="notif-list">
+              <li class="notif-item">
+                <div><strong>Sarah Jenkins (CPA)</strong> approved your September ledger reconciliation.</div>
+                <div class="notif-item-time">12 minutes ago</div>
+              </li>
+              <li class="notif-item">
+                <div>Q4 Estimated Tax calculation ready for approval ($18,400.00).</div>
+                <div class="notif-item-time">2 hours ago</div>
+              </li>
+              <li class="notif-item">
+                <div>Mercury Bank feed automatically synced 14 new expense entries.</div>
+                <div class="notif-item-time">Yesterday</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Action Button -->
+        <a href="#upload" class="btn-topbar-action" onclick="alert('Document upload modal opened. Drag & drop invoices, receipts or tax documents.')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          <span>Upload Receipt</span>
+        </a>
+
+        <!-- Profile Button -->
+        <div class="user-profile-btn" title="Eleanor Vance (Admin)">
+          <div class="user-avatar-circle">EV</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content Tabs -->
+    <div class="dashboard-content-container">
+
+      <!-- ======================================================================
+           TAB 1: OVERVIEW
+           ====================================================================== -->
+      <section class="dashboard-tab-panel active" id="tab-overview">
+        <!-- Welcome Banner -->
+        <div class="dashboard-welcome-banner">
+          <div>
+            <h1 class="banner-title">Welcome back, Eleanor</h1>
+            <p class="banner-subtitle">Acme Financial LLC accounts are fully reconciled through October 2026.</p>
+          </div>
+          <div class="banner-period-group">
+            <button class="period-pill active" data-period="30d">30 Days</button>
+            <button class="period-pill" data-period="q3">Q3 2026</button>
+            <button class="period-pill" data-period="ytd">YTD</button>
+          </div>
+        </div>
+
+        <!-- KPI Cards Grid -->
+        <div class="kpi-cards-grid">
+          <!-- Card 1 -->
+          <div class="kpi-card">
+            <div class="kpi-top-row">
+              <span class="kpi-label">Cash on Hand</span>
+              <div class="kpi-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <line x1="12" y1="8" x2="12" y2="16"></line>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpi-cash">$118,240</div>
+            <div class="kpi-bottom-row">
+              <span class="trend-badge positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                +12.4%
+              </span>
+              <span>vs previous month</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="kpi-card">
+            <div class="kpi-top-row">
+              <span class="kpi-label">Total Revenue</span>
+              <div class="kpi-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpi-revenue">$248,500</div>
+            <div class="kpi-bottom-row">
+              <span class="trend-badge positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                +24.8% YoY
+              </span>
+              <span>healthy trajectory</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="kpi-card">
+            <div class="kpi-top-row">
+              <span class="kpi-label">Operating Expenses</span>
+              <div class="kpi-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpi-expenses">$162,100</div>
+            <div class="kpi-bottom-row">
+              <span class="trend-badge positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                -3.2%
+              </span>
+              <span>under forecast limit</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="kpi-card">
+            <div class="kpi-top-row">
+              <span class="kpi-label">Net Profit Margin</span>
+              <div class="kpi-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpi-margin">34.8%</div>
+            <div class="kpi-bottom-row">
+              <span class="trend-badge positive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                +2.8%
+              </span>
+              <span>above industry benchmark</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Grid Row -->
+        <div class="charts-grid-row">
+          
+          <!-- Primary Chart: Financial Trajectory -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-title-box">
+                <h3 class="chart-card-title">Operating Trajectory (2026)</h3>
+                <span class="chart-card-desc">Monthly Cash Inflow vs. Operating Expenditures</span>
+              </div>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <span class="legend-color-dot dot-revenue"></span>
+                  <span>Revenue</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color-dot dot-expenses"></span>
+                  <span>Expenses</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Bar Chart -->
+            <div class="interactive-bar-chart" id="user-bar-chart">
+              
+              <div class="chart-bar-group">
+                <div class="chart-tooltip">Jan: Rev $185K | Exp $128K</div>
+                <div class="bars-duo-wrapper">
+                  <div class="chart-bar bar-rev" style="height: 55%;"></div>
+                  <div class="chart-bar bar-exp" style="height: 38%;"></div>
+                </div>
+                <span class="chart-month-label">Jan</span>
+              </div>
+
+              <div class="chart-bar-group">
+                <div class="chart-tooltip">Feb: Rev $205K | Exp $142K</div>
+                <div class="bars-duo-wrapper">
+                  <div class="chart-bar bar-rev" style="height: 64%;"></div>
+                  <div class="chart-bar bar-exp" style="height: 44%;"></div>
+                </div>
+                <span class="chart-month-label">Feb</span>
+              </div>
+
+              <div class="chart-bar-group">
+                <div class="chart-tooltip">Mar: Rev $220K | Exp $148K</div>
+                <div class="bars-duo-wrapper">
+                  <div class="chart-bar bar-rev" style="height: 70%;"></div>
+                  <div class="chart-bar bar-exp" style="height: 48%;"></div>
+                </div>
+                <span class="chart-month-label">Mar</span>
+              </div>
+
+              <div class="chart-bar-group">
+                <div class="chart-tooltip">Apr: Rev $215K | Exp $150K</div>
+                <div class="bars-duo-wrapper">
+                  <div class="chart-bar bar-rev" style="height: 68%;"></div>
+                  <div class="chart-bar bar-exp" style="height: 49%;"></div>
+                </div>
+                <span class="chart-month-label">Apr</span>
+              </div>
+
+              <div class="chart-bar-group">
+                <div class="chart-tooltip">May: Rev $235K | Exp $155K</div>
+                <div class="bars-duo-wrapper">
+                  <div class="chart-bar bar-rev" style="height: 78%;"></div>
+                  <div class="chart-bar bar-exp" style="height: 52%;"></div>
+                </div>
+                <span class="chart-month-label">May</span>
+              </div>
+
+              <div class="chart-bar-group">
+                <div class="chart-tooltip">Jun: Rev $248K | Exp $162K</div>
+                <div class="bars-duo-wrapper">
+                  <div class="chart-bar bar-rev" style="height: 86%;"></div>
+                  <div class="chart-bar bar-exp" style="height: 56%;"></div>
+                </div>
+                <span class="chart-month-label">Jun</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Secondary Chart: Expense Distribution -->
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-title-box">
+                <h3 class="chart-card-title">Expense Allocation</h3>
+                <span class="chart-card-desc">Breakdown by Cost Center</span>
+              </div>
+            </div>
+
+            <div class="expense-breakdown-box">
+              <div class="expense-category-item">
+                <div class="cat-label-row">
+                  <span>Payroll &amp; Team</span>
+                  <span>48% ($77,800)</span>
+                </div>
+                <div class="cat-progress-track">
+                  <div class="cat-progress-fill fill-payroll" style="width: 48%;"></div>
+                </div>
+              </div>
+
+              <div class="expense-category-item">
+                <div class="cat-label-row">
+                  <span>Cloud &amp; Software Subscriptions</span>
+                  <span>22% ($35,662)</span>
+                </div>
+                <div class="cat-progress-track">
+                  <div class="cat-progress-fill fill-saas" style="width: 22%;"></div>
+                </div>
+              </div>
+
+              <div class="expense-category-item">
+                <div class="cat-label-row">
+                  <span>Operations &amp; Facilities</span>
+                  <span>16% ($25,936)</span>
+                </div>
+                <div class="cat-progress-track">
+                  <div class="cat-progress-fill fill-ops" style="width: 16%;"></div>
+                </div>
+              </div>
+
+              <div class="expense-category-item">
+                <div class="cat-label-row">
+                  <span>Client Acquisition &amp; Marketing</span>
+                  <span>14% ($22,702)</span>
+                </div>
+                <div class="cat-progress-track">
+                  <div class="cat-progress-fill fill-marketing" style="width: 14%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Deadlines & Transactions Row -->
+        <div class="dual-section-grid">
+          
+          <!-- Upcoming Tax Compliance Deadlines -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <h3 class="panel-title">Tax &amp; Regulatory Filings</h3>
+              <a href="#" class="panel-action-link" onclick="switchDashboardTab('tab-tax'); return false;">View Calendar &rarr;</a>
+            </div>
+
+            <div class="deadline-list">
+              <div class="deadline-item">
+                <div class="deadline-date-box">
+                  <span class="deadline-day">15</span>
+                  <span class="deadline-month">Oct</span>
+                </div>
+                <div class="deadline-info">
+                  <div class="deadline-name">Q4 Estimated Federal Tax</div>
+                  <div class="deadline-desc">Calculated voucher: $18,400.00</div>
+                </div>
+                <span class="status-pill pending">Pending Review</span>
+              </div>
+
+              <div class="deadline-item">
+                <div class="deadline-date-box">
+                  <span class="deadline-day">31</span>
+                  <span class="deadline-month">Oct</span>
+                </div>
+                <div class="deadline-info">
+                  <div class="deadline-name">Form 941 Employer Payroll</div>
+                  <div class="deadline-desc">Reconciled by Sarah Jenkins, CPA</div>
+                </div>
+                <span class="status-pill completed">Ready to File</span>
+              </div>
+
+              <div class="deadline-item">
+                <div class="deadline-date-box">
+                  <span class="deadline-day">15</span>
+                  <span class="deadline-month">Nov</span>
+                </div>
+                <div class="deadline-info">
+                  <div class="deadline-name">State Franchise Return</div>
+                  <div class="deadline-desc">Delaware annual report filing</div>
+                </div>
+                <span class="status-pill pending">In Progress</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Transactions Table -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <h3 class="panel-title">Recent Reconciled Activity</h3>
+              <a href="#" class="panel-action-link" onclick="switchDashboardTab('tab-transactions'); return false;">Open Full Ledger &rarr;</a>
+            </div>
+
+            <div class="data-table-wrapper">
+              <table class="fin-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Vendor / Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Oct 02, 2026</td>
+                    <td><strong>Stripe Payments Europe</strong></td>
+                    <td>Client Retainers</td>
+                    <td class="tx-amount inflow">+$32,500.00</td>
+                    <td><span class="status-pill completed">Reconciled</span></td>
+                  </tr>
+                  <tr>
+                    <td>Oct 01, 2026</td>
+                    <td><strong>Amazon Web Services Inc</strong></td>
+                    <td>Cloud Infrastructure</td>
+                    <td class="tx-amount outflow">-$4,210.50</td>
+                    <td><span class="status-pill completed">Reconciled</span></td>
+                  </tr>
+                  <tr>
+                    <td>Sep 29, 2026</td>
+                    <td><strong>Gusto Payroll System</strong></td>
+                    <td>Bi-Weekly Payroll</td>
+                    <td class="tx-amount outflow">-$38,900.00</td>
+                    <td><span class="status-pill completed">Reconciled</span></td>
+                  </tr>
+                  <tr>
+                    <td>Sep 28, 2026</td>
+                    <td><strong>Salesforce Enterprise</strong></td>
+                    <td>Software Subscriptions</td>
+                    <td class="tx-amount outflow">-$1,450.00</td>
+                    <td><span class="status-pill pending">CPA Review</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dedicated CPA Advisory Banner -->
+        <div class="cpa-advisory-banner">
+          <div class="cpa-banner-left">
+            <img src="assets/avatar-1.webp" alt="Sarah Jenkins, CPA Lead" class="cpa-banner-avatar">
+            <div>
+              <div class="cpa-banner-title">Dedicated CPA Consultation: Sarah Jenkins, CPA</div>
+              <div class="cpa-banner-desc">Next scheduled quarterly tax optimization sync: Thursday, Oct 8 at 10:30 AM EST.</div>
+            </div>
+          </div>
+          <button class="btn-cpa-chat" onclick="switchDashboardTab('tab-advisory');">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Message Controller</span>
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ======================================================================
+           TAB 2: FINANCIAL STATEMENTS
+           ====================================================================== -->
+      <section class="dashboard-tab-panel" id="tab-financials">
+        <div class="statement-card">
+          <div class="chart-card-header">
+            <div>
+              <h2 class="chart-card-title">Profit &amp; Loss Statement (Income Statement)</h2>
+              <span class="chart-card-desc">For the Period Ended September 30, 2026 (Accrual Basis)</span>
+            </div>
+            <button class="btn-topbar-action" onclick="alert('Downloading Certified GAAP Financial Statement (PDF)...')">
+              <span>Export GAAP PDF</span>
+            </button>
+          </div>
+
+          <div class="statement-row header-row">
+            <span>Operating Revenue</span>
+            <span>Q3 2026 Total</span>
+          </div>
+          <div class="statement-row">
+            <span>Advisory Retainers &amp; Consulting</span>
+            <span class="tx-amount">$562,400.00</span>
+          </div>
+          <div class="statement-row">
+            <span>Managed Service Contracts</span>
+            <span class="tx-amount">$179,600.00</span>
+          </div>
+          <div class="statement-row total-row">
+            <span>Gross Revenue</span>
+            <span class="tx-amount inflow">$742,000.00</span>
+          </div>
+
+          <div class="statement-row header-row">
+            <span>Operating Expenditures</span>
+            <span>Q3 2026 Total</span>
+          </div>
+          <div class="statement-row">
+            <span>Executive &amp; Engineering Compensation</span>
+            <span class="tx-amount">($248,600.00)</span>
+          </div>
+          <div class="statement-row">
+            <span>Cloud Infrastructure &amp; Technical Tools</span>
+            <span class="tx-amount">($92,400.00)</span>
+          </div>
+          <div class="statement-row">
+            <span>Facilities, Insurance &amp; Compliance</span>
+            <span class="tx-amount">($74,800.00)</span>
+          </div>
+          <div class="statement-row">
+            <span>Marketing, Brand &amp; Sales Operations</span>
+            <span class="tx-amount">($64,500.00)</span>
+          </div>
+          <div class="statement-row total-row">
+            <span>Total Operating Expenses</span>
+            <span class="tx-amount outflow">($480,300.00)</span>
+          </div>
+
+          <div class="statement-row total-row" style="font-size: 1.1rem; color: var(--primary);">
+            <span>Net Operating Income (EBITDA)</span>
+            <span class="tx-amount inflow">$261,700.00 (35.3%)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 3: INVOICES & BILLING
+           ====================================================================== -->
+      <section class="dashboard-tab-panel" id="tab-invoices">
+        <div class="panel-card">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Invoices &amp; Accounts Receivable</h2>
+              <p class="chart-card-desc">Live status of customer billing and incoming settlements</p>
+            </div>
+            <button class="btn-topbar-action" onclick="alert('Create New Invoice modal triggered.')">
+              <span>+ Create Invoice</span>
+            </button>
+          </div>
+
+          <div class="data-table-wrapper">
+            <table class="fin-table">
+              <thead>
+                <tr>
+                  <th>Invoice #</th>
+                  <th>Client / Entity</th>
+                  <th>Issue Date</th>
+                  <th>Due Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>INV-2026-089</strong></td>
+                  <td>Northwind Technologies Group</td>
+                  <td>Sep 15, 2026</td>
+                  <td>Oct 15, 2026</td>
+                  <td class="tx-amount">$24,500.00</td>
+                  <td><span class="status-pill pending">Pending Due</span></td>
+                </tr>
+                <tr>
+                  <td><strong>INV-2026-088</strong></td>
+                  <td>Stratosphere Logistics LLC</td>
+                  <td>Sep 01, 2026</td>
+                  <td>Oct 01, 2026</td>
+                  <td class="tx-amount">$16,200.00</td>
+                  <td><span class="status-pill completed">Paid Full</span></td>
+                </tr>
+                <tr>
+                  <td><strong>INV-2026-087</strong></td>
+                  <td>Crestview Health Partners</td>
+                  <td>Aug 15, 2026</td>
+                  <td>Sep 15, 2026</td>
+                  <td class="tx-amount">$32,000.00</td>
+                  <td><span class="status-pill completed">Paid Full</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 4: TAX & COMPLIANCE
+           ====================================================================== -->
+      <section class="dashboard-tab-panel" id="tab-tax">
+        <div class="panel-card">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Tax Roadmap &amp; Statutory Filing Vault</h2>
+              <p class="chart-card-desc">Proactive tax shielding, deductions, and federal/state compliance</p>
+            </div>
+            <button class="btn-topbar-action" onclick="alert('Uploading tax backup document...')">
+              <span>Upload Tax Form (W9/1099)</span>
+            </button>
+          </div>
+
+          <div class="deadline-list">
+            <div class="deadline-item">
+              <div class="deadline-date-box" style="background-color: #fee2e2; color: #991b1b;">
+                <span class="deadline-day">15</span>
+                <span class="deadline-month">Oct</span>
+              </div>
+              <div class="deadline-info">
+                <div class="deadline-name">IRS Form 1120-S Extension Deadline</div>
+                <div class="deadline-desc">Complete schedule K-1 prepared and ready for final corporate signoff.</div>
+              </div>
+              <button class="status-pill completed" style="border:none; cursor:pointer;" onclick="alert('Opening Document Preview...')">Review &amp; Sign</button>
+            </div>
+
+            <div class="deadline-item">
+              <div class="deadline-date-box">
+                <span class="deadline-day">31</span>
+                <span class="deadline-month">Dec</span>
+              </div>
+              <div class="deadline-info">
+                <div class="deadline-name">Year-End Section 179 Equipment Deduction Review</div>
+                <div class="deadline-desc">Advisory projection: estimated $42,000 tax reduction through capital planning.</div>
+              </div>
+              <span class="status-pill pending">Advisory Scheduled</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 5: TRANSACTIONS & FEEDS
+           ====================================================================== -->
+      <section class="dashboard-tab-panel" id="tab-transactions">
+        <div class="panel-card">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Automated Bank Feeds &amp; Master Ledger</h2>
+              <p class="chart-card-desc">Real-time sync from Chase Operating (*4821) and Mercury Reserve (*9920)</p>
+            </div>
+            <button class="btn-topbar-action" onclick="alert('Exporting Reconciled CSV...')">
+              <span>Export CSV</span>
+            </button>
+          </div>
+
+          <div class="data-table-wrapper">
+            <table class="fin-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Bank Account</th>
+                  <th>Payee / Description</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Reconciliation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Oct 02, 2026</td>
+                  <td>Mercury Reserve (*9920)</td>
+                  <td>Apex Enterprise Retainer</td>
+                  <td>Client Revenue</td>
+                  <td class="tx-amount inflow">+$32,500.00</td>
+                  <td><span class="status-pill completed">Matched &amp; Verified</span></td>
+                </tr>
+                <tr>
+                  <td>Oct 01, 2026</td>
+                  <td>Chase Operating (*4821)</td>
+                  <td>Google Workspace &amp; Cloud</td>
+                  <td>Software</td>
+                  <td class="tx-amount outflow">-$840.00</td>
+                  <td><span class="status-pill completed">Auto-Categorized</span></td>
+                </tr>
+                <tr>
+                  <td>Sep 30, 2026</td>
+                  <td>Chase Operating (*4821)</td>
+                  <td>WeWork Office Lease</td>
+                  <td>Rent &amp; Facilities</td>
+                  <td class="tx-amount outflow">-$8,250.00</td>
+                  <td><span class="status-pill completed">Matched &amp; Verified</span></td>
+                </tr>
+                <tr>
+                  <td>Sep 28, 2026</td>
+                  <td>Mercury Reserve (*9920)</td>
+                  <td>Quarterly Board Dividend</td>
+                  <td>Shareholder Equity</td>
+                  <td class="tx-amount outflow">-$20,000.00</td>
+                  <td><span class="status-pill completed">Approved CPA</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 6: CPA ADVISORY CHAT
+           ====================================================================== -->
+      <section class="dashboard-tab-panel" id="tab-advisory">
+        <div class="panel-card">
+          <div class="panel-header">
+            <div>
+              <h2 class="panel-title">Direct Practitioner Advisory Channel</h2>
+              <p class="chart-card-desc">Encrypted communication channel with your assigned Stackly Controller</p>
+            </div>
+            <span class="reconciled-status-pill" style="display:inline-flex;">
+              <span class="status-dot-pulse"></span>
+              <span>Sarah Jenkins, CPA (Online)</span>
+            </span>
+          </div>
+
+          <div style="background-color: #f7faf7; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; min-height: 280px; display: flex; flex-direction: column; gap: 14px;">
+            <div style="align-self: flex-start; max-width: 80%; background-color: var(--white); padding: 12px 16px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+              <div style="font-weight: 700; font-size: 0.80rem; color: var(--primary); margin-bottom: 4px;">Sarah Jenkins, CPA • 9:15 AM</div>
+              <p style="font-size: 0.86rem; color: var(--text-dark); line-height: 1.45;">
+                Good morning Eleanor! I have finalized Acme Financial's September reconciliation. Your gross margins improved by 2.8% due to software consolidation. Would you like to review the Section 179 tax deductions this Thursday?
+              </p>
+            </div>
+
+            <div style="align-self: flex-end; max-width: 80%; background-color: var(--primary); color: var(--white); padding: 12px 16px; border-radius: 12px; box-shadow: var(--shadow-sm);">
+              <div style="font-weight: 700; font-size: 0.80rem; opacity: 0.8; margin-bottom: 4px;">You (Eleanor Vance) • 9:30 AM</div>
+              <p style="font-size: 0.86rem; line-height: 1.45;">
+                Thanks Sarah! Yes, please put Thursday at 10:30 AM on my calendar. We also added two new contractor invoices in the vault.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 14px;">
+            <input type="text" id="cpa-message-input" class="topbar-search-input" placeholder="Type a message or tax inquiry to your dedicated CPA team..." style="background-color: var(--white);">
+            <button class="btn-topbar-action" onclick="sendMessageToCPA()">Send Message</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           TAB 7: SETTINGS
+           ====================================================================== -->
+      <section class="dashboard-tab-panel" id="tab-settings">
+        <div class="panel-card">
+          <h2 class="panel-title" style="margin-bottom: 18px;">Client Workspace Configuration</h2>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="signup-field-group">
+              <label class="signup-label">Registered Legal Entity</label>
+              <input type="text" class="signup-input" value="Acme Financial LLC" readonly style="background-color: #f7faf7;">
+            </div>
+            <div class="signup-field-group">
+              <label class="signup-label">Federal EIN</label>
+              <input type="text" class="signup-input" value="XX-XXX8921" readonly style="background-color: #f7faf7;">
+            </div>
+            <div class="signup-field-group">
+              <label class="signup-label">Primary Primary Accounting Standard</label>
+              <input type="text" class="signup-input" value="GAAP Accrual Basis" readonly style="background-color: #f7faf7;">
+            </div>
+            <div class="signup-field-group">
+              <label class="signup-label">Integrated Banking Feeds</label>
+              <input type="text" class="signup-input" value="Chase Commercial + Mercury Bank" readonly style="background-color: #f7faf7;">
+            </div>
+          </div>
+          
+          <div style="margin-top: 24px;">
+            <button class="btn-topbar-action" onclick="alert('Configuration updated successfully.')">Save Preferences</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Inline Dashboard Interactions -->
+  <script>
+    // Tab Switching
+    function switchDashboardTab(tabId) {
+      document.querySelectorAll('.dashboard-tab-panel').forEach(panel => {
+        panel.classList.remove('active');
+      });
+      document.querySelectorAll('.sidebar-item').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-tab') === tabId) {
+          btn.classList.add('active');
+        }
+      });
+      const activePanel = document.getElementById(tabId);
+      if (activePanel) {
+        activePanel.classList.add('active');
+      }
+    }
+
+    document.querySelectorAll('.sidebar-item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+        if (tabId) {
+          switchDashboardTab(tabId);
+          // Auto close mobile sidebar
+          const sidebar = document.getElementById('dashboard-sidebar');
+          if (sidebar) sidebar.classList.remove('open');
+        }
+      });
+    });
+
+    // Mobile sidebar toggle
+    const openBtn = document.getElementById('sidebar-open-btn');
+    const closeBtn = document.getElementById('sidebar-close-btn');
+    const sidebar = document.getElementById('dashboard-sidebar');
+
+    if (openBtn && sidebar) {
+      openBtn.addEventListener('click', () => sidebar.classList.add('open'));
+    }
+    if (closeBtn && sidebar) {
+      closeBtn.addEventListener('click', () => sidebar.classList.remove('open'));
+    }
+
+    // Notification dropdown toggle
+    const notifBtn = document.getElementById('notif-toggle-btn');
+    const notifDropdown = document.getElementById('notif-dropdown');
+    if (notifBtn && notifDropdown) {
+      notifBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notifDropdown.classList.toggle('show');
+      });
+      document.addEventListener('click', () => notifDropdown.classList.remove('show'));
+    }
+
+    // Timeframe switcher in Overview tab
+    const userTimeframeData = {
+      '30d': {
+        cash: '$118,240',
+        revenue: '$248,500',
+        expenses: '$162,100',
+        margin: '34.8%',
+        bars: [
+          { rev: '55%', exp: '38%' },
+          { rev: '64%', exp: '44%' },
+          { rev: '70%', exp: '48%' },
+          { rev: '68%', exp: '49%' },
+          { rev: '78%', exp: '52%' },
+          { rev: '86%', exp: '56%' }
+        ]
+      },
+      'q3': {
+        cash: '$342,100',
+        revenue: '$742,000',
+        expenses: '$480,300',
+        margin: '35.3%',
+        bars: [
+          { rev: '65%', exp: '42%' },
+          { rev: '75%', exp: '49%' },
+          { rev: '82%', exp: '53%' },
+          { rev: '80%', exp: '51%' },
+          { rev: '88%', exp: '57%' },
+          { rev: '94%', exp: '61%' }
+        ]
+      },
+      'ytd': {
+        cash: '$1,024,500',
+        revenue: '$2,140,800',
+        expenses: '$1,378,500',
+        margin: '35.6%',
+        bars: [
+          { rev: '50%', exp: '34%' },
+          { rev: '62%', exp: '40%' },
+          { rev: '74%', exp: '48%' },
+          { rev: '82%', exp: '53%' },
+          { rev: '91%', exp: '58%' },
+          { rev: '98%', exp: '63%' }
+        ]
+      }
+    };
+
+    document.querySelectorAll('.period-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.period-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const period = pill.getAttribute('data-period');
+        const d = userTimeframeData[period];
+        if (d) {
+          document.getElementById('kpi-cash').textContent = d.cash;
+          document.getElementById('kpi-revenue').textContent = d.revenue;
+          document.getElementById('kpi-expenses').textContent = d.expenses;
+          document.getElementById('kpi-margin').textContent = d.margin;
+
+          const barGroups = document.querySelectorAll('#user-bar-chart .chart-bar-group');
+          barGroups.forEach((group, idx) => {
+            const b = d.bars[idx];
+            if (b) {
+              group.querySelector('.bar-rev').style.height = b.rev;
+              group.querySelector('.bar-exp').style.height = b.exp;
+            }
+          });
+        }
+      });
+    });
+
+    function sendMessageToCPA() {
+      const input = document.getElementById('cpa-message-input');
+      if (input && input.value.trim()) {
+        alert('Message securely dispatched to Sarah Jenkins, CPA: "' + input.value + '"');
+        input.value = '';
+      }
+    }
+  </script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

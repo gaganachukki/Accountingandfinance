@@ -1,0 +1,604 @@
+/* ==========================================================================
+   Finora Accounting & Finance - Solutions Page Stylesheet (solutions.css)
+   Figma Match: Luxury Forest Green & Sage Palette
+   ========================================================================== */
+
+/* Hero Section (Solutions Variant) */
+.solutions-hero-section {
+  padding: 80px 0 72px;
+  background-color: var(--accent-sage-subtle);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.solutions-hero-image-wrap {
+  position: relative;
+}
+
+.solutions-hero-image {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Strategic Advantage Split
+   ========================================================================== */
+.strategic-advantage-section {
+  padding: 104px 0;
+  background-color: var(--accent-sage);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.advantage-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.advantage-content p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.advantage-stats-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.advantage-stat-box {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.advantage-stat-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #bcd4be;
+}
+
+.advantage-stat-left h4 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.advantage-stat-left p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.advantage-stat-badge {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #065f46;
+  background-color: var(--status-green-bg);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+}
+
+.advantage-image-wrap {
+  position: relative;
+}
+
+.advantage-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Solutions by Company Stage (Alternating Cards)
+   ========================================================================== */
+.stage-solutions-section {
+  padding: 104px 0;
+  background-color: var(--white);
+}
+
+.stage-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.stage-solution-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 44px 40px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.stage-solution-card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: #bcd4be;
+}
+
+.stage-card-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.stage-card-grid.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.stage-card-body .section-badge {
+  margin-bottom: 14px;
+}
+
+.stage-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.stage-card-desc {
+  font-size: 0.98rem;
+  color: var(--text-body);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.stage-pills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stage-pill-item {
+  background-color: var(--accent-sage);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stage-pill-item svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.stage-industry-tags {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+  margin-bottom: 24px;
+}
+
+.stage-card-image-wrap {
+  position: relative;
+}
+
+.stage-card-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Dedicated Vertical Playbooks (4 Cards + 2 Photos)
+   ========================================================================== */
+.industry-playbooks-section {
+  padding: 104px 0;
+  background-color: var(--accent-sage);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.industry-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.industry-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.industry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: #bcd4be;
+}
+
+.industry-card-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background-color: var(--accent-sage);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: var(--transition);
+}
+
+.industry-card:hover .industry-card-icon {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.industry-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.industry-card-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.playbooks-photos-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.playbook-photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Flexible Engagement Plans (4 Cards)
+   ========================================================================== */
+.plans-pricing-section {
+  padding: 104px 0;
+  background-color: var(--white);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.plan-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 36px 26px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: #bcd4be;
+}
+
+.plan-card.highlighted {
+  border: 2px solid var(--primary);
+  box-shadow: var(--shadow-card);
+  background-color: #fafdfa;
+}
+
+.plan-badge-top {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.plan-header {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.plan-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.plan-tagline {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.plan-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.plan-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+.plan-feature-item svg {
+  color: var(--primary);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.plan-footer .btn {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Section: Implementation Onboarding
+   ========================================================================== */
+.onboarding-section {
+  padding: 104px 0;
+  background-color: var(--accent-sage);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.onboarding-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.onboarding-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 32px 0 36px;
+}
+
+.onboarding-step-box {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.onboarding-step-box:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #bcd4be;
+}
+
+.onboarding-step-num {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  background-color: var(--accent-sage);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.onboarding-step-info h4 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.onboarding-step-info p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.onboarding-image {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Section: Measurable Impact & Outcomes
+   ========================================================================== */
+.impact-outcomes-section {
+  padding: 104px 0;
+  background-color: var(--white);
+}
+
+.impact-outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.impact-main-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.impact-content p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.roi-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.roi-metric-tile {
+  background-color: var(--accent-sage);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  transition: var(--transition);
+}
+
+.roi-metric-tile:hover {
+  background-color: var(--white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.roi-metric-val {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.roi-metric-label {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* Responsive adjustments for Solutions */
+@media (max-width: 1080px) {
+  .advantage-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .stage-card-grid,
+  .stage-card-grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .industry-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .onboarding-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .impact-outcomes-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stage-pills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .playbooks-photos-row {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage-image,
+  .stage-card-image,
+  .onboarding-image,
+  .impact-main-image {
+    height: 340px;
+  }
+}
+
+@media (max-width: 560px) {
+  .stage-solution-card {
+    padding: 30px 20px;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

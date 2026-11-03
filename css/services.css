@@ -1,0 +1,474 @@
+/* ==========================================================================
+   Finora Accounting & Finance - Services Page Stylesheet (services.css)
+   Figma Match: Luxury Forest Green & Sage Palette
+   ========================================================================== */
+
+/* Hero Section (Services Variant) */
+.services-hero-section {
+  padding: 80px 0 72px;
+  background-color: var(--accent-sage-subtle);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.services-hero-image-wrap {
+  position: relative;
+}
+
+.services-hero-image {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.hero-image-floating-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  padding: 14px 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-image-floating-bar h5 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.hero-image-floating-bar p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Section: Flexible Support Delivery
+   ========================================================================== */
+.support-delivery-section {
+  padding: 104px 0;
+  background-color: var(--accent-sage);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.support-delivery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.support-image-container {
+  position: relative;
+}
+
+.support-main-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.support-image-caption-card {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  padding: 16px 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.support-image-caption-card h5 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.support-image-caption-card p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.support-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.support-stack-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.support-stack-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: #bcd4be;
+}
+
+.support-stack-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--accent-sage);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.support-stack-card:hover .support-stack-icon {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.support-stack-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.support-stack-content p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Detailed Service Sections (Bookkeeping, Tax, Advisory)
+   ========================================================================== */
+.service-detail-section {
+  padding: 104px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.service-detail-section.bg-white {
+  background-color: var(--white);
+}
+
+.service-detail-section.bg-sage {
+  background-color: var(--accent-sage);
+}
+
+.service-detail-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+.service-detail-grid.reverse {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.service-detail-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-md);
+}
+
+.service-detail-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.service-detail-card-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.service-deliverable-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--status-green-bg);
+  color: #065f46;
+}
+
+.service-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.service-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.94rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+.service-check-item svg {
+  color: var(--primary);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-kpis-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+
+.service-kpi-box {
+  background-color: var(--accent-sage-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.service-kpi-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.service-kpi-val {
+  font-family: var(--font-mono);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.service-detail-image-wrap {
+  position: relative;
+}
+
+.service-detail-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.service-image-caption-tag {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  padding: 14px 20px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.service-image-caption-tag h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.service-image-caption-tag p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Section: Practice Integration Matrix / Comparison Table
+   ========================================================================== */
+.matrix-section {
+  padding: 104px 0;
+  background-color: var(--accent-sage);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.matrix-table-container {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.matrix-table th,
+.matrix-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.92rem;
+  vertical-align: middle;
+}
+
+.matrix-table th {
+  background-color: #fafdfa;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.matrix-table th.col-feature {
+  width: 25%;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.matrix-table th.col-highlight {
+  background-color: var(--primary);
+  color: var(--white);
+  position: relative;
+}
+
+.tier-badge-pill {
+  display: inline-block;
+  background-color: #10b981;
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.tier-th-subtitle {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+}
+
+.matrix-table th:not(.col-highlight) .tier-th-subtitle {
+  color: var(--text-muted);
+}
+
+.matrix-table td.col-highlight {
+  background-color: #f7faf7;
+  font-weight: 600;
+  color: var(--primary);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.matrix-table tr:last-child td {
+  border-bottom: none;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  background-color: #fafdfa;
+}
+
+.matrix-table tr:last-child td.col-highlight {
+  background-color: #edf5ee;
+}
+
+.feature-title-cell {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Responsive adjustments for Services */
+@media (max-width: 1080px) {
+  .support-delivery-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .service-detail-grid,
+  .service-detail-grid.reverse {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .matrix-table-container {
+    overflow-x: auto;
+  }
+
+  .matrix-table {
+    min-width: 780px;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-main-image,
+  .service-detail-image,
+  .services-hero-image {
+    height: 340px;
+  }
+
+  .service-kpis-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .support-stack-card {
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .service-detail-card {
+    padding: 26px 20px;
+  }
+}

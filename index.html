@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly — Clarity for your finances. Confidence for your business.</title>
+  <meta name="description" content="Reliable accounting, bookkeeping and financial support to help your business stay organized, make informed decisions and grow with confidence.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-actions-mobile">
+            <a href="login.html" class="btn btn-secondary">Log In</a>
+            <a href="consultation.html" class="btn btn-primary">Book a Consultation</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">LOGIN</a>
+        <a href="consultation.html" class="btn btn-primary">
+          <span>BOOK A CONSULTATION</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+    <section class="hero-section">
+    <!-- Hero Background Cover Fade Slider -->
+    <div class="hero-bg-slider" aria-hidden="true">
+      <div class="hero-bg-slide active" style="background-image: url('assets/hero-bg-1.webp');"></div>
+      <div class="hero-bg-slide" style="background-image: url('assets/hero-bg-2.webp');"></div>
+      <div class="hero-bg-slide" style="background-image: url('assets/hero-bg-3.webp');"></div>
+      <div class="hero-bg-overlay"></div>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="section-badge">• ACCOUNTING &amp; FINANCE SOLUTIONS</div>
+        <h1 class="hero-title">Clarity for your finances. Confidence for your business.</h1>
+        <p class="hero-description">
+          Reliable accounting, bookkeeping and financial support to help your business stay organized, make informed decisions and grow with confidence.
+        </p>
+
+        <div class="hero-actions">
+          <a href="consultation.html" class="btn btn-primary">
+            <span>BOOK A CONSULTATION</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="services.html" class="btn btn-secondary">
+            <span>EXPLORE OUR SERVICES</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-trust-single">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>Practical financial support for businesses at every stage.</span>
+        </div>
+      </div>
+
+      <!-- Hero Interactive Card Preview (Matching Figma design) -->
+      <div class="hero-dashboard-wrapper reveal reveal-delay-2">
+        <div class="hero-dashboard-card">
+          <div class="card-header-bar">
+            <div class="card-title-group">
+              <h4>Monthly Financial Performance</h4>
+              <p>Reporting Period: July 2024</p>
+            </div>
+            <span class="sample-data-tag">[Sample Illustrative Data]</span>
+          </div>
+
+          <div class="metrics-row">
+            <div class="metric-pill-box">
+              <div class="label">Revenue</div>
+              <div class="value">$84,250</div>
+              <div class="subtext" style="color: #059669; font-weight: 700;">↑ +12.4%</div>
+            </div>
+            <div class="metric-pill-box">
+              <div class="label">Operating Exp.</div>
+              <div class="value">$48,120</div>
+              <div class="subtext" style="color: #059669; font-weight: 700;">↓ -3.2%</div>
+            </div>
+            <div class="metric-pill-box">
+              <div class="label">Net Cash Flow</div>
+              <div class="value">$36,130</div>
+              <div class="subtext" style="color: #059669; font-weight: 700;">📈 Strong</div>
+            </div>
+          </div>
+
+          <!-- Bar Chart Visual (Duo bars: Exp & Rev) -->
+          <div class="chart-visual-wrapper">
+            <div class="chart-label-row">
+              <span>6-Month Revenue vs. Expenses Run-rate</span>
+              <div class="chart-legend">
+                <span class="legend-item"><span class="legend-dot revenue"></span> Rev</span>
+                <span class="legend-item"><span class="legend-dot expenses"></span> Exp</span>
+              </div>
+            </div>
+            <div class="bar-chart-bars">
+              <div class="bar-col">
+                <div class="bar-duo-wrapper">
+                  <div class="bar-fill bar-exp" style="height: 48%;" title="Feb Exp: $42K"></div>
+                  <div class="bar-fill bar-rev" style="height: 60%;" title="Feb Rev: $68K"></div>
+                </div>
+                <span class="bar-month">Feb</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-duo-wrapper">
+                  <div class="bar-fill bar-exp" style="height: 50%;" title="Mar Exp: $44K"></div>
+                  <div class="bar-fill bar-rev" style="height: 65%;" title="Mar Rev: $72K"></div>
+                </div>
+                <span class="bar-month">Mar</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-duo-wrapper">
+                  <div class="bar-fill bar-exp" style="height: 52%;" title="Apr Exp: $46K"></div>
+                  <div class="bar-fill bar-rev" style="height: 72%;" title="Apr Rev: $76K"></div>
+                </div>
+                <span class="bar-month">Apr</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-duo-wrapper">
+                  <div class="bar-fill bar-exp" style="height: 54%;" title="May Exp: $47K"></div>
+                  <div class="bar-fill bar-rev" style="height: 78%;" title="May Rev: $80K"></div>
+                </div>
+                <span class="bar-month">May</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-duo-wrapper">
+                  <div class="bar-fill bar-exp" style="height: 56%;" title="Jun Exp: $48K"></div>
+                  <div class="bar-fill bar-rev" style="height: 84%;" title="Jun Rev: $82K"></div>
+                </div>
+                <span class="bar-month">Jun</span>
+              </div>
+              <div class="bar-col active-month">
+                <div class="bar-duo-wrapper">
+                  <div class="bar-fill bar-exp" style="height: 58%;" title="Jul Exp: $48.1K"></div>
+                  <div class="bar-fill bar-rev" style="height: 94%;" title="Jul Rev: $84.2K"></div>
+                </div>
+                <span class="bar-month" style="font-weight: 700; color: var(--primary);">Jul</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer-trust">
+            <span class="check-pill">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Books Reconciled: July 31</span>
+            </span>
+            <span class="check-pill">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span>Tax Filing: Up to date</span>
+            </span>
+          </div>
+          <p class="illustrative-note">All figures represent sample illustrative reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Trust / 4-Service Feature Cards Strip
+       ========================================================================== -->
+  <section class="trust-strip">
+    <div class="container trust-strip-grid">
+      
+      <div class="trust-card-item reveal">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div class="trust-card-body">
+          <h4 class="trust-card-title">Accounting &amp; Bookkeeping</h4>
+          <p class="trust-card-desc">Accurate ledger maintenance &amp; financial records</p>
+        </div>
+      </div>
+
+      <div class="trust-card-item reveal reveal-delay-1">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="trust-card-body">
+          <h4 class="trust-card-title">Tax &amp; Compliance Support</h4>
+          <p class="trust-card-desc">Practical filing preparation &amp; deadline management</p>
+        </div>
+      </div>
+
+      <div class="trust-card-item reveal reveal-delay-2">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+        </div>
+        <div class="trust-card-body">
+          <h4 class="trust-card-title">Financial Reporting</h4>
+          <p class="trust-card-desc">Structured balance sheets &amp; monthly statements</p>
+        </div>
+      </div>
+
+      <div class="trust-card-item reveal reveal-delay-3">
+        <div class="trust-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </div>
+        <div class="trust-card-body">
+          <h4 class="trust-card-title">Business Advisory</h4>
+          <p class="trust-card-desc">Cash flow forecasting &amp; practical guidance</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: About Split ("More than everyday accounting")
+       ========================================================================== -->
+  <section class="about-section">
+    <div class="container split-grid">
+      <div class="about-content reveal">
+        <div class="section-badge">Who We Are</div>
+        <h2 class="section-title">More than everyday accounting</h2>
+        <p>
+          We provide full-spectrum financial oversight designed to eliminate stress and fuel growth. From automated daily reconciliation to high-level CFO advisory, we partner with your business at every stage.
+        </p>
+        <p>
+          Our dedicated team of certified accountants and financial analysts combine deep industry experience with modern technology to deliver boardroom-grade insights that keep you ahead of regulatory changes and market shifts.
+        </p>
+        <a href="about.html" class="btn-link">
+          <span>Learn More About Us</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="about-image-wrapper reveal reveal-delay-2">
+        <img src="assets/desk-calculator.webp" alt="Accounting workspace with calculator and financial documents" class="about-image" loading="lazy">
+        <div class="floating-experience-pill floating-element">
+          <div class="floating-pill-number"><span class="animate-counter" data-target="15" data-suffix="+">15+</span></div>
+          <div class="floating-pill-label">Years of Advisory<br>Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Services Grid ("Financial services built around your business")
+       ========================================================================== -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Our Services</div>
+        <h2 class="section-title">Financial services built around your business</h2>
+        <p class="section-subtitle">
+          Comprehensive accounting, tax, and advisory solutions crafted to give you total control and clarity.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Bookkeeping & Reporting</h3>
+          <p class="service-card-text">
+            Daily transaction categorization, automated bank reconciliations, monthly P&L statements, and audit-ready general ledger maintenance.
+          </p>
+          <a href="services.html#bookkeeping" class="btn-link">
+            <span>Learn more</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Tax Planning & Compliance</h3>
+          <p class="service-card-text">
+            Proactive corporate tax structuring, state and federal return filings, R&D tax credit monetization, and year-round deduction optimization.
+          </p>
+          <a href="services.html#tax" class="btn-link">
+            <span>Learn more</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Fractional CFO Advisory</h3>
+          <p class="service-card-text">
+            Senior strategic leadership for cash runway modeling, scenario planning, capital fundraising readiness, and executive board presentations.
+          </p>
+          <a href="services.html#cfo" class="btn-link">
+            <span>Learn more</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card reveal">
+          <div class="service-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Payroll & HR Services</h3>
+          <p class="service-card-text">
+            Multi-state payroll runs, direct deposit setup, automated W-2 and 1099 filing, employee benefits tracking, and state labor law compliance.
+          </p>
+          <a href="services.html#payroll" class="btn-link">
+            <span>Learn more</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Audit Support & Assurance</h3>
+          <p class="service-card-text">
+            Internal control reviews, GAAP statement audits, due diligence packs for mergers and acquisitions, and full audit defense representation.
+          </p>
+          <a href="services.html#audit" class="btn-link">
+            <span>Learn more</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Wealth & Asset Advisory</h3>
+          <p class="service-card-text">
+            Entity restructuring, executive compensation packages, owner profit distribution strategies, succession planning, and corporate treasury management.
+          </p>
+          <a href="services.html#wealth" class="btn-link">
+            <span>Learn more</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Approach / Core Solutions ("Support at every stage of your growth")
+       ========================================================================== -->
+  <section class="approach-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Core Solutions</div>
+        <h2 class="section-title">Support at every stage of your growth</h2>
+        <p class="section-subtitle">
+          Tailored financial workflows built around your specific operational scale and industry needs.
+        </p>
+      </div>
+
+      <div class="approach-grid">
+        <div class="approach-card reveal">
+          <div class="approach-card-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="approach-card-title">Early-Stage Startups</h3>
+          <p class="approach-card-text">
+            Lean cloud bookkeeping, cash burn rate modeling, payroll setup, and R&D tax credits to extend your capital runway.
+          </p>
+        </div>
+
+        <div class="approach-card reveal reveal-delay-1">
+          <div class="approach-card-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+            </svg>
+          </div>
+          <h3 class="approach-card-title">Growing Enterprises</h3>
+          <p class="approach-card-text">
+            Scalable accounting software setup, departmental budget tracking, multi-entity consolidation, and KPI reporting packs.
+          </p>
+        </div>
+
+        <div class="approach-card reveal reveal-delay-2">
+          <div class="approach-card-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="approach-card-title">Established Firms</h3>
+          <p class="approach-card-text">
+            Full audit readiness, executive compensation strategies, advanced tax reduction, and capital asset depreciation schedules.
+          </p>
+        </div>
+
+        <div class="approach-card reveal reveal-delay-3">
+          <div class="approach-card-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+          </div>
+          <h3 class="approach-card-title">E-Commerce & Digital</h3>
+          <p class="approach-card-text">
+            Automated multi-state sales tax nexus filing, Stripe and Shopify reconciliation, inventory costing, and international currency handling.
+          </p>
+        </div>
+      </div>
+
+      <div class="approach-cta-center reveal">
+        <a href="solutions.html" class="btn btn-primary">Explore All Solutions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Team & Proven Results Banner
+       ========================================================================== -->
+  <section class="results-banner-section">
+    <div class="container">
+      <div class="results-banner-card reveal">
+        <img src="assets/team-meeting.webp" alt="Executive financial advisors in modern office conference room" class="results-banner-image" loading="lazy">
+        <div class="results-banner-content">
+          <div class="section-badge">Proven Results</div>
+          <h2 class="section-title">Empowering businesses to reach peak financial health</h2>
+          <p>
+            We don't just balance the books; we uncover growth opportunities, optimize operational margins, and help you navigate complex regulatory environments.
+          </p>
+
+          <div class="results-stats-row">
+            <div class="results-stat-box">
+              <div class="stat-num"><span class="animate-counter" data-target="15" data-suffix="+">15+</span></div>
+              <div class="stat-desc">Years in Business</div>
+            </div>
+            <div class="results-stat-box">
+              <div class="stat-num"><span class="animate-counter" data-target="98" data-suffix="%">98%</span></div>
+              <div class="stat-desc">Client Retention</div>
+            </div>
+            <div class="results-stat-box">
+              <div class="stat-num"><span class="animate-counter" data-target="500" data-prefix="$" data-suffix="M+">$500M+</span></div>
+              <div class="stat-desc">Advised Capital</div>
+            </div>
+          </div>
+
+          <div>
+            <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Commitments & Core Values (2x2 Grid)
+       ========================================================================== -->
+  <section class="commitments-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Our Commitments</div>
+        <h2 class="section-title">Clear, transparent, & dependable always</h2>
+        <p class="section-subtitle">
+          Our four foundational commitments to every business we represent.
+        </p>
+      </div>
+
+      <div class="commitments-grid">
+        <div class="commitment-card reveal">
+          <div class="commitment-icon-col">
+            <div class="commitment-icon-wrap">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="commitment-card-title">Guaranteed Audit-Ready Precision</h3>
+            <p class="commitment-card-text">
+              Every ledger entry is double-checked and verified to GAAP standards. Your books are kept continuously prepared for lenders and tax auditors.
+            </p>
+          </div>
+        </div>
+
+        <div class="commitment-card reveal reveal-delay-1">
+          <div class="commitment-icon-col">
+            <div class="commitment-icon-wrap">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="commitment-card-title">Dedicated CPA Team</h3>
+            <p class="commitment-card-text">
+              You work directly with an assigned lead accountant who knows your business, meets with you regularly, and is never outsourced overseas.
+            </p>
+          </div>
+        </div>
+
+        <div class="commitment-card reveal">
+          <div class="commitment-icon-col">
+            <div class="commitment-icon-wrap">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="commitment-card-title">Bank-Grade 256-Bit Security</h3>
+            <p class="commitment-card-text">
+              SOC 2 Type II certified protocols, end-to-end encrypted file vaults, and strict confidentiality protections defend your sensitive financial data.
+            </p>
+          </div>
+        </div>
+
+        <div class="commitment-card reveal reveal-delay-1">
+          <div class="commitment-icon-col">
+            <div class="commitment-icon-wrap">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h3 class="commitment-card-title">Proactive Strategic Insights</h3>
+            <p class="commitment-card-text">
+              We don't wait for tax season. We deliver ongoing monthly observations and forecasts to optimize cash flow and capture timely deductions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Process / How It Works
+       ========================================================================== -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">How It Works</div>
+        <h2 class="section-title">Four simple steps to complete clarity</h2>
+        <p class="section-subtitle">
+          A frictionless onboarding experience engineered to bring immediate order to your numbers.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step-card reveal">
+          <div class="step-number">01</div>
+          <h3 class="step-card-title">Discovery & Diagnostic</h3>
+          <p class="step-card-text">
+            We review your historical books, prior tax returns, and software connections to identify discrepancies and savings.
+          </p>
+        </div>
+
+        <div class="process-step-card reveal reveal-delay-1">
+          <div class="step-number">02</div>
+          <h3 class="step-card-title">System Integration</h3>
+          <p class="step-card-text">
+            We securely link your bank feeds, payroll, invoicing, and accounting tools with zero operational downtime.
+          </p>
+        </div>
+
+        <div class="process-step-card reveal reveal-delay-2">
+          <div class="step-number">03</div>
+          <h3 class="step-card-title">Catch-Up & Reconcile</h3>
+          <p class="step-card-text">
+            Our CPA team brings all past accounts current, corrects erroneous balances, and establishes clean baseline ledgers.
+          </p>
+        </div>
+
+        <div class="process-step-card reveal reveal-delay-3">
+          <div class="step-number">04</div>
+          <h3 class="step-card-title">Ongoing Advisory</h3>
+          <p class="step-card-text">
+            Receive automated monthly financial packs, quarterly tax forecasts, and dedicated strategic reviews as you scale.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Interactive Dashboard Showcase
+       ========================================================================== -->
+  <section class="dashboard-showcase-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Financial Intelligence</div>
+        <h2 class="section-title">Real-time visibility into your business health</h2>
+        <p class="section-subtitle">
+          Never wait until month-end again. Monitor revenue, runway, and cash position with interactive clarity.
+        </p>
+      </div>
+
+      <div class="dashboard-showcase-card reveal">
+        <div class="dashboard-topbar">
+          <div class="dashboard-topbar-left">
+            <span class="dashboard-dot"></span>
+            <h4>Executive Analytics Portal</h4>
+          </div>
+          <div class="timeframe-tabs">
+            <button class="timeframe-btn active" data-period="30d">Last 30 Days</button>
+            <button class="timeframe-btn" data-period="q3">Q3 2026</button>
+            <button class="timeframe-btn" data-period="ytd">Year to Date</button>
+          </div>
+        </div>
+
+        <div class="dashboard-body-grid">
+          <!-- Col 1: KPIs -->
+          <div class="dashboard-col">
+            <div class="dashboard-kpi-item">
+              <div class="kpi-title">Total Revenue</div>
+              <div class="kpi-value-row">
+                <span class="kpi-num" id="kpi-revenue">$248,500</span>
+                <span class="kpi-delta">+14.2%</span>
+              </div>
+              <div class="kpi-progress">
+                <div class="kpi-progress-bar" style="width: 82%;"></div>
+              </div>
+            </div>
+
+            <div class="dashboard-kpi-item">
+              <div class="kpi-title">Operating Expenses</div>
+              <div class="kpi-value-row">
+                <span class="kpi-num" id="kpi-expenses">$162,100</span>
+                <span class="kpi-delta">-3.5%</span>
+              </div>
+              <div class="kpi-progress">
+                <div class="kpi-progress-bar" style="width: 65%; background-color: #64897c;"></div>
+              </div>
+            </div>
+
+            <div class="dashboard-kpi-item">
+              <div class="kpi-title">Net Profit Margin</div>
+              <div class="kpi-value-row">
+                <span class="kpi-num" id="kpi-margin">34.8%</span>
+                <span class="kpi-delta">+4.6%</span>
+              </div>
+              <div class="kpi-progress">
+                <div class="kpi-progress-bar" style="width: 74%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 2: Interactive Bar Chart -->
+          <div class="dashboard-col">
+            <div class="main-chart-area">
+              <div class="chart-header-row">
+                <h5>Monthly Revenue Trajectory</h5>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Values in Thousands ($K)</span>
+              </div>
+
+              <div class="showcase-bars">
+                <div class="showcase-bar-group">
+                  <div class="bar-dual" style="height: 45%;" title="Jan: $142K"></div>
+                  <span class="showcase-month">Jan</span>
+                </div>
+                <div class="showcase-bar-group">
+                  <div class="bar-dual" style="height: 65%;" title="Feb: $168K"></div>
+                  <span class="showcase-month">Feb</span>
+                </div>
+                <div class="showcase-bar-group">
+                  <div class="bar-dual" style="height: 50%;" title="Mar: $155K"></div>
+                  <span class="showcase-month">Mar</span>
+                </div>
+                <div class="showcase-bar-group">
+                  <div class="bar-dual" style="height: 80%;" title="Apr: $198K"></div>
+                  <span class="showcase-month">Apr</span>
+                </div>
+                <div class="showcase-bar-group">
+                  <div class="bar-dual" style="height: 95%;" title="May: $224K"></div>
+                  <span class="showcase-month">May</span>
+                </div>
+                <div class="showcase-bar-group">
+                  <div class="bar-dual" style="height: 88%;" title="Jun: $248.5K"></div>
+                  <span class="showcase-month">Jun</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3: Reconciled Transactions -->
+          <div class="dashboard-col">
+            <h5 style="font-size: 0.95rem; font-weight: 700; color: var(--text-dark); margin-bottom: 18px;">
+              Reconciled Entries
+            </h5>
+            <ul class="recent-activities-list">
+              <li class="activity-item">
+                <div class="activity-info">
+                  <h6>Enterprise Client Retainer</h6>
+                  <p>Invoiced & Settled • Stripe</p>
+                </div>
+                <div class="activity-amount">+$18,500</div>
+              </li>
+              <li class="activity-item">
+                <div class="activity-info">
+                  <h6>Payroll Batch (42 Employees)</h6>
+                  <p>Automated Tax Withholding</p>
+                </div>
+                <div class="activity-amount" style="color: var(--text-muted);">-$42,300</div>
+              </li>
+              <li class="activity-item">
+                <div class="activity-info">
+                  <h6>R&D Tax Credit Claim</h6>
+                  <p>Federal Treasury Refund</p>
+                </div>
+                <div class="activity-amount">+$34,250</div>
+              </li>
+              <li class="activity-item">
+                <div class="activity-info">
+                  <h6>Q2 Cloud Infrastructure</h6>
+                  <p>Categorized OpEx</p>
+                </div>
+                <div class="activity-amount" style="color: var(--text-muted);">-$6,820</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Dedicated Support / Advisory Split
+       ========================================================================== -->
+  <section class="support-section">
+    <div class="container split-grid">
+      <div class="support-content reveal">
+        <div class="section-badge">Dedicated Advisory</div>
+        <h2 class="section-title">Partner with advisors who understand your numbers</h2>
+        <p>
+          You deserve more than an automated ticketing queue. When you work with Stackly, you have direct access to experienced, licensed CPAs dedicated to your account.
+        </p>
+
+        <ul class="support-checklist">
+          <li class="support-check-item">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Direct phone, email, and Slack access to your assigned lead CPA</span>
+          </li>
+          <li class="support-check-item">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Proactive quarterly tax planning sessions to avoid year-end surprises</span>
+          </li>
+          <li class="support-check-item">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Custom investor-ready and board-ready reporting packs</span>
+          </li>
+        </ul>
+
+        <a href="about.html" class="btn-link">
+          <span>Meet Our Leadership Team</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="support-image-wrapper reveal reveal-delay-2">
+        <img src="assets/advisor-support.webp" alt="Senior financial accountant advising business client" class="support-image" loading="lazy">
+        <div class="support-floating-badge floating-element">
+          <div class="badge-pulse-indicator"></div>
+          <div>
+            <h5>Rapid Response Team</h5>
+            <p>Under 2 hr advisory turnaround</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Testimonials / Social Proof
+       ========================================================================== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Client Stories</div>
+        <h2 class="section-title">Trusted by ambitious founders & finance leaders</h2>
+        <p class="section-subtitle">
+          Real results from real executives who rely on Stackly for financial operations.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card reveal">
+          <div class="star-rating">★★★★★</div>
+          <p class="testimonial-quote">
+            "They restructured our corporate entities and uncovered over $64,000 in immediate tax credits during our first year. Their team is an indispensable strategic asset."
+          </p>
+          <div class="testimonial-author-box">
+            <img src="assets/avatar-2.webp" alt="Marcus Vance avatar" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">Marcus Vance</div>
+              <div class="author-role">CEO at Apex Logistics</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="star-rating">★★★★★</div>
+          <p class="testimonial-quote">
+            "Our monthly closing time dropped from three weeks down to four business days. Having clean, reliable numbers has transformed our executive board meetings."
+          </p>
+          <div class="testimonial-author-box">
+            <img src="assets/avatar-1.webp" alt="Elena Rostova avatar" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">Elena Rostova</div>
+              <div class="author-role">Founder at Nexa Health</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="star-rating">★★★★★</div>
+          <p class="testimonial-quote">
+            "Their fractional CFO helped us model our Series A fundraising and negotiate debt facilities. We couldn't have closed our funding round without them."
+          </p>
+          <div class="testimonial-author-box">
+            <img src="assets/avatar-3.webp" alt="David Chen avatar" class="author-avatar" loading="lazy">
+            <div>
+              <div class="author-name">David Chen</div>
+              <div class="author-role">COO at ScaleWorks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Executive Case Study Spotlight
+       ========================================================================== -->
+  <section class="case-study-section">
+    <div class="container">
+      <div class="case-study-card reveal">
+        <img src="assets/executive-team.webp" alt="Executive team meeting in boardroom overlooking city" class="case-study-bg-img" loading="lazy">
+        <div class="case-study-overlay">
+          <div class="section-badge case-study-badge">Featured Case Study</div>
+          <h2 class="case-study-title">Executive financial clarity for scaling enterprises</h2>
+          <p class="case-study-desc">
+            How we helped a 120-person technology company streamline multi-state tax compliance, automate payroll, and unlock $1.4M in working capital reserves.
+          </p>
+
+          <div class="case-study-metrics-row">
+            <div>
+              <div class="cs-metric-num"><span class="animate-counter" data-target="35" data-suffix="%">35%</span></div>
+              <div class="cs-metric-label">Tax Liability Saved</div>
+            </div>
+            <div>
+              <div class="cs-metric-num"><span class="animate-counter" data-target="120" data-suffix="+">120+</span></div>
+              <div class="cs-metric-label">Hours Saved Monthly</div>
+            </div>
+            <div>
+              <div class="cs-metric-num"><span class="animate-counter" data-target="100" data-suffix="%">100%</span></div>
+              <div class="cs-metric-label">Audit Defense Success</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Frequently Asked Questions (Accordion)
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">FAQ</div>
+        <h2 class="section-title">Frequently asked questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about getting started, our security, and services.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" type="button">
+            <span>How fast can we get onboarded and have our books caught up?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Most businesses are fully connected within 5 to 7 business days. If historical cleanup is required, our catch-up specialists complete a comprehensive general ledger audit and catch up all prior months within two weeks.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question-btn" type="button">
+            <span>Which accounting software and ERP platforms do you support?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              We integrate seamlessly with QuickBooks Online, Xero, NetSuite, Sage Intacct, Gusto, Stripe, Bill.com, Ramp, and Brex. We ensure all your existing bank feeds and tools synchronize automatically.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question-btn" type="button">
+            <span>Will I work with an outsourced team or a dedicated CPA?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              You are assigned a dedicated, US-licensed lead CPA and account specialist. They learn the nuances of your business model, attend your financial check-in meetings, and handle your account year after year.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" type="button">
+            <span>How does proactive tax planning differ from standard filing?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Standard filing simply looks back at what already happened. With proactive tax planning, we meet with you quarterly to model your projected liability, optimize deductions, and implement legal tax-saving strategies before deadlines arrive.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question-btn" type="button">
+            <span>What security standards do you maintain for client financial data?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              We utilize bank-grade 256-bit AES encryption, SOC 2 Type II certified infrastructure, hardware-backed multi-factor authentication, and strict non-disclosure agreements to safeguard all client financial records.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question-btn" type="button">
+            <span>Can you support multi-state sales tax and payroll compliance?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Yes. We manage economic nexus tracking, state tax registrations, and automated payroll withholding across all 50 US states, ensuring your business never incurs surprise penalties.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Recent Insights & Articles
+       ========================================================================== -->
+  <section class="insights-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Financial Intelligence</div>
+        <h2 class="section-title">Practical insights for modern business finances</h2>
+        <p class="section-subtitle">
+          Expert analysis, regulatory updates, and strategic playbooks written by senior CPAs.
+        </p>
+      </div>
+
+      <div class="insights-grid">
+        <div class="insight-card reveal">
+          <div class="insight-meta-row">
+            <span class="insight-category-tag">Tax Strategy</span>
+            <span class="insight-readtime">5 min read</span>
+          </div>
+          <h3 class="insight-title">The 2026 Small Business Tax Playbook: Maximizing Section 179 and R&D Credits</h3>
+          <p class="insight-snippet">
+            Discover the newly updated deduction thresholds and state-specific credit expansions that can preserve six-figure capital for your growing firm.
+          </p>
+          <a href="resources.html" class="btn-link">
+            <span>Read Article</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="insight-card reveal reveal-delay-1">
+          <div class="insight-meta-row">
+            <span class="insight-category-tag">CFO Insights</span>
+            <span class="insight-readtime">7 min read</span>
+          </div>
+          <h3 class="insight-title">5 Silent Cash Flow Leaks That Drain Scaling Companies (And How to Fix Them)</h3>
+          <p class="insight-snippet">
+            Unbilled disbursements, untracked subscription creep, and loose payment terms: learn how modern financial controllers plug margin leaks fast.
+          </p>
+          <a href="resources.html" class="btn-link">
+            <span>Read Article</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="insight-card reveal reveal-delay-2">
+          <div class="insight-meta-row">
+            <span class="insight-category-tag">Growth</span>
+            <span class="insight-readtime">4 min read</span>
+          </div>
+          <h3 class="insight-title">When Should Your Business Transition From a Bookkeeper to a Fractional CFO?</h3>
+          <p class="insight-snippet">
+            Clear benchmarks on revenue milestones, investor reporting requirements, and unit economics complexity that signal it is time to upgrade.
+          </p>
+          <a href="resources.html" class="btn-link">
+            <span>Read Article</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Deep Forest Green CTA Banner
+       ========================================================================== -->
+  <section class="dark-cta-section">
+    <div class="container dark-cta-inner reveal">
+      <div class="section-badge dark-cta-badge">Start Your Transformation</div>
+      <h2 class="dark-cta-title">Ready to bring complete clarity to your business?</h2>
+      <p class="dark-cta-subtitle">
+        Schedule a confidential 30-minute consultation with a senior CPA and discover where your business can save, optimize, and grow.
+      </p>
+
+      <div class="dark-cta-actions">
+        <a href="contact.html" class="btn btn-white">
+          <span>Schedule a Free Consultation</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="solutions.html" class="btn btn-outline-white">Explore Pricing & Plans</a>
+      </div>
+
+      <div class="dark-cta-guarantees">
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          No Long-Term Contracts
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Free Diagnostic Review
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          100% Confidential NDA
+        </span>
+      </div>
+    </div>
+  </section>
+
+      <!-- ==========================================================================
+       Footer (Matching exact design)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+          <p class="footer-brand-desc">
+            Professional accounting, bookkeeping and financial management support for ambitious businesses.
+          </p>
+          <p class="footer-brand-sub">
+            Registered accounting practice &amp; commercial finance advisors.
+          </p>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-nav-col">
+          <h5>Services</h5>
+          <ul class="footer-links-list">
+            <li><a href="services.html#bookkeeping">Bookkeeping &amp; Accounting</a></li>
+            <li><a href="services.html#tax">Tax &amp; Compliance</a></li>
+            <li><a href="services.html#payroll">Payroll Support</a></li>
+            <li><a href="services.html#reporting">Financial Reporting</a></li>
+            <li><a href="services.html#advisory">Business Advisory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-nav-col">
+          <h5>Company</h5>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html#industries">Industries We Serve</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="resources.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contact -->
+        <div class="footer-nav-col">
+          <h5>Direct Contact</h5>
+          <div class="footer-contact-details">
+            <a href="mailto:info@stacklyfinance-example.com">info@stacklyfinance-example.com</a>
+            <a href="tel:+15550192834">+1 (555) 019-2834</a>
+            <span>Hours: Mon–Fri 9am–5pm</span>
+          </div>
+          <div class="footer-social-list">
+            <a href="404.html" class="footer-social-icon" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-copy">
+          &copy; 2024 Stackly Financial Services Inc. All rights reserved. Registered accounting practice. Sample illustrative business website.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Client Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources & Knowledge Base — Stackly Accounting & Finance</title>
+  <meta name="description" content="Explore CPA-curated financial guides, tax playbooks, runway calculators, and accounting templates for modern scaling businesses.">
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/resources.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="resources.html" class="nav-link active">Resources</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-actions-mobile">
+            <a href="login.html" class="btn btn-secondary">Log In</a>
+            <a href="consultation.html" class="btn btn-primary">Book a Consultation</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login">LOGIN</a>
+        <a href="consultation.html" class="btn btn-primary">
+          <span>BOOK A CONSULTATION</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section (Resources Page)
+       ========================================================================== -->
+  <section class="resources-hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="section-badge">Knowledge Base</div>
+        <h1 class="hero-title">Practical financial knowledge for better business decisions.</h1>
+        <p class="hero-description">
+          Explore our library of CPA-curated playbooks, tax guides, financial modeling templates, and accounting insights designed to help modern companies scale with confidence.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#article-grid" class="btn btn-primary">
+            <span>Browse All Articles</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#financial-tools" class="btn btn-secondary">Download Free Guides →</a>
+        </div>
+      </div>
+
+      <div class="resources-hero-image-wrap reveal reveal-delay-2">
+        <img src="assets/resources-hero.webp" alt="Executive conference and financial masterclass" class="resources-hero-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Search & Category Filter Bar
+       ========================================================================== -->
+  <section class="search-filter-section">
+    <div class="container search-filter-wrap reveal">
+      <label for="resource-search" class="search-label">What would you like to learn about?</label>
+      <div class="search-input-box">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <input type="text" id="resource-search" class="resources-search-input" placeholder="Search guides, playbooks, calculators, tax rules...">
+      </div>
+
+      <div class="filter-pills-row">
+        <button class="filter-pill-btn active" data-filter="all">All Topics</button>
+        <button class="filter-pill-btn" data-filter="accounting">Accounting Fundamentals</button>
+        <button class="filter-pill-btn" data-filter="tax">Tax Strategy</button>
+        <button class="filter-pill-btn" data-filter="cashflow">Cash Flow & Runway</button>
+        <button class="filter-pill-btn" data-filter="cfo">CFO Leadership</button>
+        <button class="filter-pill-btn" data-filter="tools">Tools & Templates</button>
+        <button class="filter-pill-btn" data-filter="compliance">Compliance & Legal</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Featured Article / Lead Story Spotlight
+       ========================================================================== -->
+  <section class="featured-story-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Featured Article</div>
+        <h2 class="section-title">Getting your business finances organized.</h2>
+      </div>
+
+      <div class="featured-story-card reveal">
+        <div class="featured-image-wrap">
+          <img src="assets/featured-notebook.webp" alt="Professional planning corporate finances in planner" class="featured-story-image" loading="lazy">
+        </div>
+
+        <div class="featured-content-body">
+          <span class="featured-category-badge">Foundational Accounting</span>
+          <h3 class="featured-title">Setting your business finances up for resilient long-term growth</h3>
+          <p class="featured-desc">
+            A complete step-by-step masterclass on structuring charts of accounts, automating bank reconciliations, setting tax reserves, and establishing audit-proof record-keeping.
+          </p>
+          <div class="featured-meta">
+            By Sarah Jenkins, CPA • 8 min read • Updated 2026
+          </div>
+          <div>
+            <a href="contact.html" class="btn btn-primary">
+              <span>Read Full Guide</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: 9-Card Resource Article Grid
+       ========================================================================== -->
+  <section id="article-grid" class="articles-grid-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Latest Articles</div>
+        <h2 class="section-title">Useful guidance for everyday business finances</h2>
+        <p class="section-subtitle">
+          Practical advice and strategies from our team of certified public accountants and financial analysts.
+        </p>
+      </div>
+
+      <div class="resource-cards-grid">
+        <!-- Card 1 -->
+        <article class="resource-card reveal" data-category="tax">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/consulting-pair.webp" alt="Tax strategy meeting" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">Tax Strategy</span>
+            <h3 class="resource-card-title">Maximizing Section 179 and R&D Tax Credits for Tech Scaleups</h3>
+            <p class="resource-card-snippet">
+              Unpack newly updated federal limits and learn how to claim six-figure payroll offsets through qualifying software development.
+            </p>
+            <div class="resource-card-footer">
+              <span>6 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="resource-card reveal reveal-delay-1" data-category="cashflow">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/solutions-hero.webp" alt="Founders calculating runway" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">Cash Flow</span>
+            <h3 class="resource-card-title">The 13-Week Cash Flow Forecast: Predicting Runway with Precision</h3>
+            <p class="resource-card-snippet">
+              Step-by-step guidance on building rolling weekly models that identify upcoming cash crunches months before they occur.
+            </p>
+            <div class="resource-card-footer">
+              <span>5 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="resource-card reveal reveal-delay-2" data-category="cfo">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/handshake-agreement.webp" alt="CFO partnership agreement" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">CFO Leadership</span>
+            <h3 class="resource-card-title">When to Transition from a Bookkeeper to a Fractional CFO</h3>
+            <p class="resource-card-snippet">
+              Benchmark revenue milestones and operational complexities that signal your business requires forward-looking strategy.
+            </p>
+            <div class="resource-card-footer">
+              <span>7 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="resource-card reveal" data-category="compliance">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/leader-1.webp" alt="State tax compliance" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">Compliance</span>
+            <h3 class="resource-card-title">Understanding Multi-State Sales Tax Nexus in 2026</h3>
+            <p class="resource-card-snippet">
+              Avoid surprise state audit assessments by tracking economic thresholds across remote employees and digital channels.
+            </p>
+            <div class="resource-card-footer">
+              <span>4 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="resource-card reveal reveal-delay-1" data-category="accounting">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/skyline-boardroom.webp" alt="Corporate expense management" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">Accounting</span>
+            <h3 class="resource-card-title">Managing Operating Expenses and Reducing Subscription Creep</h3>
+            <p class="resource-card-snippet">
+              How controllers audit recurring SaaS subscriptions, eliminate shadow IT spending, and recover 8-15% of EBITDA margin.
+            </p>
+            <div class="resource-card-footer">
+              <span>5 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="resource-card reveal reveal-delay-2" data-category="compliance">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/bookkeeping-workspace.webp" alt="Financial statement audit preparation" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">Compliance</span>
+            <h3 class="resource-card-title">How to Prepare for Your First Institutional Financial Audit</h3>
+            <p class="resource-card-snippet">
+              A comprehensive diligence checklist covering revenue recognition (ASC 606), inventory valuation, and internal controls.
+            </p>
+            <div class="resource-card-footer">
+              <span>8 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7 -->
+        <article class="resource-card reveal" data-category="cfo">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/office-presentation.webp" alt="Executive presentation on unit economics" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">CFO Leadership</span>
+            <h3 class="resource-card-title">Unit Economics: Measuring LTV, CAC, and Payback Milestones</h3>
+            <p class="resource-card-snippet">
+              Formulas and financial templates to calculate true customer acquisition cost, gross margin retention, and capital efficiency.
+            </p>
+            <div class="resource-card-footer">
+              <span>6 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8 -->
+        <article class="resource-card reveal reveal-delay-1" data-category="tax">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/team-group.webp" alt="Contractor and payroll team compliance" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">Tax Strategy</span>
+            <h3 class="resource-card-title">Navigating IRS 1099 and W-2 Contractor Compliance</h3>
+            <p class="resource-card-snippet">
+              Clear legal criteria to classify independent contractors properly and avoid catastrophic misclassification penalties.
+            </p>
+            <div class="resource-card-footer">
+              <span>5 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 9 -->
+        <article class="resource-card reveal reveal-delay-2" data-category="accounting">
+          <div class="resource-thumbnail-wrap">
+            <img src="assets/desk-calculator.webp" alt="Founder compensation planning" class="resource-thumbnail" loading="lazy">
+          </div>
+          <div class="resource-card-body">
+            <span class="resource-cat-tag">Accounting</span>
+            <h3 class="resource-card-title">Structuring Founder Compensation and Equity Distributions</h3>
+            <p class="resource-card-snippet">
+              Balancing S-Corp reasonable compensation guidelines with tax-advantaged shareholder dividend distributions.
+            </p>
+            <div class="resource-card-footer">
+              <span>7 min read</span>
+              <a href="contact.html" class="btn-link">Read Article →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Daily Habits Split
+       ========================================================================== -->
+  <section class="daily-habits-section">
+    <div class="container habits-grid">
+      <div class="habits-content reveal">
+        <div class="section-badge">Best Practices</div>
+        <h2 class="section-title">Build better everyday accounting habits.</h2>
+        <p>
+          Clean financials aren't built at tax time—they are maintained daily. Implementing small automated workflows eliminates month-end closing chaos and ensures total visibility.
+        </p>
+
+        <div class="habits-tiles-grid">
+          <div class="habit-tile">
+            <h4>Automate Receipt Capture</h4>
+            <p>Connect your business card feeds to auto-match receipts instantly.</p>
+          </div>
+          <div class="habit-tile">
+            <h4>Weekly Bank Reconciliations</h4>
+            <p>Reconcile cash accounts every Friday to catch discrepancies early.</p>
+          </div>
+          <div class="habit-tile">
+            <h4>Segregate Tax Reserves</h4>
+            <p>Automatically sweep 25-30% of operating profits into an escrow account.</p>
+          </div>
+          <div class="habit-tile">
+            <h4>Monitor Runway Trajectory</h4>
+            <p>Review 13-week cash models monthly against actual payroll trends.</p>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn-link">
+          <span>Download Our Daily Accounting Checklist</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="habits-image-wrap reveal reveal-delay-2">
+        <img src="assets/whiteboard-discussion.webp" alt="Financial planners mapping business workflows on whiteboard" class="habits-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Tax Documentation Split
+       ========================================================================== -->
+  <section class="tax-docs-section">
+    <div class="container tax-docs-grid">
+      <div class="tax-docs-content reveal">
+        <div class="section-badge">Tax Compliance Guide</div>
+        <h2 class="section-title">Approach tax documentation with greater clarity.</h2>
+        <p>
+          Navigating corporate tax filings shouldn't feel overwhelming. Our structured checklists keep your records organized, deductions maximized, and audit defense ready.
+        </p>
+
+        <div class="quote-callout-box">
+          <h5>Proactive Tax Philosophy</h5>
+          <blockquote>
+            "The best corporate tax strategy is executed throughout the four quarters, not rushed during the final two weeks of March."
+          </blockquote>
+        </div>
+
+        <ul class="support-checklist">
+          <li class="support-check-item">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Corporate filings across all 50 states (Forms 1120, 1120-S, 1065)</span>
+          </li>
+          <li class="support-check-item">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Quarterly estimated tax modeling and safe harbor calculation</span>
+          </li>
+          <li class="support-check-item">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Qualified R&D expenditure documentation and substantiation logs</span>
+          </li>
+        </ul>
+
+        <a href="contact.html" class="btn-link">
+          <span>Explore Tax Filing Resources</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="tax-docs-image-wrap reveal reveal-delay-2">
+        <img src="assets/laptop-typing.webp" alt="Reviewing financial documentation and tax filings on laptop" class="tax-docs-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Financial Modeling Split
+       ========================================================================== -->
+  <section class="modeling-section">
+    <div class="container modeling-grid">
+      <div class="modeling-content reveal">
+        <div class="section-badge">Financial Intelligence</div>
+        <h2 class="section-title">Understand the numbers behind your decisions.</h2>
+        <p>
+          Every executive decision impacts cash flow and unit margins. We provide straightforward financial modeling frameworks that give founders clarity before committing capital.
+        </p>
+
+        <div class="modeling-items-stack">
+          <div class="modeling-item-bar">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+            <span>Pricing & Margin Sensitivity Models</span>
+          </div>
+          <div class="modeling-item-bar">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>Headcount Planning & Compensation Impact</span>
+          </div>
+          <div class="modeling-item-bar">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            <span>Burn Multiple & Capital Runway Formulas</span>
+          </div>
+          <div class="modeling-item-bar">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+            </svg>
+            <span>Working Capital & Inventory Turnover Ratios</span>
+          </div>
+        </div>
+
+        <div class="template-download-box">
+          <div class="template-download-info">
+            <h5>Executive Cash Runway Model (.xlsx)</h5>
+            <p>Dynamic 13-week rolling spreadsheet template</p>
+          </div>
+          <a href="contact.html" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.88rem;">Download Model</a>
+        </div>
+      </div>
+
+      <div class="modeling-image-wrap reveal reveal-delay-2">
+        <img src="assets/boardroom-chairs.webp" alt="Executive boardroom setting for financial decision-making" class="modeling-image" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Interactive Financial Calculators & Tools
+       ========================================================================== -->
+  <section id="financial-tools" class="tools-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">Tools & Templates</div>
+        <h2 class="section-title">Useful tools for your next financial task.</h2>
+        <p class="section-subtitle">
+          Interactive financial utilities and spreadsheets designed by our senior CPAs to simplify complex calculations.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+        <!-- Tool 1 -->
+        <div class="tool-card reveal">
+          <span class="tool-badge">Calculator</span>
+          <h3 class="tool-title">Business Runway & Burn Rate Calculator</h3>
+          <p class="tool-desc">
+            Input cash reserves, monthly recurring revenue, and operating burn to forecast cash zero dates and model hiring expansion.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Launch Calculator →</a>
+        </div>
+
+        <!-- Tool 2 -->
+        <div class="tool-card reveal reveal-delay-1">
+          <span class="tool-badge">Tax Estimator</span>
+          <h3 class="tool-title">Section 179 Depreciation Estimator</h3>
+          <p class="tool-desc">
+            Estimate first-year capital equipment write-offs and tax deductions under newly updated 2026 IRS federal guidelines.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Calculate Deduction →</a>
+        </div>
+
+        <!-- Tool 3 -->
+        <div class="tool-card reveal reveal-delay-2">
+          <span class="tool-badge">Spreadsheet</span>
+          <h3 class="tool-title">Corporate Chart of Accounts (COA) Template</h3>
+          <p class="tool-desc">
+            A standardized, GAAP-compliant chart of accounts template ready to import directly into QuickBooks Online, Xero, or NetSuite.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Download Template →</a>
+        </div>
+      </div>
+
+      <div class="tool-alert-strip reveal">
+        <span><strong>Looking for bespoke financial modeling?</strong> Our fractional CFO team builds custom multi-entity forecast models for institutional funding rounds.</span>
+        <a href="contact.html" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">Talk with a CFO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Frequently Asked Questions (FAQ Accordion)
+       ========================================================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <div class="section-badge">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Common questions regarding our resources, guides, templates, and CPA advice.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" type="button">
+            <span>Are these financial templates free to use for our business?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Yes. All our financial models, runway templates, and accounting checklists are 100% free for founders, CFOs, and finance leaders to download, adapt, and use internally.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question-btn" type="button">
+            <span>How often are your tax and compliance guides updated?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Our guides and calculators are reviewed quarterly by licensed CPAs to ensure complete alignment with newly passed federal tax code revisions, IRS inflation adjustments, and state sales tax nexus changes.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item reveal reveal-delay-2">
+          <button class="faq-question-btn" type="button">
+            <span>Can your team help us customize these templates for our business?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Absolutely. If your business has unique subscription cohorts, multi-currency revenue, or complex inventory pipelines, our fractional CFO team can tailor bespoke financial models during an advisory engagement.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item reveal">
+          <button class="faq-question-btn" type="button">
+            <span>What software formats do your templates support?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Our templates are formatted for Microsoft Excel (.xlsx) and Google Sheets, with complete dynamic formulas and zero hidden macros for frictionless collaboration.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item reveal reveal-delay-1">
+          <button class="faq-question-btn" type="button">
+            <span>Can I request a specific guide or playbook topic?</span>
+            <span class="faq-icon-toggle">+</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p>
+              Yes! We regularly author new playbooks based on client questions and community feedback. Reach out to our advisory team with the topic or scenario you'd like us to cover.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section: Deep Forest Green CTA Banner
+       ========================================================================== -->
+  <section class="dark-cta-section">
+    <div class="container dark-cta-inner reveal">
+      <div class="section-badge dark-cta-badge">Expert Assistance</div>
+      <h2 class="dark-cta-title">Need guidance specific to your business?</h2>
+      <p class="dark-cta-subtitle">
+        Our articles and tools are just the start. Schedule a consultation with a senior CPA for personalized strategy and complete operational oversight.
+      </p>
+
+      <div class="dark-cta-actions">
+        <a href="contact.html" class="btn btn-white">
+          <span>Schedule a Consultation</span>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline-white">Contact Our Office</a>
+      </div>
+
+      <div class="dark-cta-guarantees">
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          No Long-Term Contracts
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Free Diagnostic Review
+        </span>
+        <span>
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="#a7f3d0">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          100% Confidential NDA
+        </span>
+      </div>
+    </div>
+  </section>
+
+      <!-- ==========================================================================
+       Footer (Matching exact design)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" />
+      </a>
+          <p class="footer-brand-desc">
+            Professional accounting, bookkeeping and financial management support for ambitious businesses.
+          </p>
+          <p class="footer-brand-sub">
+            Registered accounting practice &amp; commercial finance advisors.
+          </p>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-nav-col">
+          <h5>Services</h5>
+          <ul class="footer-links-list">
+            <li><a href="services.html#bookkeeping">Bookkeeping &amp; Accounting</a></li>
+            <li><a href="services.html#tax">Tax &amp; Compliance</a></li>
+            <li><a href="services.html#payroll">Payroll Support</a></li>
+            <li><a href="services.html#reporting">Financial Reporting</a></li>
+            <li><a href="services.html#advisory">Business Advisory</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-nav-col">
+          <h5>Company</h5>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="solutions.html#industries">Industries We Serve</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="resources.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contact -->
+        <div class="footer-nav-col">
+          <h5>Direct Contact</h5>
+          <div class="footer-contact-details">
+            <a href="mailto:info@stacklyfinance-example.com">info@stacklyfinance-example.com</a>
+            <a href="tel:+15550192834">+1 (555) 019-2834</a>
+            <span>Hours: Mon–Fri 9am–5pm</span>
+          </div>
+          <div class="footer-social-list">
+            <a href="404.html" class="footer-social-icon" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Twitter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+            <a href="404.html" class="footer-social-icon" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-copy">
+          &copy; 2024 Stackly Financial Services Inc. All rights reserved. Registered accounting practice. Sample illustrative business website.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Service</a>
+          <a href="404.html">Client Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/animations.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Live filter and search for articles
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('resource-search');
+      const filterBtns = document.querySelectorAll('.filter-pill-btn');
+      const articles = document.querySelectorAll('.resource-card');
+
+      function filterArticles() {
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        const activeBtn = document.querySelector('.filter-pill-btn.active');
+        const activeCategory = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+
+        articles.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          const title = card.querySelector('.resource-card-title').textContent.toLowerCase();
+          const snippet = card.querySelector('.resource-card-snippet').textContent.toLowerCase();
+
+          const matchesCat = (activeCategory === 'all' || cardCat === activeCategory);
+          const matchesQuery = (query === '' || title.includes(query) || snippet.includes(query));
+
+          if (matchesCat && matchesQuery) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (filterBtns) {
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterArticles();
+          });
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterArticles);
+      }
+    });
+  </script>
+</body>
+</html>
