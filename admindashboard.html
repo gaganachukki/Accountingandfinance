@@ -114,7 +114,7 @@
       <div class="admin-partner-widget">
         <img src="assets/leader-1.webp" alt="Marcus Sterling, Managing Partner" class="admin-partner-avatar">
         <div class="admin-partner-meta">
-          <span class="admin-partner-name">Marcus Sterling</span>
+          <span class="admin-partner-name" id="admin-sidebar-name">Marcus Sterling</span>
           <span class="admin-partner-role">Managing Partner &amp; CPA</span>
         </div>
       </div>
@@ -184,17 +184,17 @@
         <!-- Admin Profile with Initial -->
         <div class="admin-profile-wrapper">
           <button class="admin-profile-btn" id="admin-profile-toggle" aria-label="Account menu" aria-expanded="false" title="Marcus Sterling (Managing Partner)">
-            <span class="admin-profile-initial">MS</span>
+            <span class="admin-profile-initial" id="admin-profile-initial">MS</span>
             <span class="admin-profile-status-dot"></span>
           </button>
 
           <div class="admin-profile-dropdown" id="admin-profile-dropdown">
             <div class="admin-profile-header">
-              <div class="admin-profile-avatar-large">MS</div>
+              <div class="admin-profile-avatar-large" id="admin-dropdown-avatar">MS</div>
               <div class="admin-profile-info">
-                <span class="admin-profile-name">Marcus Sterling</span>
+                <span class="admin-profile-name" id="admin-dropdown-name">Marcus Sterling</span>
                 <span class="admin-profile-role">Managing Partner &amp; CPA</span>
-                <span class="admin-profile-email">m.sterling@stackly.com</span>
+                <span class="admin-profile-email" id="admin-dropdown-email">m.sterling@stackly.com</span>
               </div>
             </div>
             <div class="admin-profile-divider"></div>
@@ -693,9 +693,9 @@
               <tbody>
                 <tr>
                   <td>
-                    <div style="display:flex; align-items:center; gap:10px;">
-                      <img src="assets/avatar-1.webp" alt="Sarah Jenkins" style="width:34px; height:34px; border-radius:50%; object-fit:cover;">
-                      <strong>Sarah Jenkins, CPA</strong>
+                    <div class="practitioner-name-cell">
+                      <img src="assets/avatar-1.webp" alt="Sarah Jenkins" class="practitioner-avatar-img">
+                      <strong class="practitioner-name">Sarah Jenkins, CPA</strong>
                     </div>
                   </td>
                   <td>Senior Partner / Controller</td>
@@ -706,9 +706,9 @@
                 </tr>
                 <tr>
                   <td>
-                    <div style="display:flex; align-items:center; gap:10px;">
-                      <img src="assets/avatar-2.webp" alt="David Miller" style="width:34px; height:34px; border-radius:50%; object-fit:cover;">
-                      <strong>David Miller, CPA</strong>
+                    <div class="practitioner-name-cell">
+                      <img src="assets/avatar-2.webp" alt="David Miller" class="practitioner-avatar-img">
+                      <strong class="practitioner-name">David Miller, CPA</strong>
                     </div>
                   </td>
                   <td>Director of Tax Advisory</td>
@@ -719,9 +719,9 @@
                 </tr>
                 <tr>
                   <td>
-                    <div style="display:flex; align-items:center; gap:10px;">
-                      <img src="assets/avatar-3.webp" alt="Elena Rostova" style="width:34px; height:34px; border-radius:50%; object-fit:cover;">
-                      <strong>Elena Rostova</strong>
+                    <div class="practitioner-name-cell">
+                      <img src="assets/avatar-3.webp" alt="Elena Rostova" class="practitioner-avatar-img">
+                      <strong class="practitioner-name">Elena Rostova</strong>
                     </div>
                   </td>
                   <td>Fractional CFO Specialist</td>
@@ -804,21 +804,21 @@
             <button class="btn-new-client" onclick="alert('Triggering batch automated retainer run...')">Execute Monthly Batch</button>
           </div>
 
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px;">
+          <div class="admin-billing-kpi-grid">
             <div class="kpi-card">
               <span class="kpi-label">Current MRR</span>
-              <div class="kpi-value" style="font-size: 1.6rem; color: var(--admin-primary);">$184,500.00</div>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">From 42 active client retainers</span>
+              <div class="kpi-value" style="color: var(--admin-primary);">$184,500.00</div>
+              <span class="kpi-subtext" style="font-size: 0.75rem; color: var(--text-muted);">From 42 active client retainers</span>
             </div>
             <div class="kpi-card">
               <span class="kpi-label">Collections Rate</span>
-              <div class="kpi-value" style="font-size: 1.6rem; color: var(--status-emerald);">99.2%</div>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Auto-ACH debit enabled</span>
+              <div class="kpi-value" style="color: var(--status-emerald);">99.2%</div>
+              <span class="kpi-subtext" style="font-size: 0.75rem; color: var(--text-muted);">Auto-ACH debit enabled</span>
             </div>
             <div class="kpi-card">
               <span class="kpi-label">Average Retainer</span>
-              <div class="kpi-value" style="font-size: 1.6rem; color: var(--text-dark);">$4,392.00</div>
-              <span style="font-size: 0.75rem; color: var(--text-muted);">Per client / month</span>
+              <div class="kpi-value" style="color: var(--text-dark);">$4,392.00</div>
+              <span class="kpi-subtext" style="font-size: 0.75rem; color: var(--text-muted);">Per client / month</span>
             </div>
           </div>
         </div>
@@ -872,7 +872,7 @@
         <div class="admin-card">
           <h2 class="admin-card-title" style="margin-bottom: 18px;">Firm Governance &amp; Practice Settings</h2>
           
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="admin-settings-grid">
             <div class="signup-field-group">
               <label class="signup-label">Practice Legal Name</label>
               <input type="text" class="signup-input" value="Stackly Financial Services Inc." readonly style="background-color: #f7faf7;">
@@ -883,7 +883,7 @@
             </div>
             <div class="signup-field-group">
               <label class="signup-label">Managing Partner</label>
-              <input type="text" class="signup-input" value="Marcus Sterling, CPA" readonly style="background-color: #f7faf7;">
+              <input type="text" class="signup-input" id="admin-settings-partner-name" value="Marcus Sterling, CPA" readonly style="background-color: #f7faf7;">
             </div>
             <div class="signup-field-group">
               <label class="signup-label">Encryption Standard</label>
@@ -1055,6 +1055,7 @@
       }
     });
   </script>
+  <script src="js/auth-session.js"></script>
   <script src="js/animations.js"></script>
 </body>
 </html>

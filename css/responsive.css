@@ -290,6 +290,7 @@ img, svg, video, canvas {
   .nav-container {
     width: 100%;
     max-width: 100%;
+    height: 68px;
   }
 
   .nav-links {
@@ -672,6 +673,11 @@ img, svg, video, canvas {
 
   .admin-charts-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  .admin-billing-kpi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 14px !important;
   }
 }
 
@@ -1424,6 +1430,32 @@ img, svg, video, canvas {
     margin-bottom: 16px !important;
   }
 
+  .admin-billing-kpi-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 18px !important;
+  }
+
+  .admin-billing-kpi-grid .kpi-card {
+    padding: 14px 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    min-width: 0 !important;
+  }
+
+  .admin-billing-kpi-grid .kpi-value {
+    font-size: 1.45rem !important;
+  }
+
+  .admin-settings-grid,
+  .user-settings-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
   .admin-card {
     padding: 16px 14px !important;
     border-radius: 12px !important;
@@ -1442,18 +1474,36 @@ img, svg, video, canvas {
 
   .practice-chart-wrapper {
     height: 160px !important;
-    gap: 4px !important;
+    gap: 6px !important;
     padding-top: 10px !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    overflow-x: hidden !important;
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+
+  .practice-col-group {
+    flex: 1 !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    height: 100% !important;
+    position: relative !important;
   }
 
   .practice-bar-container {
-    min-width: 0 !important;
-    flex: 1 !important;
+    width: 18px !important;
+    max-width: 22px !important;
+  }
+
+  .practice-month-name {
+    font-size: 0.72rem !important;
+    margin-top: 8px !important;
+    white-space: nowrap !important;
   }
 
   .practice-bar {
@@ -1472,15 +1522,48 @@ img, svg, video, canvas {
   }
 
   .admin-table {
-    min-width: 540px !important;
+    min-width: 720px !important;
     width: 100% !important;
   }
 
   .admin-table th,
   .admin-table td {
-    padding: 10px 10px !important;
+    padding: 10px 12px !important;
     font-size: 0.78rem !important;
     white-space: nowrap !important;
+  }
+
+  .admin-table th:first-child,
+  .admin-table td:first-child {
+    min-width: 195px !important;
+  }
+
+  .admin-table th:nth-child(2),
+  .admin-table td:nth-child(2) {
+    min-width: 180px !important;
+  }
+
+  .practitioner-name-cell,
+  .client-name-cell,
+  .admin-table td:first-child > div {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-width: max-content !important;
+    white-space: nowrap !important;
+  }
+
+  .practitioner-avatar-img {
+    width: 32px !important;
+    height: 32px !important;
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+  }
+
+  .practitioner-name {
+    white-space: nowrap !important;
+    font-weight: 600 !important;
   }
 
   .btn-new-client {
@@ -1491,8 +1574,8 @@ img, svg, video, canvas {
 
   /* Nav logo sizing for small screens */
   .brand-logo-img {
-    height: 32px;
-    max-width: 130px;
+    height: 38px;
+    max-width: 165px;
   }
 
   .nav-container {
@@ -1975,10 +2058,48 @@ img, svg, video, canvas {
     padding: 0 14px;
   }
 
+
   .deadline-item {
-    padding: 10px 12px;
-    gap: 10px;
+    display: grid !important;
+    grid-template-columns: 44px 1fr !important;
+    grid-template-areas:
+      "date info"
+      ". pill" !important;
+    gap: 8px 12px !important;
+    align-items: start !important;
+    padding: 12px 12px !important;
   }
+
+  .deadline-date-box {
+    grid-area: date !important;
+  }
+
+  .deadline-info {
+    grid-area: info !important;
+    min-width: 0 !important;
+  }
+
+  .deadline-name {
+    font-size: 0.88rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 3px !important;
+  }
+
+  .deadline-desc {
+    font-size: 0.76rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .deadline-item .status-pill {
+    grid-area: pill !important;
+    justify-self: start !important;
+    align-self: start !important;
+    width: fit-content !important;
+    margin-top: 2px !important;
+    padding: 5px 10px !important;
+    font-size: 0.72rem !important;
+  }
+
 
   .statement-card {
     padding: 18px;
@@ -2012,6 +2133,20 @@ img, svg, video, canvas {
     border-radius: 12px;
   }
 
+  .admin-billing-kpi-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .admin-billing-kpi-grid .kpi-card {
+    padding: 12px !important;
+  }
+
+  .admin-billing-kpi-grid .kpi-value {
+    font-size: 1.35rem !important;
+  }
+
   .practice-chart-wrapper {
     height: 150px;
   }
@@ -2032,19 +2167,19 @@ img, svg, video, canvas {
 
   /* Nav */
   .brand-logo-img {
-    height: 28px;
-    max-width: 120px;
+    height: 38px;
+    max-width: 160px;
   }
 
   .nav-container {
-    height: 60px;
-    gap: 10px;
+    height: 64px;
+    gap: 12px;
   }
 
   .nav-links {
-    top: 60px;
-    height: calc(100vh - 60px);
-    height: calc(100dvh - 60px);
+    top: 64px;
+    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
     padding: 24px 18px 36px;
     gap: 16px;
   }
@@ -2062,6 +2197,23 @@ img, svg, video, canvas {
 @media (max-width: 360px) {
   :root {
     --container-padding: 12px;
+  }
+
+  /* Nav for extra small screens */
+  .brand-logo-img {
+    height: 36px;
+    max-width: 145px;
+  }
+
+  .nav-container {
+    height: 62px;
+    gap: 8px;
+  }
+
+  .nav-links {
+    top: 62px;
+    height: calc(100vh - 62px);
+    height: calc(100dvh - 62px);
   }
 
   .hero-title {

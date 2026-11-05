@@ -260,7 +260,14 @@ document.addEventListener('DOMContentLoaded', () => {
           `;
         }
 
+        const emailVal = loginEmail ? loginEmail.value.trim() : '';
         const selectedRole = loginRoleInput ? loginRoleInput.value : 'user';
+
+        if (window.StacklyAuth) {
+          const userData = window.StacklyAuth.parseUserDataFromEmail(emailVal, selectedRole);
+          window.StacklyAuth.saveUserSession(userData);
+        }
+
         setTimeout(() => {
           if (selectedRole === 'admin') {
             window.location.href = 'admindashboard.html';
@@ -458,7 +465,15 @@ document.addEventListener('DOMContentLoaded', () => {
           `;
         }
 
+        const emailVal = signupEmail ? signupEmail.value.trim() : '';
+        const nameVal = signupName ? signupName.value.trim() : '';
         const selectedRole = signupRoleInput ? signupRoleInput.value : 'user';
+
+        if (window.StacklyAuth) {
+          const userData = window.StacklyAuth.parseUserDataFromEmail(emailVal, selectedRole, nameVal);
+          window.StacklyAuth.saveUserSession(userData);
+        }
+
         setTimeout(() => {
           if (selectedRole === 'admin') {
             window.location.href = 'admindashboard.html';

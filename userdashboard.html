@@ -189,9 +189,54 @@
           <span>Upload Receipt</span>
         </a>
 
-        <!-- Profile Button -->
-        <div class="user-profile-btn" title="Eleanor Vance (Admin)">
-          <div class="user-avatar-circle">EV</div>
+        <!-- User Profile Wrapper & Dropdown -->
+        <div class="user-profile-wrapper" style="position: relative;">
+          <button class="user-profile-btn" id="user-profile-toggle" aria-label="Account menu" aria-expanded="false" title="Eleanor Vance (Client Account)">
+            <div class="user-avatar-circle" id="user-profile-initial">EV</div>
+            <span class="user-profile-status-dot"></span>
+          </button>
+
+          <div class="user-profile-dropdown" id="user-profile-dropdown">
+            <div class="user-profile-header">
+              <div class="user-profile-avatar-large" id="user-dropdown-avatar">EV</div>
+              <div class="user-profile-info">
+                <span class="user-profile-name" id="user-dropdown-name">Eleanor Vance</span>
+                <span class="user-profile-role">Client Account Owner</span>
+                <span class="user-profile-email" id="user-dropdown-email">eleanor@acmefinancial.com</span>
+              </div>
+            </div>
+            <div class="user-profile-divider"></div>
+            <ul class="user-profile-menu">
+              <li>
+                <button type="button" class="user-profile-menu-item" onclick="switchDashboardTab('tab-settings'); closeUserProfileDropdown();">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                  <span>Workspace Settings</span>
+                </button>
+              </li>
+              <li>
+                <a href="admindashboard.html" class="user-profile-menu-item">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                  <span>Switch to Practice Partner</span>
+                </a>
+              </li>
+              <li>
+                <a href="login.html" class="user-profile-menu-item logout" id="user-dropdown-logout">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                  <span>Sign Out</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -206,7 +251,7 @@
         <!-- Welcome Banner -->
         <div class="dashboard-welcome-banner">
           <div>
-            <h1 class="banner-title">Welcome back, Eleanor</h1>
+            <h1 class="banner-title" id="user-welcome-title">Welcome back, <span id="user-display-firstname">Eleanor</span></h1>
             <p class="banner-subtitle">Acme Financial LLC accounts are fully reconciled through October 2026.</p>
           </div>
           <div class="banner-period-group">
@@ -812,12 +857,12 @@
             <div style="align-self: flex-start; max-width: 80%; background-color: var(--white); padding: 12px 16px; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
               <div style="font-weight: 700; font-size: 0.80rem; color: var(--primary); margin-bottom: 4px;">Sarah Jenkins, CPA • 9:15 AM</div>
               <p style="font-size: 0.86rem; color: var(--text-dark); line-height: 1.45;">
-                Good morning Eleanor! I have finalized Acme Financial's September reconciliation. Your gross margins improved by 2.8% due to software consolidation. Would you like to review the Section 179 tax deductions this Thursday?
+                Good morning <span id="chat-client-firstname">Eleanor</span>! I have finalized Acme Financial's September reconciliation. Your gross margins improved by 2.8% due to software consolidation. Would you like to review the Section 179 tax deductions this Thursday?
               </p>
             </div>
 
             <div style="align-self: flex-end; max-width: 80%; background-color: var(--primary); color: var(--white); padding: 12px 16px; border-radius: 12px; box-shadow: var(--shadow-sm);">
-              <div style="font-weight: 700; font-size: 0.80rem; opacity: 0.8; margin-bottom: 4px;">You (Eleanor Vance) • 9:30 AM</div>
+              <div style="font-weight: 700; font-size: 0.80rem; opacity: 0.8; margin-bottom: 4px;">You (<span id="chat-client-fullname">Eleanor Vance</span>) • 9:30 AM</div>
               <p style="font-size: 0.86rem; line-height: 1.45;">
                 Thanks Sarah! Yes, please put Thursday at 10:30 AM on my calendar. We also added two new contractor invoices in the vault.
               </p>
@@ -826,7 +871,7 @@
 
           <div style="display: flex; gap: 12px; margin-top: 14px;">
             <input type="text" id="cpa-message-input" class="topbar-search-input" placeholder="Type a message or tax inquiry to your dedicated CPA team..." style="background-color: var(--white);">
-            <button class="btn-topbar-action" onclick="sendMessageToCPA()">Send Message</button>
+            <a href="404.html" class="btn-topbar-action" id="cpa-send-message-btn" onclick="sendMessageToCPA(event)">Send Message</a>
           </div>
         </div>
       </section>
@@ -838,17 +883,25 @@
         <div class="panel-card">
           <h2 class="panel-title" style="margin-bottom: 18px;">Client Workspace Configuration</h2>
           
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div class="user-settings-grid">
             <div class="signup-field-group">
               <label class="signup-label">Registered Legal Entity</label>
               <input type="text" class="signup-input" value="Acme Financial LLC" readonly style="background-color: #f7faf7;">
+            </div>
+            <div class="signup-field-group">
+              <label class="signup-label">Account Owner / Primary Contact</label>
+              <input type="text" class="signup-input" id="user-settings-name" value="Eleanor Vance" readonly style="background-color: #f7faf7;">
+            </div>
+            <div class="signup-field-group">
+              <label class="signup-label">Registered Email</label>
+              <input type="email" class="signup-input" id="user-settings-email" value="eleanor@acmefinancial.com" readonly style="background-color: #f7faf7;">
             </div>
             <div class="signup-field-group">
               <label class="signup-label">Federal EIN</label>
               <input type="text" class="signup-input" value="XX-XXX8921" readonly style="background-color: #f7faf7;">
             </div>
             <div class="signup-field-group">
-              <label class="signup-label">Primary Primary Accounting Standard</label>
+              <label class="signup-label">Accounting Standard</label>
               <input type="text" class="signup-input" value="GAAP Accrual Basis" readonly style="background-color: #f7faf7;">
             </div>
             <div class="signup-field-group">
@@ -991,14 +1044,44 @@
       });
     });
 
-    function sendMessageToCPA() {
-      const input = document.getElementById('cpa-message-input');
-      if (input && input.value.trim()) {
-        alert('Message securely dispatched to Sarah Jenkins, CPA: "' + input.value + '"');
-        input.value = '';
-      }
+    // User Profile Dropdown
+    const userProfileToggle = document.getElementById('user-profile-toggle');
+    const userProfileDropdown = document.getElementById('user-profile-dropdown');
+
+    function closeUserProfileDropdown() {
+      if (userProfileDropdown) userProfileDropdown.classList.remove('show');
+    }
+
+    if (userProfileToggle && userProfileDropdown) {
+      userProfileToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        userProfileDropdown.classList.toggle('show');
+        if (typeof notifDropdown !== 'undefined' && notifDropdown) notifDropdown.classList.remove('show');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!userProfileDropdown.contains(e.target) && !userProfileToggle.contains(e.target)) {
+          userProfileDropdown.classList.remove('show');
+        }
+      });
+    }
+
+    function sendMessageToCPA(e) {
+      if (e) e.preventDefault();
+      window.location.href = '404.html';
+    }
+
+    const cpaMsgInput = document.getElementById('cpa-message-input');
+    if (cpaMsgInput) {
+      cpaMsgInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          window.location.href = '404.html';
+        }
+      });
     }
   </script>
+  <script src="js/auth-session.js"></script>
   <script src="js/animations.js"></script>
 </body>
 </html>
