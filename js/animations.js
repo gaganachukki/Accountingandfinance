@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('active');
+          entry.target.classList.add('active', 'revealed');
 
           // If the element has a badge or pill child, give it an attention jump
           const badge = entry.target.querySelector('.section-badge, .card-badge, .sample-data-tag');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => revealObserver.observe(el));
   } else {
-    revealElements.forEach(el => el.classList.add('active'));
+    revealElements.forEach(el => el.classList.add('active', 'revealed'));
   }
 
   // ==========================================================================

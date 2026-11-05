@@ -186,7 +186,8 @@
   will-change: opacity, transform;
 }
 
-.reveal.active {
+.reveal.active,
+.reveal.revealed {
   opacity: 1;
   transform: perspective(1200px) translateY(0) rotateX(0deg);
 }

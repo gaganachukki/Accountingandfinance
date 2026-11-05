@@ -1272,7 +1272,8 @@
   transition: all 0.25s ease;
 }
 
-.consult-faq-section .faq-item.active {
+.consult-faq-section .faq-item.active,
+.consult-faq-section .faq-item.open {
   border-color: var(--c-primary-green);
   box-shadow: var(--c-shadow-sm);
 }
@@ -1300,7 +1301,8 @@
   flex-shrink: 0;
 }
 
-.consult-faq-section .faq-item.active .faq-chevron-icon {
+.consult-faq-section .faq-item.active .faq-chevron-icon,
+.consult-faq-section .faq-item.open .faq-chevron-icon {
   transform: rotate(180deg);
   color: var(--c-primary-green);
 }

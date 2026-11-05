@@ -53,18 +53,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3. FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
+
+  // Ensure all .faq-icon-toggle elements contain dropdown chevron and close SVG icons
+  document.querySelectorAll('.faq-icon-toggle').forEach(toggle => {
+    if (!toggle.querySelector('svg')) {
+      toggle.innerHTML = `
+        <svg class="faq-icon-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+        <svg class="faq-icon-close" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      `;
+    }
+  });
+
   faqItems.forEach(item => {
     const questionBtn = item.querySelector('.faq-question-btn');
     const answerPanel = item.querySelector('.faq-answer-panel');
 
     if (questionBtn && answerPanel) {
       questionBtn.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
+        const isOpen = item.classList.contains('open');
 
-        // Close all other items for clean accordion behavior
-        faqItems.forEach(otherItem => {
+        // Close sibling items in the same container for clean accordion behavior
+        const container = item.closest('.faq-list') || item.closest('.faq-accordion-list') || item.parentElement;
+        const siblingItems = container ? container.querySelectorAll('.faq-item') : faqItems;
+
+        siblingItems.forEach(otherItem => {
           if (otherItem !== item) {
-            otherItem.classList.remove('active');
+            otherItem.classList.remove('open');
+            const otherBtn = otherItem.querySelector('.faq-question-btn');
+            if (otherBtn) {
+              otherBtn.setAttribute('aria-expanded', 'false');
+            }
             const otherPanel = otherItem.querySelector('.faq-answer-panel');
             if (otherPanel) {
               otherPanel.style.maxHeight = null;
@@ -72,27 +95,29 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        // Toggle current item
-        if (isActive) {
-          item.classList.remove('active');
+        // Toggle current item: when opened, shows answer & close tag; when closed, collapses & shows dropdown
+        if (isOpen) {
+          item.classList.remove('open');
+          questionBtn.setAttribute('aria-expanded', 'false');
           answerPanel.style.maxHeight = null;
         } else {
-          item.classList.add('active');
+          item.classList.add('open');
+          questionBtn.setAttribute('aria-expanded', 'true');
           answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
         }
       });
     }
   });
 
-  // Open the first FAQ by default
-  if (faqItems.length > 0) {
-    const firstItem = faqItems[0];
-    const firstPanel = firstItem.querySelector('.faq-answer-panel');
-    firstItem.classList.add('active');
-    if (firstPanel) {
-      firstPanel.style.maxHeight = firstPanel.scrollHeight + 'px';
+  // Only open items that explicitly have the .open class in HTML (do not force open by default)
+  faqItems.forEach(item => {
+    if (item.classList.contains('open')) {
+      const btn = item.querySelector('.faq-question-btn');
+      const panel = item.querySelector('.faq-answer-panel');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+      if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
     }
-  }
+  });
 
   // 4. Interactive Dashboard Showcase Timeframe Switcher
   const timeframeBtns = document.querySelectorAll('.timeframe-btn');
