@@ -181,6 +181,16 @@
   function updateUserDashboard(user) {
     if (!user) return;
 
+    // Sidebar footer user profile
+    const sidebarInitial = document.getElementById('user-sidebar-initial') || document.querySelector('.user-sidebar-initial');
+    if (sidebarInitial) sidebarInitial.textContent = user.initials;
+
+    const sidebarName = document.getElementById('user-sidebar-name') || document.querySelector('.user-sidebar-name');
+    if (sidebarName) sidebarName.textContent = user.fullName;
+
+    const sidebarEmail = document.getElementById('user-sidebar-email') || document.querySelector('.user-sidebar-email');
+    if (sidebarEmail) sidebarEmail.textContent = user.email;
+
     // Welcome banner title
     const welcomeTitle = document.getElementById('user-welcome-title');
     if (welcomeTitle) {
